@@ -1,0 +1,1 @@
+web: gunicorn letters_from_zaragoza.wsgi
