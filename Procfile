@@ -1,1 +1,1 @@
-web: gunicorn letters_from_zaragoza.wsgi
+web: gunicorn zaragoza_project.wsgi
