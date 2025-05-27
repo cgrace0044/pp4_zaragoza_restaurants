@@ -40,7 +40,7 @@ The live link can be found here - [Letters from Zaragoza](to be updated).
 
 <summary>Restaurants</summary>
 
-![Restaurants]()
+![Restaurants](docs/wireframes/restaurants_wireframe.webp)
 </details>
 
 
@@ -48,19 +48,19 @@ The live link can be found here - [Letters from Zaragoza](to be updated).
 
 <summary>Restaurant Detail</summary>
 
-![Restaurant Detail]()
+![Restaurant Detail](docs/wireframes/restaurant_detail_wireframe.webp)
 </details>
 
 <details>
 
 <summary>Login</summary>
 
-![Login]()
+![Login](docs/wireframes/login_wireframe.webp)
 </details>
 
 <details>
 
 <summary>Contact</summary>
 
-![Contact]()
+![Contact](docs/wireframes/contact_wireframe.webp)
 </details>
