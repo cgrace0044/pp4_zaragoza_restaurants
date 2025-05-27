@@ -26,3 +26,41 @@ The live link can be found here - [Letters from Zaragoza](to be updated).
 
 #### EPIC | Review Management
 - As a Site Admin I can create, read, update and delete reviews so that I can manage my content.
+
+#### Wireframes
+
+<details>
+
+ <summary>Landing Page</summary>
+
+![Landing Page](docs/wireframes/landing_wireframe.webp)
+</details>
+
+<details>
+
+<summary>Restaurants</summary>
+
+![Restaurants]()
+</details>
+
+
+<details>
+
+<summary>Restaurant Detail</summary>
+
+![Restaurant Detail]()
+</details>
+
+<details>
+
+<summary>Login</summary>
+
+![Login]()
+</details>
+
+<details>
+
+<summary>Contact</summary>
+
+![Contact]()
+</details>
