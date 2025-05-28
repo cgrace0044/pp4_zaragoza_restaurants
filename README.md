@@ -9,13 +9,13 @@ The live link can be found here - [Letters from Zaragoza](to be updated).
 ### User Stories
 
 #### EPIC | User Profile
-- As a site user I can register an account so that I can comment on posts.
-- As a site user I can login/logout of my account so that I can keep my account secure.
-- As a site user I can view my login status so that I know whether I am logged in or not.
+- As a Site User I can register an account so that I can comment on posts.
+- As a Site User I can login/logout of my account so that I can keep my account secure.
+- As a Site User I can view my login status so that I know whether I am logged in or not.
 
 #### EPIC | User Navigation
-- As a site user I can access the homepage and immediately understand the purpose of the site.
-- As a site user I can easily navigate the site so that I do not get easily lost and I know where I am.
+- As a Site User I can access the homepage and immediately understand the purpose of the site.
+- As a Site User I can easily navigate the site so that I do not get easily lost and I know where I am.
 - As a Site User I can view a list of the best restaurants by category so that I can select a review to read.
 - As a Site User I can click on a review on the restaurants page so that I can know more about the restaurant.  
 
