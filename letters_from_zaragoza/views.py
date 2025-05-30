@@ -5,6 +5,6 @@ from .models import Restaurant
 
 # Create your views here.
 class Browse_Restaurants(generic.ListView):
-    queryset = Restaurant.objects.all()
+    queryset = Restaurant.objects.filter(status=1)
     template_name = "browse_restaurants.html"
 
