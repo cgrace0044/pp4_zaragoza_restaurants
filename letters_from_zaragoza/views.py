@@ -1,7 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Restaurant
 
 
 # Create your views here.
-def index(request):
-    return HttpResponse("Hello, Zaragoza!")
+class Browse_Restaurants(generic.ListView):
+    queryset = Restaurant.objects.all()
+    template_name = "browse_restaurants.html"
+

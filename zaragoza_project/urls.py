@@ -16,10 +16,9 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
-from letters_from_zaragoza.views import index
+from django.urls import path, include
 
 urlpatterns = [
+    path("", include("letters_from_zaragoza.urls"), name="zaragoza_urls"),
     path("admin/", admin.site.urls),
-    path("", index, name="index"),
 ]
