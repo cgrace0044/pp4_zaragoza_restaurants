@@ -1,21 +1,32 @@
 
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Views Part 1</title>
-</head>
+{% block content %}
 
-<body>
-    <h1>Restaurants list</h1>
+<!-- browse_restaurants.html content starts here -->
+<!-- Call to action section -->
+
+<h1>Restaurants list</h1>
+<div class="row card-deck">
     {% for restaurant in object_list %}
-    <h2>{{restaurant.title}}</h2>
-    <p>{{restaurant.name}}</p>
-    <p>Author: {{restaurant.author}}</p>
+     <div class="col-sm-6 col-md-4 col-lg-3 px-1 d-flex align-items-stretch">
+            <div class="card card-detail recipe-card mb-3 shadow-sm mx-auto mx-sm-2">
+                {% if "placeholder" in restaurant.image.url %}
+                <img src="{}"
+                    class="card-img-top" alt="placeholder image">
+                {% else %}
+                <img src=" {{ restaurant.image.url }}" alt="restaurant image" class="card-img-top">
+                {% endif %}
+                <div class="card-body pb-1">
+                    <h2 class="card-title restaurant-detail-title text-truncate">{{ restaurant.title }}</h2>
+                    <p class="card-text">
+                        <span>{{ restaurant.name }}</span>
+                    </p>
+                </div>
     {% endfor %}
-</body>
+</div>
+</section>
+<!-- browse_restaurants.html content ends here -->
+{% endblock %}
 
-</html>
+
