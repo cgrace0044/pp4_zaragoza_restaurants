@@ -26,6 +26,16 @@ The live link can be found here - [Letters from Zaragoza](https://letters-from-z
 
 #### EPIC | Review Management
 - As a Site Admin I can create, read, update and delete reviews so that I can manage my content.
+- As Site Admin I can mark my reviews as 'save for later' or 'publish now' depending on whether they are finished or not.
+
+#### EPIC | About Letters from Zaragoza
+- As a site user I can click on the About link so that I can read about the site.
+- As a Site Admin I can create or update the about page content so that it is available on the site.
+
+#### EPIC | Contact
+- As a site user I can contact the site owner via the contact form.
+- As a site owner I can monitor contact requests via a database.
+- As a site owner I can mark each contact request as read once complete.
 
 #### Wireframes
 
