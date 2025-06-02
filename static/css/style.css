@@ -1,3 +1,13 @@
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&family=Open+Sans:wght@300;500&family=Playfair+Display:wght@600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    background-color: rgb(252, 247, 242);
+}
+    
 body {
     background-color: #F9FAFC;
 }
