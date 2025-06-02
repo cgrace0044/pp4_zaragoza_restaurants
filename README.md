@@ -33,9 +33,9 @@ The live link can be found here - [Letters from Zaragoza](https://letters-from-z
 - As a Site Admin I can create or update the about page content so that it is available on the site.
 
 #### EPIC | Contact
-- As a site user I can contact the site owner via the contact form.
-- As a site owner I can monitor contact requests via a database.
-- As a site owner I can mark each contact request as read once complete.
+- As a site user I can contact the site owner via the contact form so that I can make suggestions/propose collaboration opportunities.
+- As a site owner I can monitor contact requests via a database so that I can keep track of contact requests.
+- As a site owner I can mark each contact request as read once complete so that I can keep track of my progress.
 
 #### Wireframes
 
