@@ -74,3 +74,51 @@ The live link can be found here - [Letters from Zaragoza](https://letters-from-z
 
 ![Contact](docs/wireframes/contact_wireframe.webp)
 </details>
+
+## Deployment
+In order to deploy the app to Heroku the following steps were followed:
+### Create the Heroku App:
+- Update requirements.txt file within your IDE using command pip3 freeze > requirements.txt
+- Heroku will use the above list to install these packages into your application before the project is run.
+- Sign into Heroku or create an account if you don't yet have one.
+- From the Heroku dashboard click 'Create New App'.
+- Name the App and select your region. The App name will need to be something unique.
+- Now select 'Create App'
+
+### Attach the Postgres database:
+- Click on the settings tab within your App and scroll to Config Vars.
+- Click Reveal Config Vars.
+- As a key type DATABASE_URL and the corresponding value should be your postgres database. 
+
+### Prepare the environment and settings.py file:
+- In VS Code ensure you have an env.py file created in your route directory.
+- Both your database value and your secret key should be located in your env.py file.
+- Update the settings.py file to import the env.py file and add the SECRETKEY and DATABASE_URL file paths.
+- Comment out the default database configuration from Django.
+- Save files and make migrations.
+- Add Cloudinary URL to env.py
+- Add the cloudinary libraries to the list of installed apps.
+- Add the STATIC files settings - the url, storage path, directory path, root path, media url and default file storage path.
+- Link the file to the templates directory in Heroku.
+- Change the templates directory to TEMPLATES_DIR
+- Add Heroku to the ALLOWED_HOSTS list the format ['app_name.heroku.com', 'localhost']
+
+### Create files / directories
+- Create a file named "Procfile" in the main directory and add the following: web: gunicorn project-name.wsgi
+
+### Update Heroku Config Vars
+Add the following Config Vars in Heroku:
+- SECRET_KEY value 
+- CLOUDINARY_URL
+- PORT = 8000
+
+### Deploy
+- Click add buildpack and select python, save changes, and click node.js and save changes.
+- Go to the deploy section and click Github and 'Connect to Github'
+- Search for the Github repository name within the search bar.
+- Click search and then connect to link up the repository to Heroku.
+- You can setup automatic deploys or else you can manually deploy from branch (main) each time.
+- Click on deploy from branch (main) and the app will build.
+- Once complete click view to be taken to the deployed app.
+
+The site is now live and operational.
