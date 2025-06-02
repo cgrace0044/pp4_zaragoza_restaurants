@@ -23,12 +23,11 @@ class Restaurant(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     image = CloudinaryField("image", default="placeholder")
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(
-        User, related_name='restaurant_like', blank=True)
+    likes = models.ManyToManyField(User, related_name="restaurant_like", blank=True)
 
     def __str__(self):
         return f"{self.name} | written by {self.author}"
-    
+
     def number_of_likes(self):
         return self.likes.count()
 
