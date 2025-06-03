@@ -7,7 +7,7 @@ body {
     font-weight: 300;
     background-color: rgb(252, 247, 242);
 }
-    
+
 body {
     background-color: #F9FAFC;
 }
@@ -168,4 +168,34 @@ body {
 
 .approval {
     color: rgb(222, 146, 168);
+}
+
+/* Footer */
+body footer {
+    background-color: #b3e5fc;
+    color: #4a4a4a;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+body footer p {
+    font-size: 0.75rem;
+    margin: 0px;
+}
+
+body .footer span {
+    display: block;
+    margin-bottom: 20px;
+}
+
+body .footer i {
+    font-size: 1.5rem;
+    margin: 10px 5px;
+    color: #4a4a4a;
+    transition: color 0.3s;
+}
+
+body .footer i:hover {
+    color: #db006a;
 }
