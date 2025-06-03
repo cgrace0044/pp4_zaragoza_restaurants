@@ -10,7 +10,12 @@ class Home(generic.TemplateView):
     template_name = "index.html"
 
 
-class Browse_Restaurants(generic.ListView):
+class RestaurantList(generic.ListView):
+    """
+    Display a list of approved reviews
+
+    """
+    model = Restaurant
     queryset = Restaurant.objects.filter(status=1)
     template_name = "browse_restaurants.html"
-    paginate_by = 8
+    paginate_by = 6
