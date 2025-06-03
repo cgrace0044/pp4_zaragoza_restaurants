@@ -1,5 +1,6 @@
 
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -12,8 +13,7 @@
      <div class="col-sm-6 col-md-4 col-lg-3 px-1 d-flex align-items-stretch">
             <div class="card card-detail recipe-card mb-3 shadow-sm mx-auto mx-sm-2">
                 {% if "placeholder" in restaurant.image.url %}
-                <img src="{}"
-                    class="card-img-top" alt="placeholder image">
+                <img class="card-img-top" src="{% static 'images/pilar_zaragoza.webp' %}" alt="placeholder image">
                 {% else %}
                 <img src=" {{ restaurant.image.url }}" alt="restaurant image" class="card-img-top">
                 {% endif %}
