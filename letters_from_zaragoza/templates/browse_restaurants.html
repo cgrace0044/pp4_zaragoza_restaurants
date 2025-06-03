@@ -7,7 +7,8 @@
 <!-- browse_restaurants.html content starts here -->
 <!-- Call to action section -->
 
-<h1>Restaurants list</h1>
+<h1 class= "my-3 text-center">Best Restaurants in Zaragoza</h1>
+<hr class="home-break">
 <div class="row card-deck">
     {% for restaurant in object_list %}
      <div class="col-sm-6 col-md-4 col-lg-3 px-1 d-flex align-items-stretch">
@@ -19,12 +20,16 @@
                 {% endif %}
                 <div class="card-body pb-1">
                     <h2 class="card-title restaurant-detail-title text-truncate">{{ restaurant.title }}</h2>
-                    <p class="card-text">
+                    <p class="card-text-1">
                         <span>{{ restaurant.name }}</span>
+                    </p>
+                    <p class="card-text-2">
+                        <span>{{ restaurant.location }}</span>
                     </p>
                 </div>
     {% endfor %}
 </div>
+
 </section>
 <!-- browse_restaurants.html content ends here -->
 {% endblock %}
