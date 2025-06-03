@@ -19,7 +19,9 @@
                 <img src=" {{ restaurant.image.url }}" alt="restaurant image" class="card-img-top">
                 {% endif %}
                 <div class="card-body pb-1">
-                    <h2 class="card-title restaurant-detail-title text-truncate">{{ restaurant.title }}</h2>
+                    <a href="{% url 'restaurant_detail' restaurant.slug %}" class="stretched-link"
+                        aria-label="restaurant-detail">
+                    <h2 class="card-title restaurant-detail-title text-truncate">{{ restaurant.title }}</h2></a>
                     <p class="card-text-1">
                         <span>{{ restaurant.name }}</span>
                     </p>

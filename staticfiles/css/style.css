@@ -77,7 +77,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: white;
     color: white;
     position: relative;
 }
@@ -101,7 +101,7 @@ body {
     z-index: 100;
 }
 
-.post-link {
+.restaurant-link {
     text-decoration: none;
     color: #445261;
 }
@@ -111,14 +111,9 @@ body {
     color: #E84610;
 }
 
-.post-title {
+.restaurant-title {
     margin-top: 10%;
     margin-left: 5%;
-}
-
-.post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
 }
 
 .btn-signup,
