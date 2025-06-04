@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 col-md-4 text-center">
+            {% if "placeholder" in about.profile_image.url %}
+            <img src="{% static 'images/pilar_zaragoza' %}" class="profile-image" alt="{{ about.title }}">
+            {% else %}
+            <img src="{{ about.zaragoza_image.url }}" class="profile-image" alt="{{ about.title }}">
+            {% endif %}
+        </div>
+        <div class="col-12 col-md-8">
+            <h2>{{ about.title }}</h2>
+            {{ about.about_zaragoza | safe }}
+        </div>
+    </div>
+  
+</div>
+{% endblock content %}
