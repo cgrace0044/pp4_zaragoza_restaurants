@@ -6,3 +6,5 @@ node_modules/
 cloudinary_python.txt
 .venv
 .DS_Store
+.env.py.swp
+db.sqlite3
