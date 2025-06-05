@@ -75,6 +75,11 @@ The live link can be found here - [Letters from Zaragoza](https://letters-from-z
 ![Contact](docs/wireframes/contact_wireframe.webp)
 </details>
 
+## Data Model
+Please see the database schema created for the project below: 
+
+![Database](docs/readme_images/database_schema.webp)
+
 ## Deployment
 In order to deploy the app to Heroku the following steps were followed:
 ### Create the Heroku App:
