@@ -2,23 +2,33 @@
 {% load static %}
 
 {% block content %}
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-12 col-md-4 text-center">
-            {% if "placeholder" in about.profile_image.url %}
-            <img src="{% static 'images/pilar_zaragoza' %}" class="profile_image img-fluid" alt="{{ about.title }}">
-            {% else %}
-            <img src="{{ about.zaragoza_image.url }}" class="profile_image img-fluid" alt="{{ about.title }}">
-            {% endif %}
+<div class="container my-5">
+    <div class="row align-items-center">
+        <h2 class="my-3 text-center">{{ about.title }}</h2>
+        <hr class="home-break">
+        <!-- About Us and About Me -->
+        <div class="col-lg-6">
+            <div class="about-section">
+                    <h3>About Zaragoza</h3>
+                        {{ about.about_zaragoza | safe }}
+                    <h3>About Me</h3>
+                        {{ about.about_me | safe }}
+                </div>
         </div>
-        <div class="col-12 col-md-8">
-            <h2>{{ about.title }}</h2>
-            <h3>About Zaragoza</h3>
-            {{ about.about_zaragoza | safe }}
-            <h3>About Me</h3>
-            {{ about.about_me | safe }}
+
+<!-- Image Column with Framed Effect -->
+        <div class="col-lg-6 d-none d-md-block">
+            <div class="inner-column position-relative">
+                <div class="image">
+                    {% if "placeholder" in about.profile_image.url %}
+                        <img src="{% static 'images/pilar_zaragoza' %}" class="profile_image img-fluid" alt="{{ about.title }}">
+                    {% else %}
+                        <img src="{{ about.zaragoza_image.url }}" class="profile_image img-fluid" alt="{{ about.title }}">
+                    {% endif %}
+                        <div class="overlay-box"></div>
+                </div>
+            </div>
         </div>
     </div>
-  
-</div>
+
 {% endblock content %}
