@@ -202,10 +202,13 @@ div#map {
     min-height: 360px;
 }
 
-.about-section h3 {
-    margin: 10px;
+.about-section {
+    margin: 20px;
 }
 
+div.about-section {
+    margin: 20px;
+}
 
 
 
