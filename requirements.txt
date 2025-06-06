@@ -20,7 +20,7 @@ PyJWT==2.10.1
 python3-openid==3.2.0
 requests==2.32.3
 requests-oauthlib==2.0.0
-ruff==0.11.12
+ruff==0.11.11
 setuptools==80.8.0
 six==1.17.0
 sqlparse==0.5.3

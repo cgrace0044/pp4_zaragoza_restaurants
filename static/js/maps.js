@@ -1,28 +1,18 @@
-function initMap() {
-    
-    var map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 3,
-      center: { 
-        lat: 46.619261, 
-        lng: -33.134766 
-    },
-    });
-    
-    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var markers = locations.map(function(location, i){
-      return new google.maps.Marker({
-          position: location,
-          label: labels[i % labels.length]
-      });
-    });
-  
-    var markerCluster = new markerClusterer.MarkerClusterer({ map, markers });
-  }
-  
-  const locations = [
-    { lat: 40.785091, lng: -73.968285 },
-    { lat: 41.084045, lng: -73.874245 },
-    { lat: 40.754932, lng: -73.984016 },
-  ];
-  
-  initMap();
+let map;
+
+async function initMap() {
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+  const map = new Map(document.getElementById("map"), {
+    center: { lat: 41.6474, lng: -0.8861 },
+    zoom: 12,
+    mapId: "4504f8b37365c3d0",
+  });
+  const marker = new AdvancedMarkerElement({
+    map,
+    position: { lat: 41.6231, lng: -0.9324 },
+  });
+}
+
+initMap();
+

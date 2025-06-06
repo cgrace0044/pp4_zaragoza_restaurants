@@ -19,8 +19,6 @@ body {
     color: #4A4A4F;
 }
 
-#map {height: 100%;}
-
 .red-o {
     color: #E84610;
 }
@@ -196,5 +194,21 @@ body .footer i {
 body .footer i:hover {
     color: #db006a;
 }
+
+/*--------------------------------------------About*/
+
+/* Map */
+div#map {
+    min-height: 360px;
+}
+
+.about-section h3 {
+    margin: 10px;
+}
+
+
+
+
+
 
 
