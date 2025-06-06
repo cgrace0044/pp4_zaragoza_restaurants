@@ -28,9 +28,15 @@ def restaurant_detail(request, slug):
 
     queryset = Restaurant.objects.filter(status=1)
     restaurant = get_object_or_404(queryset, slug=slug)
+    comments = restaurant.comments.all().order_by("-created_on")
+    comment_count = restaurant.comments.filter(approved=True).count()
+
 
     return render(
         request,
         "restaurant_detail.html",
-        {"restaurant": restaurant},
+        {"restaurant": restaurant,
+        "comments": comments,
+        "comment_count": comment_count,
+        }
     )

@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&family=Open+Sans:wght@300;500&family=Playfair+Display:wght@600&display=swap');
 
+/*--------------------------------------------General Styles*/
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
@@ -10,6 +11,10 @@ body {
 
 body {
     background-color: #F9FAFC;
+}
+
+img {
+    border-radius: 20px;
 }
 
 .brand {
@@ -200,14 +205,16 @@ body .footer i:hover {
 /* Map */
 div#map {
     min-height: 360px;
-}
-
-.about-section {
-    margin: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
 }
 
 div.about-section {
     margin: 20px;
+}
+
+.about-zaragoza {
+    margin-bottom: 20px;
 }
 
 
