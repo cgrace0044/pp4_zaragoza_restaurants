@@ -12,6 +12,7 @@ class About(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     about_zaragoza = models.TextField()
     about_me = models.TextField()
+    email = models.EmailField()
 
     def __str__(self):
         return self.title
