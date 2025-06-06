@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&family=Open+Sans:wght@300;500&family=Playfair+Display:wght@600&display=swap');
 
+/*--------------------------------------------General Styles*/
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
@@ -12,14 +13,16 @@ body {
     background-color: #F9FAFC;
 }
 
+img {
+    border-radius: 20px;
+}
+
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: #4A4A4F;
 }
-
-#map {height: 100%;}
 
 .red-o {
     color: #E84610;
@@ -196,5 +199,26 @@ body .footer i {
 body .footer i:hover {
     color: #db006a;
 }
+
+/*--------------------------------------------About*/
+
+/* Map */
+div#map {
+    min-height: 360px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+div.about-section {
+    margin: 20px;
+}
+
+.about-zaragoza {
+    margin-bottom: 20px;
+}
+
+
+
+
 
 
