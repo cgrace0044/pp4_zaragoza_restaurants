@@ -5,34 +5,40 @@
 {% block content %}
 
 <!-- browse_restaurants.html content starts here -->
-<!-- Call to action section -->
 
-<h1 class= "my-3 text-center">Best Restaurants in Zaragoza</h1>
-<hr class="home-break">
-<div class="row card-deck">
-    {% for restaurant in object_list %}
-     <div class="col-sm-6 col-md-4 col-lg-3 px-1 d-flex align-items-stretch">
-            <div class="card card-detail recipe-card mb-3 shadow-sm mx-auto mx-sm-2">
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="page-title">Best Restaurants in Zaragoza</h1>
+        </div>
+    </div>
+    <hr class="home-break">
+    <br>
+    <!-- Restaurant Cards -->
+    <div class="row card-deck">
+        {% for restaurant in restaurant_list  %}
+        <div class="col-sm-6 col-md-4 col-lg-3 px-1 d-flex align-items-stretch">
+            <div class="card card-detail restaurant-card mb-3 shadow-sm mx-auto mx-sm-2">
                 {% if "placeholder" in restaurant.image.url %}
                 <img class="card-img-top" src="{% static 'images/pilar_zaragoza.webp' %}" alt="placeholder image">
                 {% else %}
                 <img src=" {{ restaurant.image.url }}" alt="restaurant image" class="card-img-top">
                 {% endif %}
                 <div class="card-body pb-1">
-                    <a href="{% url 'restaurant_detail' restaurant.slug %}" class="stretched-link"
-                        aria-label="restaurant-detail">
-                    <h2 class="card-title restaurant-detail-title text-truncate">{{ restaurant.title }}</h2></a>
-                    <p class="card-text-1">
+                    <h2 class="card-title restaurant-detail-title text-truncate">{{ restaurant.title }}</h2>
+                    <p class="card-text">
                         <span>{{ restaurant.name }}</span>
                     </p>
-                    <p class="card-text-2">
-                        <span>{{ restaurant.location }}</span>
-                    </p>
+                    <a href="{% url 'restaurant_detail' restaurant.slug %}" class="stretched-link"
+                        aria-label="restaurant-detail"></a>
                 </div>
-    {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 
-</section>
+
 <!-- browse_restaurants.html content ends here -->
 {% endblock %}
 

@@ -225,6 +225,10 @@ div.about-section {
     margin: auto;
 }
 
+.card-deck img {
+    border-radius: none;
+}
+
 .card:hover {
     box-shadow: 0px 0px 4px #D8B646 !important;
 }
@@ -238,7 +242,6 @@ div.about-section {
 
 .card-detail {
     border: none;
-    color: #886363;
 }
 
 .card-title {
@@ -256,3 +259,5 @@ div.about-section {
 .card-text-1 .card-text-2 {
     font-size: 15px;
 }
+
+
