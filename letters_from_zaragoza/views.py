@@ -18,6 +18,7 @@ class RestaurantList(generic.ListView):
     Display a list of approved reviews
 
     """
+
     model = Restaurant
     queryset = Restaurant.objects.filter(status=1)
     template_name = "browse_restaurants.html"
@@ -41,20 +42,19 @@ def restaurant_detail(request, slug):
             comment.restaurant = restaurant
             comment.save()
             messages.add_message(
-                request, messages.SUCCESS,
-                'Comment submitted and awaiting approval'
-    )
-    comment_form = CommentForm()    
-
+                request, messages.SUCCESS, "Comment submitted and awaiting approval"
+            )
+    comment_form = CommentForm()
 
     return render(
         request,
         "restaurant_detail.html",
-        {"restaurant": restaurant,
-        "comments": comments,
-        "comment_count": comment_count,
-        "comment_form": comment_form,
-        }
+        {
+            "restaurant": restaurant,
+            "comments": comments,
+            "comment_count": comment_count,
+            "comment_form": comment_form,
+        },
     )
 
 
@@ -63,7 +63,6 @@ def comment_edit(request, slug, comment_id):
     view to edit comments
     """
     if request.method == "POST":
-
         queryset = Restaurant.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comment = get_object_or_404(Comment, pk=comment_id)
@@ -74,11 +73,12 @@ def comment_edit(request, slug, comment_id):
             comment.post = post
             comment.approved = False
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+            messages.add_message(request, messages.SUCCESS, "Comment Updated!")
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(request, messages.ERROR, "Error updating comment!")
 
-    return HttpResponseRedirect(reverse('restaurant_detail', args=[slug]))
+    return HttpResponseRedirect(reverse("restaurant_detail", args=[slug]))
+
 
 def comment_delete(request, slug, comment_id):
     """
@@ -90,8 +90,10 @@ def comment_delete(request, slug, comment_id):
 
     if comment.author == request.user:
         comment.delete()
-        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+        messages.add_message(request, messages.SUCCESS, "Comment deleted!")
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR, "You can only delete your own comments!"
+        )
 
-    return HttpResponseRedirect(reverse('restaurant_detail', args=[slug]))
+    return HttpResponseRedirect(reverse("restaurant_detail", args=[slug]))

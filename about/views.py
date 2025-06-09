@@ -8,13 +8,14 @@ def about_me(request):
     """
     Renders the About page
     """
-    about = About.objects.all().order_by('-updated_on').first()
+    about = About.objects.all().order_by("-updated_on").first()
 
     return render(
         request,
         "about/about.html",
         {"about": about},
     )
+
 
 def contact_us(request):
     """
@@ -24,7 +25,11 @@ def contact_us(request):
         contact_form = ContactForm(data=request.POST)
         if contact_form.is_valid():
             contact_form.save()
-            messages.add_message(request, messages.SUCCESS, "Contact form has been submitted! I will respond to you as soon as possible.")
+            messages.add_message(
+                request,
+                messages.SUCCESS,
+                "Contact form has been submitted! I will respond to you as soon as possible.",
+            )
 
     contact_form = ContactForm()
 

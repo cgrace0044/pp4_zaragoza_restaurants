@@ -6,9 +6,10 @@ class About(models.Model):
     """
     Model for about text
     """
+
     title = models.CharField(max_length=200)
     location = models.CharField(max_length=200, unique=True)
-    zaragoza_image = CloudinaryField('image', default='placeholder')
+    zaragoza_image = CloudinaryField("image", default="placeholder")
     updated_on = models.DateTimeField(auto_now=True)
     about_zaragoza = models.TextField()
     about_me = models.TextField()
@@ -22,6 +23,7 @@ class Contact(models.Model):
     """
     Model for contacting us
     """
+
     name = models.CharField(max_length=200)
     email = models.EmailField()
     message = models.TextField()
