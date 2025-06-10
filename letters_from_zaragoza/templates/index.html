@@ -3,14 +3,25 @@
 {% block content %}
 
 <!-- index.html content starts here -->
-<!-- Call to action section -->
+<!-- Hero section -->
 <section class="hero">
     <div class="container px-2 py-3">
         <div class="row flex-md-row-reverse py-3 m-0">
             <div class="col-md-7 col-lg-5 p-0 pl-md-5 align-self-center">
-                <img src="static/images/pilar_zaragoza.webp"
-                    class="img-fluid" alt="pilar_zaragoza">
-            </div>
+                <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="static/images/pilar_zaragoza.webp" alt="pilar_zaragoza">
+                        </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="static/images/genterara.webp" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="static/images/pulpo.webp" alt="Third slide">
+                    </div>
+                </div>
+        </div>
+    </div>
         <div class="col-md-5 col-lg-7 hero-text-outer text-center">
                 <h1 class="mt-4 mb-2 hero-text">Welcome to Letters from Zaragoza</h1>
                     <p>Discover the best restaurants in Zaragoza, Spain</p>        
@@ -28,7 +39,7 @@
         <hr class="home-break">
     </div>
     <div class="container-fluid feature-image-outer">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-12 col-md-3 mb-2">
                 <div class="feature-image mb-2">
                     <a href="{% url 'browse_restaurants' %}"><i class="fas fa-utensils fa-5x"></i></a>

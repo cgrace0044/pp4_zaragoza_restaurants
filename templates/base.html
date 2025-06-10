@@ -30,7 +30,7 @@
     <title>Letters from Zaragoza</title>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <div class="content">
         <!-- Header starts -->
@@ -82,7 +82,7 @@
     </nav>
 
 <!-- displaying Django messages -->
-<div class="container">
+<div class="container django-msg">
   <div class="row">
     <div class="col-md-8 offset-md-2">
       {% for message in messages %}
@@ -111,7 +111,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 fixed-bottom text-center">
+    <footer class="footer mt-auto py-3 text-center">
         <h6>Follow our tasty Zaragoza journey</h6>
         <span>
             <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter page (opens in new tab)">

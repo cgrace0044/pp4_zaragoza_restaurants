@@ -24,10 +24,6 @@ img {
     text-align: center;
 }
 
-.django-msg {
-    background-color: #E8E4E2;
-}
-
 /* Buttons */
 .btn-signup,
 .btn-edit {
@@ -54,14 +50,34 @@ img {
 
 i {
     color: #B6BFB8;
+    align-items: center;
 }
 
 i:hover {
     color: #4E5424; 
 }
 
+.carousel-item img {
+  height: 350px; 
+  width: 100%;
+  object-fit: cover; 
+}
+
 .thin {
     font-weight: 300;
+}
+
+.feature-image {
+    text-align: center;
+}
+
+.feature-text {
+    text-align: center;
+    font-size: 17px;
+}
+
+.feature-title {
+    text-align: center;
 }
 
 .main-bg {
@@ -98,6 +114,12 @@ i:hover {
 .faded {
     color: rgb(172, 175, 175);
 }
+
+/*--------------------------------------------Restaurant Detail*/
+.masthead {
+    background-color: #E8E4E2;
+}
+
 
 /* Footer */
 body footer {
@@ -158,7 +180,7 @@ div.about-section {
 }
 
 .card:hover {
-    box-shadow: 0px 0px 4px #D8B646 !important;
+    box-shadow: 0px 0px 4px #4E5424 !important;
 }
 
 .card-img-top {
@@ -180,20 +202,16 @@ div.about-section {
     text-transform: capitalize
 }
 
-.draft {
-    color: red;
-}
-
 .card-text-1 .card-text-2 {
     font-size: 15px;
 }
 
-/* All auth templates */
+/*--------------------------------------------Allauth and Contact Templates*/
 
-.signup, .login {
+.signup, .login, .contact {
     background-color: #E8E4E2;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
     border-radius: 2%;
     border: 1px solid #9DA57E;
 }
@@ -202,19 +220,23 @@ div.about-section {
     display: none;
 }
 
-.signup input, .login input {
+.signup input, .login input, .contact input, .contact textarea {
     width: 90%;
     border: 1px solid #9DA57E;
     padding: 5px;
     margin: 5px 0 10px 0;
     background-color: #fff;
-} 
+}
 
-.signup label, .login label {
+.signup label, .login label, .contact label {
     display: block;
     text-align: center;
     color: #4E5424;
     font-weight: bold;
+}
+
+.contact div {
+    padding-left: 40px;
 }
 
 .login label[for="id_remember"] {
