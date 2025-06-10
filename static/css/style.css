@@ -17,10 +17,6 @@ img {
     border-radius: 20px;
 }
 
-i {
-    color: #B6BFB8; 
-}
-
 .page-title {
     padding-top: 5px;
     color: #4E5424;
@@ -28,7 +24,41 @@ i {
     text-align: center;
 }
 
+.django-msg {
+    background-color: #E8E4E2;
+}
+
+/* Buttons */
+.btn-signup,
+.btn-edit {
+    background-color: #4E5424;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #4E5424;
+}
+
+.btn-delete {
+    color: #fff;
+    background: #E84610;
+}
+
 /*--------------------------------------------Home Page*/
+
+.hero {
+    background-color: #E8E4E2;
+}
+
+i {
+    color: #B6BFB8;
+}
+
+i:hover {
+    color: #4E5424; 
+}
 
 .thin {
     font-weight: 300;
@@ -44,65 +74,14 @@ i {
     text-transform: uppercase;
 }
 
-.masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
-}
-
-.masthead-text {
-    background-color: white;
-    color: white;
-    position: relative;
-}
-
-.masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-}
-
 .restaurant-link {
     text-decoration: none;
     color: #4E5424;
 }
 
-.post-link:hover,
-.page-link {
-    color: #E84610;
-}
-
 .restaurant-title {
     margin-top: 10%;
     margin-left: 5%;
-}
-
-.btn-signup,
-.btn-edit {
-    background-color: #4E5424;
-    color: #fff;
-}
-
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff;
-    color: #4E5424;
 }
 
 .link {
@@ -114,11 +93,6 @@ i {
 .link:active {
     color: #445261;
     text-decoration: underline;
-}
-
-.btn-delete {
-    color: #fff;
-    background: #E84610;
 }
 
 .faded {
