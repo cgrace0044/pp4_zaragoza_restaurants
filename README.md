@@ -37,6 +37,21 @@ The live link can be found here - [Letters from Zaragoza](https://letters-from-z
 - As a site owner I can monitor contact requests via a database so that I can keep track of contact requests.
 - As a site owner I can mark each contact request as read once complete so that I can keep track of my progress.
 
+### Design
+When picking the colours for the website I researched a number of food blogs. I noticed that on the majority of these websites minimal colour was used. This allows the images of the food to really shine.  
+
+#### Colour Scheme
+Colour palette from Coolors
+
+![Colour Palette](docs/readme_images/coolers.webp)
+
+The colours I chose are quite neutral. I have predominently kept the backgrounds white or close to white and then I picked variations on greens and beiges.
+
+Great care was taken to establish a good contrast between background colours and text at all times to ensure maximum user accessibility. 
+
+#### Fonts
+The Montserrat font is the main font used for the body of the website with the Playfair Display font used for the main headings on the home page. These fonts were imported via Google Fonts. Sans Serif is the backup font, in case for any reason the main font isn't being imported into the site correctly.
+
 #### Wireframes
 
 <details>
