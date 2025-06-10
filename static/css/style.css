@@ -179,22 +179,20 @@ img {
 
 /* Footer */
 body footer {
+    border-top: 1px #D8B646 solid !important;
     background-color: #fff;
     color: #4a4a4a;
     text-align: center;
     padding: 40px 20px;
     margin-top: 20px;
-    position: relative;
 }
 
 body footer p {
     font-size: 0.75rem;
-    margin: 0px;
 }
 
 body .footer span {
     display: block;
-    margin-bottom: 20px;
 }
 
 body .footer i {
