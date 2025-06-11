@@ -17,7 +17,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
+        <div class="col card mb-4  mt-3 left top">
             <div class="card-body">
                 <!-- The review content goes inside the card-text. -->
                 <div class="card-text">
@@ -27,8 +27,6 @@
                         <p>€{{ restaurant.low_price_range | safe }} - €{{ restaurant.high_price_range | safe }}</p>
                 <h2>Description</h2>
                     {{ restaurant.description | safe }}
-                <h2>Opening Hours</h2>
-                    {{ restaurant.opening_hours | safe }}
                 </div>
             </div>
         </div>
