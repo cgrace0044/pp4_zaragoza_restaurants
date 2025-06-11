@@ -19,7 +19,6 @@ class Restaurant(models.Model):
     low_price_range = models.IntegerField(default=0)
     high_price_range = models.IntegerField(default=10)
     description = models.TextField()
-    opening_hours = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     image = CloudinaryField("image", default="placeholder")
     status = models.IntegerField(choices=STATUS, default=0)
