@@ -22,7 +22,7 @@ class RestaurantList(generic.ListView):
     model = Restaurant
     queryset = Restaurant.objects.filter(status=1)
     template_name = "browse_restaurants.html"
-    paginate_by = 6
+    paginate_by = 8
 
 
 def restaurant_detail(request, slug):
