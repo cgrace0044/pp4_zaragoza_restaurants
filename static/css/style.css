@@ -13,6 +13,10 @@ body {
     background-color: #F9FAFC;
 }
 
+.content {
+    min-height: calc(100vh - 90px);
+}
+
 img {
     border-radius: 20px;
 }
@@ -34,12 +38,21 @@ img {
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
-    color: #4E5424;
+    color: #9DA57E;
 }
 
 .btn-delete {
     color: #fff;
     background: #E84610;
+}
+
+.btn-outline-dark {
+    color: #4E5424;
+}
+
+.btn-outline-dark:hover {
+    background-color: #4E5424;
+    color: #fff;
 }
 
 /*--------------------------------------------Home Page*/
@@ -78,6 +91,10 @@ i:hover {
 
 .feature-title {
     text-align: center;
+}
+
+.main {
+    min-height: 100vh;
 }
 
 .main-bg {
@@ -128,7 +145,8 @@ body footer {
     color: rgb(252, 247, 242);;
     text-align: center;
     padding: 40px 20px;
-    margin-top: 20px;
+    margin-top: auto;
+    width: 100%;
 }
 
 body footer p {
@@ -215,21 +233,22 @@ div.about-section {
     box-shadow: 0px 0px 4px #4E5424 !important;
 }
 
-/*--------------------------------------------Allauth and Contact Templates*/
+/*--------------------------------------------Allauth Templates*/
 
-.signup, .login, .contact {
+.signup, .login {
     background-color: #E8E4E2;
     text-align: center;
     padding: 20px;
-    border-radius: 2%;
+    border-radius: 15px;
     border: 1px solid #9DA57E;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .signup li {
     display: none;
 }
 
-.signup input, .login input, .contact input, .contact textarea {
+.signup input, .login input {
     width: 90%;
     border: 1px solid #9DA57E;
     padding: 5px;
@@ -237,15 +256,10 @@ div.about-section {
     background-color: #fff;
 }
 
-.signup label, .login label, .contact label {
+.signup label, .login label {
     display: block;
-    text-align: center;
     color: #4E5424;
     font-weight: bold;
-}
-
-.contact div {
-    padding-left: 40px;
 }
 
 .login label[for="id_remember"] {
@@ -255,4 +269,25 @@ div.about-section {
 .login #id_remember {
     width: 20px;
     display: inline;
+}
+
+/*--------------------------------------------Contact Template*/
+.contact {
+    background-color: #E8E4E2;
+    padding: 20px;
+    border: 1px solid #9DA57E;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 2em;
+}
+
+.contact input, .contact textarea {
+    border: 1px solid #9DA57E;
+    background-color: #fff;
+}
+
+.contact label {
+    display: block;
+    color: #4E5424;
+    font-weight: bold;
 }

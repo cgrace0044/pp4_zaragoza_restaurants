@@ -25,11 +25,7 @@ def contact_us(request):
         contact_form = ContactForm(data=request.POST)
         if contact_form.is_valid():
             contact_form.save()
-            messages.add_message(
-                request,
-                messages.SUCCESS,
-                "Contact form has been submitted! I will respond to you as soon as possible.",
-            )
+            messages.success(request, "Your message was sent successfully.")
 
     contact_form = ContactForm()
 
