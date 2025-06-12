@@ -20,7 +20,7 @@ class RestaurantList(generic.ListView):
     """
 
     model = Restaurant
-    queryset = Restaurant.objects.filter(status=1)
+    queryset = Restaurant.objects.filter(status=1).order_by("-created_on")
     template_name = "browse_restaurants.html"
     paginate_by = 8
 
