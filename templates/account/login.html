@@ -12,6 +12,7 @@
             <hr class="home-break">
             <br>
             <h4 class ="text-center mt-3">Welcome to Letters from Zaragoza!</h4>
+            <p class ="text-center mt-3">To comment on restaurant reviews please log in</p>
             <p class ="text-center mt-3">{% blocktrans %} 
                 Don't have an account? <a class="link" href="{{ signup_url }}">Sign up</a>{% endblocktrans %}</p>
     <div class="row justify-content-center">
@@ -20,7 +21,7 @@
                 {% csrf_token %}
                 {{ form.as_p }}
                 {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
                 {% endif %}
                 <button class="btn btn-outline-dark" type="submit">{% trans "Sign In" %}</button>
             </form>

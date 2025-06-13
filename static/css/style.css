@@ -22,7 +22,7 @@ img {
 }
 
 .page-title {
-    padding-top: 5px;
+    padding-top: 30px;
     color: #4E5424;
     font-weight: 300;
     text-align: center;
@@ -59,6 +59,7 @@ img {
 
 .hero {
     background-color: #E8E4E2;
+    margin-bottom: 30px;
 }
 
 i {
@@ -91,10 +92,6 @@ i:hover {
 
 .feature-title {
     text-align: center;
-}
-
-.main {
-    min-height: 100vh;
 }
 
 .main-bg {
@@ -271,6 +268,12 @@ div.about-section {
     display: inline;
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+    -webkit-text-fill-color: #4E5424;
+    font-family: 'Montserrat', sans-serif;
+}
+
 /*--------------------------------------------Contact Template*/
 .contact {
     background-color: #E8E4E2;
@@ -278,7 +281,6 @@ div.about-section {
     border: 1px solid #9DA57E;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 0 2em;
 }
 
 .contact input, .contact textarea {

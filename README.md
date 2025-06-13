@@ -95,6 +95,30 @@ Please see the database schema created for the project below:
 
 ![Database](docs/readme_images/database_schema.webp)
 
+## Features
+
+### Header
+
+### Footer
+
+### Home Page
+
+### User Account Pages
+
+**Sign Up**
+
+![header](docs/readme_images/signup.webp)
+
+**Log In**
+
+![header](docs/readme_images/login.webp)
+
+**Log Out**
+
+![header](docs/readme_images/logout.webp)
+
+- Django allauth was installed and used to create the Sign up, Log in and Log out functionality. 
+
 ## Deployment
 In order to deploy the app to Heroku the following steps were followed:
 ### Create the Heroku App:
