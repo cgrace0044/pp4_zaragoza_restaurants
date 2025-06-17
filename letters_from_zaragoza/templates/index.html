@@ -2,35 +2,45 @@
 
 {% block content %}
 
-<!-- index.html content starts here -->
-<!-- Hero section -->
+<!-- Hero Section -->
 <section class="hero">
     <div class="container px-2 py-3">
         <div class="row flex-md-row-reverse py-3 m-0">
+            
+            <!-- Carousel Section -->
             <div class="col-md-7 col-lg-5 p-0 pl-md-5 align-self-center">
                 <div id="carousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
+                        <!-- Carousel Slide 1 -->
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="http://res.cloudinary.com/dovrntxy9/image/upload/v1749649139/lelrwxf2tlyyc192irds.webp" alt="cibus bakery cake">
                         </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="http://res.cloudinary.com/dovrntxy9/image/upload/v1749639860/qvzoyzicch0bpvguflaz.webp" alt="scallops">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="http://res.cloudinary.com/dovrntxy9/image/upload/v1749641109/naarx3cja5qqakzp7z08.webp" alt="pizza">
+                        <!-- Carousel Slide 2 -->
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="http://res.cloudinary.com/dovrntxy9/image/upload/v1749639860/qvzoyzicch0bpvguflaz.webp" alt="scallops">
+                        </div>
+                        <!-- Carousel Slide 3 -->
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="http://res.cloudinary.com/dovrntxy9/image/upload/v1749641109/naarx3cja5qqakzp7z08.webp" alt="pizza">
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Hero Text -->
+            <div class="col-md-5 col-lg-7 hero-text-outer text-center">
+                <h1 class="mt-4 mb-2 hero-text">Welcome to Letters from Zaragoza</h1>
+                <p>Discover the best restaurants in Zaragoza, Spain</p>        
+            </div>
+
         </div>
     </div>
-        <div class="col-md-5 col-lg-7 hero-text-outer text-center">
-                <h1 class="mt-4 mb-2 hero-text">Welcome to Letters from Zaragoza</h1>
-                    <p>Discover the best restaurants in Zaragoza, Spain</p>        
-        </div>
 </section>
 
-<!-- Features section -->
+<!-- Features Section -->
 <section class="container px-0">
     <div class="container">
+        <!-- Features Section Title -->
         <div class="row">
             <div class="col-12">
                 <h2 class="my-3 text-center">Get Started</h2>
@@ -39,11 +49,17 @@
         <hr class="home-break">
         <br>
     </div>
+
+    <!-- Feature Links -->
     <div class="container-fluid feature-image-outer">
         <div class="row justify-content-center">
+
+            <!-- Feature: Restaurants -->
             <div class="col-12 col-md-3 mb-2">
                 <div class="feature-image mb-2">
-                    <a href="{% url 'browse_restaurants' %}"><i class="fas fa-utensils fa-5x"></i></a>
+                    <a href="{% url 'browse_restaurants' %}">
+                        <i class="fas fa-utensils fa-5x"></i>
+                    </a>
                 </div>
                 <div>
                     <h3 class="feature-title">Restaurants</h3>
@@ -52,35 +68,48 @@
                     </p>
                 </div>
             </div>
+
+            <!-- Feature: Contact -->
             <div class="col-12 col-md-3 mb-2">
                 <div class="feature-image mb-2">
-                    <a href="{% url 'contact' %}"><i class="fa-solid fa-message fa-5x"></i></a>
+                    <a href="{% url 'contact' %}">
+                        <i class="fa-solid fa-message fa-5x"></i>
+                    </a>
                 </div>
                 <h3 class="feature-title">Contact</h3>
                 <p class="feature-text">
-                        Get in contact with us to collaborate
+                    Get in contact with us to collaborate
                 </p>
             </div>
+
+            <!-- Feature: About -->
             <div class="col-12 col-md-3 mb-2">
                 <div class="feature-image mb-2">
-                    <a href="{% url 'about' %}"><i class="fa-solid fa-address-card fa-5x"></i></a>
+                    <a href="{% url 'about' %}">
+                        <i class="fa-solid fa-address-card fa-5x"></i>
+                    </a>
                 </div>
                 <h3 class="feature-title">About</h3>
                 <p class="feature-text">
                     Learn more about us
                 </p>
             </div>
+
+            <!-- Feature: Login -->
             <div class="col-12 col-md-3 mb-2">
                 <div class="feature-image mb-2">
-                    <a href="{% url 'account_login' %}"><i class="fa-solid fa-right-to-bracket fa-5x"></i></a>
+                    <a href="{% url 'account_login' %}">
+                        <i class="fa-solid fa-right-to-bracket fa-5x"></i>
+                    </a>
                 </div>
                 <h3 class="feature-title">Login</h3>
                 <p class="feature-text">
                     Login to interact with us
                 </p>
             </div>
+
         </div>
     </div>
 </section>
-<!-- index.html content ends here -->
+
 {% endblock %}
