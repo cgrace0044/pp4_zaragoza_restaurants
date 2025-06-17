@@ -70,17 +70,22 @@
                         <!-- User authentication conditional menu items -->
                         {% if user.is_authenticated %}
                             <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="navbarDropdown">
-                                    <span><i class="fa-regular fa-user"></i> {{ user }}</span>
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-regular fa-user"></i> {{ user }}
                                 </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link {% if request.path == favourites_url %}active{% endif %}" aria-current="page"
-                                   href="{% url 'favourites' %}">Favourites</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                                   href="{% url 'account_logout' %}">Logout</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <a class="dropdown-item {% if request.path == favourites_url %}active{% endif %}" href="{% url 'favourites' %}">
+                                            Favourites
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <a class="dropdown-item" href="{% url 'account_logout' %}">
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>       
                             </li>
                         {% else %}
                             <li class="nav-item">
