@@ -94,8 +94,9 @@
                     Learn more about us
                 </p>
             </div>
-
-            <!-- Feature: Login -->
+        
+        {% if not user.is_authenticated %}
+            <!-- Feature: Login (only shown to anonymous users)-->
             <div class="col-12 col-md-3 mb-2">
                 <div class="feature-image mb-2">
                     <a href="{% url 'account_login' %}">
@@ -107,6 +108,7 @@
                     Login to interact with us
                 </p>
             </div>
+        {% endif %}
 
         </div>
     </div>
