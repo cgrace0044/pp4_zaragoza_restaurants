@@ -12,19 +12,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Letters From Zaragoza, Discover the best restaurants in Zaragoza">
     <meta name="keywords" content="Zaragoza, food, restaurants, Spain, Aragon">
     <meta name="author" content="Caroline Grace">
-    
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/x-icon" href="static/favicon/favicon.ico">
 
-    <!-- Bootstrap CSS -->
+    <!-- Favicon links to different devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon/favicon.ico' %}">
+
+    <!-- Bootstrap CSS from CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-    <!-- Custom CSS -->
+    <!-- Custom Style Sheet -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <title>Letters from Zaragoza</title>
@@ -33,97 +35,110 @@
 <body>
 
 <div class="content">
-        <!-- Header starts -->
-        <header>
-        <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}">Letters from Zaragoza</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == home_url %}active" aria-current="page{% endif %}"
-                            href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == browse_restaurants_url %}active" aria-current="page{% endif %}"
-                            href="{% url 'browse_restaurants' %}">Restaurants</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == about_url %}active" aria-current="page{% endif %}"
-                            href="{% url 'about' %}">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == contact_url %}active" aria-current="page{% endif %}"
-                            href="{% url 'contact' %}">Contact</a>
-                    </li>
-                    {% if user.is_authenticated %}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="navbarDropdown">
-                                    <span><i class="fa-regular fa-user "></i> {{ user }}</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == favourites_url %}active" aria-current="page{% endif %}"
-                            href="{% url 'favourites' %}">Favourites</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}"
-                            href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active" aria-current="page{% endif %}"
-                            href="{% url 'account_signup' %}">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}"
-                            href="{% url 'account_login' %}">Login</a>
-                    </li>
-                    {% endif %}
-                </ul>
+    <!-- Header section -->
+    <header>
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'home' %}">Letters from Zaragoza</a>
+                <!-- Hamburger button for mobile navigation -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <!-- Navigation links with active class toggle based on current path -->
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
+                               href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == browse_restaurants_url %}active{% endif %}" aria-current="page"
+                               href="{% url 'browse_restaurants' %}">Restaurants</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == about_url %}active{% endif %}" aria-current="page"
+                               href="{% url 'about' %}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == contact_url %}active{% endif %}" aria-current="page"
+                               href="{% url 'contact' %}">Contact</a>
+                        </li>
+
+                        <!-- User authentication conditional menu items -->
+                        {% if user.is_authenticated %}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" id="navbarDropdown">
+                                    <span><i class="fa-regular fa-user"></i> {{ user }}</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == favourites_url %}active{% endif %}" aria-current="page"
+                                   href="{% url 'favourites' %}">Favourites</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                                   href="{% url 'account_logout' %}">Logout</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                                   href="{% url 'account_signup' %}">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                                   href="{% url 'account_login' %}">Login</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-     <main class="flex-shrink-0 main-bg">
+    <!-- Main content area, to be overridden by child templates -->
+    <main class="flex-shrink-0 main-bg">
         {% block content %}
-        <!-- Content Goes here -->
+        <!-- Page specific content will go here -->
         {% endblock content %}
-
     </main>
 </div>
 
-    <!-- Footer -->
-    <footer class="footer mt-auto py-3 text-center">
-        <h6>Follow our tasty Zaragoza journey</h6>
-        <span>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter page (opens in new tab)">
-                <i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page (opens in new tab)">
-                <i class="fab fa-instagram-square ms-2"></i></a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page (opens in new tab)">
-                <i class="fab fa-facebook-square ms-2"></i></a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit out Youtube page (opens in new tab)">
-                <i class="fab fa-youtube-square ms-2"></i></a>
-        </span>
-    </footer>
+<!-- Footer section -->
+<footer class="footer mt-auto py-3 text-center">
+    <h6>Follow our tasty Zaragoza journey</h6>
+    <span>
+        <!-- Social media links with accessible labels and icons -->
+        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter page (opens in new tab)">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page (opens in new tab)">
+            <i class="fab fa-instagram-square ms-2"></i>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page (opens in new tab)">
+            <i class="fab fa-facebook-square ms-2"></i>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube page (opens in new tab)">
+            <i class="fab fa-youtube-square ms-2"></i>
+        </a>
+    </span>
+</footer>
 
-    <!-- Bootstrap script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-    </script>
-    <script src="https://kit.fontawesome.com/27e5dc9fca.js" crossorigin="anonymous"></script>
-    <script src="{% static 'js/script.js' %}"></script>
+<!-- Bootstrap JS bundle and FontAwesome icons scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+</script>
+<script src="https://kit.fontawesome.com/27e5dc9fca.js" crossorigin="anonymous"></script>
 
-    {% block extrajs %}
-    {% endblock extrajs %}
-    
-    
+<!-- Custom JSS Script -->
+<script src="{% static 'js/script.js' %}"></script>
+
+<!-- Block for additional JavaScript that child templates can extend -->
+{% block extrajs %}
+{% endblock extrajs %}
+
 </body>
 
 </html>
