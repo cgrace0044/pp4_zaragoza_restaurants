@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- favourite_list.html content starts here -->
+
+<!-- Page Title -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="page-title">My Favourites</h1>
+        </div>
+    </div>
+    <hr class="home-break">
+    <br>
+
+<div class="row card-deck">
+    {% for restaurant in favourites %}  
+    <div class="col-sm-6 col-md-4 col-lg-3 px-1 d-flex align-items-stretch">
+        <div class="card card-detail restaurant-card mb-3 shadow-sm mx-auto mx-sm-2">
+            {% if "placeholder" in restaurant.image.url %}
+            <img class="card-img-top" src="{% static 'images/pilar_zaragoza.webp' %}" alt="placeholder image">
+            {% else %}
+            <img src=" {{ restaurant.image.url }}" alt="restaurant image" class="card-img-top">
+            {% endif %}
+            <div class="card-body pb-1">
+                <h2 class="card-title restaurant-detail-title text-truncate">{{ restaurant.title }}</h2>
+                <p class="card-text">
+                    <span>{{ restaurant.name }}</span>
+                </p>
+                <a href="{% url 'restaurant_detail' restaurant.slug %}" class="stretched-link"
+                    aria-label="restaurant-detail"></a>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+<!-- Pagination -->
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&#8249;</a></li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link">&#8250;</a></li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+
+<!-- favourite_list.html content ends here -->
+{% endblock %}

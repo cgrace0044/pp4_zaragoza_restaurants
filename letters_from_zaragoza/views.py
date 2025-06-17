@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Restaurant, Comment
@@ -97,3 +98,34 @@ def comment_delete(request, slug, comment_id):
         )
 
     return HttpResponseRedirect(reverse("restaurant_detail", args=[slug]))
+
+
+@login_required
+def toggle_favourite(request, slug):
+    restaurant = get_object_or_404(Restaurant, slug=slug)
+
+    if request.user in restaurant.favourites.all():
+        restaurant.favourites.remove(request.user)
+    else:
+        restaurant.favourites.add(request.user)
+
+    return redirect(request.META.get("HTTP_REFERER") or "home")
+
+
+@login_required
+def favourite_list(request):
+    favourites = request.user.favourite.all()
+    return render(
+        request, "favourite_list.html", {"favourites": favourites})
+
+
+@login_required
+def toggle_like(request, slug):
+    restaurant = get_object_or_404(Restaurant, slug=slug)
+
+    if request.user in restaurant.likes.all():
+        restaurant.likes.remove(request.user)
+    else:
+        restaurant.likes.add(request.user)
+
+    return redirect("restaurant_detail", slug=restaurant.slug)

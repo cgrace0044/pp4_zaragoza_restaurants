@@ -68,6 +68,10 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link {% if request.path == favourites_url %}active" aria-current="page{% endif %}"
+                            href="{% url 'favourites' %}">Favourites</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}"
                             href="{% url 'account_logout' %}">Logout</a>
                     </li>
