@@ -33,7 +33,7 @@
                 {% endif %}
               </form>
             {% else %}
-              <a href="{% url 'account_login' %}" class="btn btn-green">Login to add to favourites</a>
+              <a href="{% url 'account_login' %}" class="btn btn-green">Login to Interact</a>
             {% endif %}
           </div>
 
@@ -51,10 +51,6 @@
                 </form>
                 <p>{{ restaurant.number_of_likes }} like{{ restaurant.number_of_likes|pluralize }}</p>
               </div>
-            {% else %}
-              <p>
-                <a href="{% url 'account_login' %}" class="btn btn-green">Login to like this post</a>
-              </p>
             {% endif %}
           </div>
 
