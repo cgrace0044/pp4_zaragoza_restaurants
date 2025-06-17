@@ -1,155 +1,159 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
 {% load crispy_forms_tags %}
 
+<!-- Hero Section -->
 <section class="masthead">
-    <div class="container px-2 py-3">
-        <div class="row flex-md-row-reverse py-3 m-0">
-            <div class="col-md-7 col-lg-5 p-0 pl-md-5 align-self-center">
-                <img src="{{ restaurant.image.url }}"
-                    class="img-fluid" alt="restaurant_image">
-            </div>
-        <div class="col-md-5 col-lg-7 hero-text-outer text-center">
-                <h1 class="mt-4 mb-2 hero-text">{{ restaurant.title }}</h1>
-                  <p>{{ restaurant.name }}</p>
-                  <hr class="home-break">
-                  <br>
-                 {% if user.is_authenticated %}
-                  <form action="{% url 'toggle_favourite' restaurant.slug %}" method="post">
-                    {% csrf_token %}
-                    {% if user in restaurant.favourites.all %}
-                      <button class="btn btn-outline-dark" type="submit">Remove from Favourites</button>
-                    {% else %}
-                      <button class="btn btn-outline-dark" type="submit">Add to Favourites</button>
-                    {% endif %}
-                  </form>
+  <div class="container px-2 py-3">
+    <div class="row flex-md-row-reverse py-3 m-0">
+      <!-- Restaurant Image -->
+      <div class="col-md-7 col-lg-5 p-0 pl-md-5 align-self-center">
+        <img src="{{ restaurant.image.url }}" class="img-fluid" alt="restaurant_image">
+      </div>
+
+      <!-- Restaurant Info and Actions -->
+      <div class="col-md-5 col-lg-7 hero-text-outer text-center">
+        <div class="hero-info">
+          <h1 class="mt-4 mb-2 hero-text">{{ restaurant.title }}</h1>
+          <p>{{ restaurant.name }}</p>
+          <hr class="home-break">
+          <br>
+
+          <!-- Favourite Button -->
+          <div class="favourite-wrapper">
+            {% if user.is_authenticated %}
+              <form action="{% url 'toggle_favourite' restaurant.slug %}" method="post">
+                {% csrf_token %}
+                {% if user in restaurant.favourites.all %}
+                  <button class="btn btn-outline-dark" type="submit">Remove from Favourites</button>
                 {% else %}
-                  <a href="{% url 'account_login' %}">Login to bookmark</a>
-                {% endif %} 
-                {% if user.is_authenticated %}
-                  <form action="{% url 'toggle_like' restaurant.slug %}" method="post">
-                    {% csrf_token %}
-                    {% if user in restaurant.likes.all %}
-                      <button type="submit"><i class="fa-solid fa-thumbs-down"></i></button>
-                    {% else %}
-                      <button type="submit"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
-                    {% endif %}
-                  </form>
-                  <p>{{ restaurant.number_of_likes }} like{{ restaurant.number_of_likes|pluralize }}</p>
-                {% else %}
-                  <p><a href="{% url 'account_login' %}">Login to like this post</a></p>
+                  <button class="btn btn-outline-dark" type="submit">Add to Favourites</button>
                 {% endif %}
+              </form>
+            {% else %}
+              <a href="{% url 'account_login' %}">Login to bookmark</a>
+            {% endif %}
+          </div>
+
+          <!-- Like Button -->
+          <div class="like-wrapper mt-3">
+            {% if user.is_authenticated %}
+              <form action="{% url 'toggle_like' restaurant.slug %}" method="post">
+                {% csrf_token %}
+                {% if user in restaurant.likes.all %}
+                  <button type="submit"><i class="fa-solid fa-thumbs-down"></i></button>
+                {% else %}
+                  <button type="submit"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+                {% endif %}
+              </form>
+              <p>{{ restaurant.number_of_likes }} like{{ restaurant.number_of_likes|pluralize }}</p>
+            {% else %}
+              <p><a href="{% url 'account_login' %}">Login to like this post</a></p>
+            {% endif %}
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- Restaurant Details Section -->
 <div class="container">
-    <div class="row">
-        <div class="col card mb-4  mt-3 left top">
-            <div class="card-body">
-                <!-- The review content goes inside the card-text. -->
-                <div class="card-text">
-                    <h2>Location</h2>
-                        <p>{{ restaurant.location | safe }}</p>
-                    <h2>Price Range</h2>
-                        <p>€{{ restaurant.low_price_range | safe }} - €{{ restaurant.high_price_range | safe }}</p>
-                <h2>Description</h2>
-                    {{ restaurant.description | safe }}
-                </div>
-            </div>
+  <div class="row">
+    <div class="col card mb-4 mt-3">
+      <div class="card-body">
+        <div class="card-text">
+          <h2>Location</h2>
+          <p>{{ restaurant.location | safe }}</p>
+          <h2>Price Range</h2>
+          <p>€{{ restaurant.low_price_range | safe }} - €{{ restaurant.high_price_range | safe }}</p>
+          <h2>Description</h2>
+          {{ restaurant.description | safe }}
         </div>
-        
+      </div>
     </div>
+  </div>
 
-<!-- Displaying count of comments -->
+  <!-- Comments Header -->
   <div class="row">
     <div class="col-12">
       <strong class="text-secondary">
         <i class="far fa-comments"></i> {{ comment_count }}
       </strong>
-    </div>
-    <div class="col-12">
       <hr>
     </div>
   </div>
-  
-  <!-- Displaying Comments -->
+
+  <!-- Comments Section -->
   <div class="row">
-    <div class="col-md-8 card mb-4  mt-3 ">
-      <h3>Comments:</h3>
+    <!-- Existing Comments -->
+    <div class="col-md-8 card mb-4 mt-3">
       <div class="card-body">
-        <!-- We want a for loop inside the empty control tags
-          to iterate through each comment in comments -->
+        <h3>Comments:</h3>
         {% for comment in comments %}
-        <div class="p-2 comments
-          {% if not comment.approved and comment.author == user %}
-          faded{% elif not comment.approved %} d-none{% endif %}">
-          <p class="font-weight-bold">
-            {{ comment.author }}
-            <span class="font-weight-normal">
-              {{ comment.created_on }}
-            </span> wrote:
-          </p>
-          <div id="comment{{ comment.id }}">
-            {{ comment.body | linebreaks }}
+          <div class="p-2 comments
+            {% if not comment.approved and comment.author == user %}
+              faded
+            {% elif not comment.approved %}
+              d-none
+            {% endif %}">
+            <p class="font-weight-bold">
+              {{ comment.author }}
+              <span class="font-weight-normal">
+                {{ comment.created_on }}
+              </span> wrote:
+            </p>
+            <div id="comment{{ comment.id }}">
+              {{ comment.body | linebreaks }}
+            </div>
+            {% if not comment.approved and comment.author == user %}
+              <p class="approval">This comment is awaiting approval</p>
+            {% endif %}
+            {% if user.is_authenticated and comment.author == user %}
+              <div class="comment-actions mt-2">
+                <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+                <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+              </div>
+            {% endif %}
           </div>
-          {% if not comment.approved and comment.author == user %}
-          <p class="approval">
-            This comment is awaiting approval
-          </p>
-          {% endif %}
-        {% if user.is_authenticated and comment.author == user %}
-        <button class="btn btn-delete"
-            comment_id="{{ comment.id }}">Delete</button>
-        <button class="btn btn-edit"
-            comment_id="{{ comment.id }}">Edit</button>
-        {% endif %}
-        </div>
-        <!-- Our for loop ends here -->
         {% endfor %}
       </div>
     </div>
 
-    <!-- Creating New Comments -->
+    <!-- Comment Form -->
     <div class="col-md-4 card mb-4 mt-3">
       <div class="card-body">
         {% if user.is_authenticated %}
-        <h3>Leave a comment:</h3>
-        <p>Posting as: {{ user.username }}</p>
-        <form id="commentForm" method="post"
-          style="margin-top: 1.3em;">
-          {{ comment_form | crispy }}
-          {% csrf_token %}
-          <button id="submitButton" type="submit"
-            class="btn btn-signup btn-lg">Submit</button>
-        </form>
+          <h3>Leave a comment:</h3>
+          <p>Posting as: {{ user.username }}</p>
+          <form id="commentForm" method="post" style="margin-top: 1.3em;">
+            {{ comment_form | crispy }}
+            {% csrf_token %}
+            <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+          </form>
         {% else %}
-        <p>Log in to leave a comment</p>
+          <p>Log in to leave a comment</p>
         {% endif %}
       </div>
     </div>
   </div>
 </div>
 
-<!-- Delete confirmation modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1"
-  aria-labelledby="deleteModalLabel" aria-hidden="true">
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title"
-          id="deleteModalLabel">Delete comment?</h5>
-        <button type="button" class="btn-close"
-          data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Are you sure you want to delete your comment?
-        This action cannot be undone.
+        Are you sure you want to delete your comment? This action cannot be undone.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary"
-          data-bs-dismiss="modal">Close</button>
-        <a id="deleteConfirm" href="#" class="btn
-          btn-danger">Delete</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
       </div>
     </div>
   </div>
