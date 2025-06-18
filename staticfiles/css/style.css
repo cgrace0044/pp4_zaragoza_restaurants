@@ -1,6 +1,6 @@
 /* Google Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&family=Open+Sans:wght@300;500&family=Playfair+Display:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&family=Imperial+Script&family=Open+Sans:wght@300;500&display=swap');
 
 /*--------------------------------------------General Styles*/
 body {
@@ -13,57 +13,111 @@ body {
     background-color: #F9FAFC;
 }
 
+.content {
+    min-height: calc(100vh - 90px);
+}
+
 img {
     border-radius: 20px;
 }
 
-.brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
+.page-title {
+    padding-top: 30px;
+    color: #4E5424;
+    font-weight: 300;
+    text-align: center;
 }
 
-.red-o {
-    color: #E84610;
+/* Buttons */
+.btn-signup,
+.btn-edit {
+    background-color: #4E5424;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #9DA57E;
+}
+
+.btn-delete {
+    color: #fff;
+    background: #E84610;
+}
+
+.btn-outline-dark {
+    color: #4E5424;
+}
+
+.btn-outline-dark:hover {
+    background-color: #4E5424;
+    color: #fff;
+}
+
+.btn-green {
+    background-color: #4E5424;
+    color: #fff;
+}
+
+.btn-green:hover {
+    box-shadow: 0px 0px 4px #fff !important;
+}
+
+/*--------------------------------------------Home Page*/
+
+/* Navbar */
+.dropdown-menu .dropdown-item {
+    padding: 0.5rem 1rem;  
+    font-size: 1rem;       
+    border: none;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+    background-color: #e9ecef; 
+    color: #000;
+}
+
+.hero {
+    background-color: #E8E4E2;
+    margin-bottom: 30px;
+}
+
+i {
+    color: #B6BFB8;
+    align-items: center;
+}
+
+i:hover {
+    color: #4E5424; 
+}
+
+.carousel-item img {
+  height: 350px; 
+  width: 100%;
+  object-fit: cover; 
 }
 
 .thin {
     font-weight: 300;
 }
 
-.light-bg {
-    background-color: #fff;
+.feature-image {
+    text-align: center;
 }
 
-.dark-bg {
-    background-color: #445261;
+.feature-text {
+    text-align: center;
+    font-size: 17px;
+}
+
+.feature-title {
+    text-align: center;
 }
 
 .main-bg {
     background-color: #F9FAFC;
-}
-
-.card {
-    border: none;
-    background-color: transparent;
-}
-
-.image-container {
-    position: relative;
-}
-
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #188181;
-}
-
-.scale {
-    width: 100%;
-    height: auto;
 }
 
 .author {
@@ -72,48 +126,9 @@ img {
     text-transform: uppercase;
 }
 
-.masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
-}
-
-.masthead-text {
-    background-color: white;
-    color: white;
-    position: relative;
-}
-
-.masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-}
-
 .restaurant-link {
     text-decoration: none;
-    color: #445261;
-}
-
-.post-link:hover,
-.page-link {
-    color: #E84610;
+    color: #4E5424;
 }
 
 .restaurant-title {
@@ -121,20 +136,8 @@ img {
     margin-left: 5%;
 }
 
-.btn-signup,
-.btn-edit {
-    background-color: #188181;
-    color: #fff;
-}
-
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
-}
-
 .link {
-    color: #23BBBB;
+    color: #9Da57E;
     text-decoration: none;
 }
 
@@ -144,60 +147,83 @@ img {
     text-decoration: underline;
 }
 
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
-
-.btn-delete {
-    color: #fff;
-    background: #E84610;
-}
-
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
-}
-
 .faded {
     color: rgb(172, 175, 175);
 }
 
-.approval {
-    color: rgb(222, 146, 168);
+/*--------------------------------------------Restaurant Detail*/
+.masthead {
+    background-color: #E8E4E2;
+}
+
+/* Likes */
+.like-wrapper {
+  margin-top: 1rem; 
+}
+
+.like-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* space between button and like count */
+}
+
+.like-action form {
+  margin: 0; /* remove default margin */
+}
+
+.like-action button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.like-action button i {
+  color: #4E5424;
+  font-size: 1.2rem;
+}
+
+.like-action i:hover {
+  background: white;
+}
+
+.like-action p {
+  margin: 0;
+}
+
+.restaurant-name {
+    font-family: 'Imperial Script';
+    font-size: 3rem;
 }
 
 /* Footer */
-body footer {
-    background-color: #b3e5fc;
-    color: #4a4a4a;
+.footer {
+    background-color: #4E5424;
+    color: rgb(252, 247, 242);;
     text-align: center;
     padding: 40px 20px;
-    margin-top: 20px;
+    margin-top: auto;
+    width: 100%;
 }
 
-body footer p {
+footer p {
     font-size: 0.75rem;
-    margin: 0px;
 }
 
-body .footer span {
+.footer span {
     display: block;
-    margin-bottom: 20px;
 }
 
-body .footer i {
+.footer i {
     font-size: 1.5rem;
     margin: 10px 5px;
-    color: #4a4a4a;
+    color: #fff;
     transition: color 0.3s;
 }
 
-body .footer i:hover {
-    color: #db006a;
+.footer i:hover {
+    color: #142a2b;
 }
 
 /*--------------------------------------------About*/
@@ -217,8 +243,132 @@ div.about-section {
     margin-bottom: 20px;
 }
 
+/*--------------------------------------------Browse Restaurants*/
 
+/* Restaurant Cards */
 
+.card-deck {
+    margin: auto;
+}
 
+.card-deck img {
+    border-radius: none;
+}
 
+.card:hover {
+    box-shadow: 0px 0px 4px #4E5424 !important;
+}
 
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    min-height: 250px;
+}
+
+.card-detail {
+    border: none;
+}
+
+.card-title {
+    font-size: 20px;
+}
+
+.card-title:first-letter{
+    text-transform: capitalize
+}
+
+.card-text-1 .card-text-2 {
+    font-size: 15px;
+}
+
+.restaurant-description {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+/* Pagination */
+.page-link {
+    color: #4E5424;
+}
+
+.page-link:hover {
+    box-shadow: 0px 0px 4px #4E5424 !important;
+}
+
+/*--------------------------------------------Allauth Templates*/
+
+.signup, .login {
+    background-color: #E8E4E2;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #9DA57E;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signup li {
+    display: none;
+}
+
+.signup input, .login input {
+    width: 90%;
+    border: 1px solid #9DA57E;
+    padding: 5px;
+    margin: 5px 0 10px 0;
+    background-color: #fff;
+}
+
+.signup label, .login label {
+    display: block;
+    color: #4E5424;
+    font-weight: bold;
+}
+
+.login label[for="id_remember"] {
+    display: inline;
+}
+
+.login #id_remember {
+    width: 20px;
+    display: inline;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+    -webkit-text-fill-color: #4E5424;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*--------------------------------------------Contact Template*/
+.contact {
+    background-color: #E8E4E2;
+    padding: 20px;
+    border: 1px solid #9DA57E;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact input, .contact textarea {
+    border: 1px solid #9DA57E;
+    background-color: #fff;
+}
+
+.contact label {
+    display: block;
+    color: #4E5424;
+    font-weight: bold;
+}
+
+.cover-text {
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(241, 109, 107, .7);
+    font-size: 130%;
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
+}
