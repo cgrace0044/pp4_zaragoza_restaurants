@@ -4,59 +4,67 @@
 {% block content %}
 <div class="container my-5">
     <div class="row align-items-center">
+        <!-- Page Title -->
         <h1 class="my-3 text-center page-title">{{ about.title }}</h1>
         <hr class="home-break">
-        <!-- About Zaragoza and About Me -->
+
+        <!-- About Section (Left Column) -->
         <div class="col-lg-6">
             <div class="about-section">
+                <!-- About Zaragoza Subsection -->
                 <div class="about-zaragoza"> 
-                <h3>About Zaragoza</h3>
-                        <hr class="home-break">
-                        {{ about.about_zaragoza | safe }}
+                    <h3>About Zaragoza</h3>
+                    <hr class="home-break">
+                    {{ about.about_zaragoza|safe }}
                 </div>
-                <div class="about-me"> 
+
+                <!-- About Me Subsection -->
+                <div class="about-me">
                     <h3>About Me</h3>
-                        <hr class="home-break">
-                        {{ about.about_me | safe }}
+                    <hr class="home-break">
+                    {{ about.about_me|safe }}
                 </div>
             </div>
         </div>
 
-<!-- Image Column  -->
+        <!-- Image Section (Right Column) -->
         <div class="col-lg-6 d-md-block">
             <div class="img-fluid">
                 <div class="image">
                     {% if "placeholder" in about.profile_image.url %}
+                        <!-- Use default static image if placeholder is detected -->
                         <img src="{% static 'images/pilar_zaragoza' %}" class="profile_image img-fluid" alt="{{ about.title }}">
                     {% else %}
+                        <!-- Use uploaded Zaragoza image -->
                         <img src="{{ about.zaragoza_image.url }}" class="profile_image img-fluid" alt="{{ about.title }}">
                     {% endif %}
-                        <div class="overlay-box"></div>
+                    <div class="overlay-box"></div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Map and Contact Section -->
     <div class="row align-items-center my-5">
-    
-    <!-- Google Maps Embed Column -->
-    <div class="col-lg-6">
-        <div id="map"></div>
-    </div>
+        <!-- Google Map Embed -->
+        <div class="col-lg-6">
+            <div class="ratio ratio-16x9 rounded shadow-sm overflow-hidden">
+                <div id="map"></div>
+            </div>
+        </div>
 
-    <!-- Location and Contact Column -->
-    <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center text-center custom-size">
-        <h2 class="mb-3 fw-bolder">Our Location</h2>
-        <p>{{ about.location | safe }}</p>
+        <!-- Location and Contact Info -->
+        <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center text-center custom-size">
+            <h2 class="mb-3 fw-bolder">Our Location</h2>
+            <p>{{ about.location|safe }}</p>
 
-        <h2 class="mt-4 fw-bolder">Contact Us</h2>
-        <p>If you have any questions feel free to contact:</p>
+            <h2 class="mt-4 fw-bolder">Contact Us</h2>
+            <p>If you have any questions, feel free to contact us:</p>
             <p>Email: <a href="mailto:{{ about.email }}">{{ about.email }}</a></p>
+        </div>
     </div>
 </div>
-</div>
-
-{% endblock content %}
+{% endblock content %}  
 
 
 {% block extrajs %}
