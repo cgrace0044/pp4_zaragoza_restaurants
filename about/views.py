@@ -21,16 +21,22 @@ def contact_us(request):
     """
     Renders the Contact Form page
     """
+    success_message = None
+
     if request.method == "POST":
         contact_form = ContactForm(data=request.POST)
         if contact_form.is_valid():
             contact_form.save()
-            messages.success(request, "Your message was sent successfully.")
-
-    contact_form = ContactForm()
+            success_message = "Your message was sent successfully."
+            contact_form = ContactForm()  # reset form after success
+    else:
+        contact_form = ContactForm()
 
     return render(
         request,
         "about/contact.html",
-        {"contact_form": contact_form},
+        {
+            "contact_form": contact_form,
+            "success_message": success_message,
+        },
     )
