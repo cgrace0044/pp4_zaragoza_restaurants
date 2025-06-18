@@ -17,7 +17,7 @@
       <div class="col-md-5 col-lg-7 hero-text-outer text-center">
         <div class="hero-info">
           <h1 class="mt-4 mb-2 hero-text">{{ restaurant.title }}</h1>
-          <p>{{ restaurant.name }}</p>
+          <p class="restaurant-name">{{ restaurant.name }}</p>
           <hr class="home-break">
           <br>
 
@@ -67,12 +67,29 @@
     <div class="col card mb-4 mt-3">
       <div class="card-body">
         <div class="card-text">
-          <h2>Location</h2>
-          <p>{{ restaurant.location | safe }}</p>
-          <h2>Price Range</h2>
-          <p>€{{ restaurant.low_price_range | safe }} - €{{ restaurant.high_price_range | safe }}</p>
-          <h2>Description</h2>
-          {{ restaurant.description | safe }}
+
+          <!-- Location and Price Range Row -->
+          <div class="row">
+            <div class="col-6">
+              <h3>Location</h3>
+              <hr class="home-break">
+              <p>{{ restaurant.location | safe }}</p>
+            </div>
+            <div class="col-6">
+              <h3>Price Range</h3>
+              <hr class="home-break">
+              <p>€{{ restaurant.low_price_range | safe }} - €{{ restaurant.high_price_range | safe }}</p>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Description Section -->
+          <h3>Description</h3>
+          <hr class="home-break">
+          <p class="card-text">{{ restaurant.description | safe }}</p>
+          <br>
+
         </div>
       </div>
     </div>
@@ -90,10 +107,26 @@
 
   <!-- Comments Section -->
   <div class="row">
-    <!-- Existing Comments -->
-    <div class="col-md-8 card mb-4 mt-3">
+    <!-- Comment Form -->
+    <div class="col-12">
       <div class="card-body">
-        <h3>Comments:</h3>
+        {% if user.is_authenticated %}
+          <h4>Leave a comment:</h4>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#commentModal">
+            Write a Comment
+          </button>
+        {% else %}
+          <p>Log in to leave a comment</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+    <!-- Existing Comments -->
+    <div class="col-12">
+      <div class="card-body">
+        <h4>Comments:</h4>
         {% for comment in comments %}
           <div class="p-2 comments
             {% if not comment.approved and comment.author == user %}
@@ -123,25 +156,30 @@
         {% endfor %}
       </div>
     </div>
+</div>
+</div>
 
-    <!-- Comment Form -->
-    <div class="col-md-4 card mb-4 mt-3">
-      <div class="card-body">
-        {% if user.is_authenticated %}
-          <h3>Leave a comment:</h3>
-          <p>Posting as: {{ user.username }}</p>
-          <form id="commentForm" method="post" style="margin-top: 1.3em;">
-            {{ comment_form | crispy }}
-            {% csrf_token %}
-            <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-          </form>
-        {% else %}
-          <p>Log in to leave a comment</p>
-        {% endif %}
-      </div>
+<!-- Comment Form Modal -->
+<div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="commentForm" method="post">
+        {% csrf_token %}
+        <div class="modal-header">
+          <h5 class="page-title">Leave a comment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          {{ comment_form | crispy }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-green" data-bs-dismiss="modal">Close</button>
+          <button id="submitButton" type="submit" class="btn btn-green">Submit</button>
+        </div>
+      </form>
     </div>
   </div>
-</div>
+</div>  
 
 <!-- Delete Confirmation Modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">

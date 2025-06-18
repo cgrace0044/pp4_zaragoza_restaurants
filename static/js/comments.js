@@ -3,6 +3,7 @@ const commentText = document.getElementById("id_body");
 const commentForm = document.getElementById("commentForm");
 const submitButton = document.getElementById("submitButton");
 
+const commentModal = new bootstrap.Modal(document.getElementById("commentModal"));
 const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const deleteButtons = document.getElementsByClassName("btn-delete");
 const deleteConfirm = document.getElementById("deleteConfirm");
@@ -24,6 +25,7 @@ for (let button of editButtons) {
     commentText.value = commentContent;
     submitButton.innerText = "Update";
     commentForm.setAttribute("action", `edit_comment/${commentId}`);
+    commentModal.show();
   });
 }
 
