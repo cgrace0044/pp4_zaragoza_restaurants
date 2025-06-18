@@ -13,7 +13,7 @@
         <img src="{{ restaurant.image.url }}" class="img-fluid" alt="restaurant_image">
       </div>
 
-      <!-- Restaurant Info and Actions -->
+      <!-- Restaurant Info and Action Buttons -->
       <div class="col-md-5 col-lg-7 hero-text-outer text-center">
         <div class="hero-info">
           <h1 class="mt-4 mb-2 hero-text">{{ restaurant.title }}</h1>
@@ -21,7 +21,7 @@
           <hr class="home-break">
           <br>
 
-          <!-- Favourite Button -->
+          <!-- Favourite Toggle -->
           <div class="favourite-wrapper">
             {% if user.is_authenticated %}
               <form action="{% url 'toggle_favourite' restaurant.slug %}" method="post">
@@ -43,11 +43,9 @@
               <div class="like-action">
                 <form action="{% url 'toggle_like' restaurant.slug %}" method="post">
                   {% csrf_token %}
-                  {% if user in restaurant.likes.all %}
-                    <button type="submit"><i class="fa fa-thumbs-up"></i></button>
-                  {% else %}
-                    <button type="submit"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
-                  {% endif %}
+                  <button type="submit">
+                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                  </button>
                 </form>
                 <p>{{ restaurant.number_of_likes }} like{{ restaurant.number_of_likes|pluralize }}</p>
               </div>
@@ -68,7 +66,7 @@
       <div class="card-body">
         <div class="card-text">
 
-          <!-- Location and Price Range Row -->
+          <!-- Location and Price Range -->
           <div class="row">
             <div class="col-6">
               <h3>Location</h3>
@@ -84,7 +82,7 @@
 
           <br>
 
-          <!-- Description Section -->
+          <!-- Description -->
           <h3>Description</h3>
           <hr class="home-break">
           <p class="card-text">{{ restaurant.description | safe }}</p>
@@ -107,12 +105,12 @@
 
   <!-- Comments Section -->
   <div class="row">
-    <!-- Comment Form -->
+
+    <!-- Comment Form (Trigger Modal) -->
     <div class="col-12">
       <div class="card-body">
         {% if user.is_authenticated %}
           <h4>Leave a comment:</h4>
-          <!-- Button trigger modal -->
           <button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#commentModal">
             Write a Comment
           </button>
@@ -121,45 +119,50 @@
         {% endif %}
       </div>
     </div>
-  </div>
 
-    <!-- Existing Comments -->
+    <!-- List of Comments -->
     <div class="col-12">
       <div class="card-body">
         <h4>Comments:</h4>
         {% for comment in comments %}
           <div class="p-2 comments
-            {% if not comment.approved and comment.author == user %}
-              faded
-            {% elif not comment.approved %}
-              d-none
+            {% if not comment.approved and comment.author == user %} faded
+            {% elif not comment.approved %} d-none
             {% endif %}">
+            
+            <!-- Comment Author and Date -->
             <p class="font-weight-bold">
               {{ comment.author }}
-              <span class="font-weight-normal">
-                {{ comment.created_on }}
-              </span> wrote:
+              <span class="font-weight-normal">{{ comment.created_on }}</span> wrote:
             </p>
+
+            <!-- Comment Body -->
             <div id="comment{{ comment.id }}">
               {{ comment.body | linebreaks }}
             </div>
+
+            <!-- Approval Notice -->
             {% if not comment.approved and comment.author == user %}
               <p class="approval">This comment is awaiting approval</p>
             {% endif %}
+
+            <!-- Comment Actions -->
             {% if user.is_authenticated and comment.author == user %}
               <div class="comment-actions mt-2">
                 <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
                 <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
               </div>
             {% endif %}
+
           </div>
         {% endfor %}
       </div>
     </div>
-</div>
+
+  </div>
 </div>
 
-<!-- Comment Form Modal -->
+<!-- Comment Modal Form -->
 <div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -179,7 +182,7 @@
       </form>
     </div>
   </div>
-</div>  
+</div>
 
 <!-- Delete Confirmation Modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
