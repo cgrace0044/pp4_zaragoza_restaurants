@@ -47,7 +47,6 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarText">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <!-- Navigation links with active class toggle based on current path -->
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
                                href="{{ home_url }}">Home</a>
@@ -65,7 +64,6 @@
                                href="{% url 'contact' %}">Contact</a>
                         </li>
 
-                        <!-- User authentication conditional menu items -->
                         {% if user.is_authenticated %}
                             <li class="nav-item dropdown navbar-nav me-auto mb-2 mb-lg-0">
                                 <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button"
@@ -99,30 +97,21 @@
         </nav>
     </header>
 
-<!-- Code to display Django messages -->
-{% if messages %}
-  <div class="container mt-4">
-    {% for message in messages %}
-    <!-- Loop through all messages and display each message as a Bootstrap alert -->
-      <div class="alert alert-{{ message.tags }} alert-dismissible fade show text-center" role="alert">
-        {{ message }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <!-- Code to display Django messages -->
+    {% if messages %}
+      <div class="container mt-4" id="django-messages">
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }} alert-dismissible fade show text-center" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endfor %}
       </div>
-    {% endfor %}
-  </div>
-
-  <!-- JavaScript to redirect the user to the previous page in browser history -->
-  <script>
-    setTimeout(() => {
-      history.back();
-    }, 2000);
-  </script>
-{% endif %}
+    {% endif %}
 
     <!-- Main content area, to be overridden by child templates -->
     <main class="flex-shrink-0 main-bg">
         {% block content %}
-        <!-- Page specific content will go here -->
         {% endblock content %}
     </main>
 </div>
@@ -131,7 +120,6 @@
 <footer class="footer mt-auto py-3 text-center">
     <h6>Follow our tasty Zaragoza journey</h6>
     <span>
-        <!-- Social media links with accessible labels and icons -->
         <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"
            aria-label="Visit our Twitter page (opens in new tab)">
             <i class="fa-brands fa-x-twitter"></i></a>
@@ -153,7 +141,7 @@
         crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/27e5dc9fca.js" crossorigin="anonymous"></script>
 
-<!-- Custom JSS Script -->
+<!-- Custom JS Script -->
 <script src="{% static 'js/script.js' %}"></script>
 
 <!-- Block for additional JavaScript that child templates can extend -->
