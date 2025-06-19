@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
@@ -98,87 +99,75 @@
 </div>
 
   <!-- Comments Header -->
-  <div class="row">
-    <div class="col-12">
+ <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
       <strong class="text-secondary">
         <i class="far fa-comments"></i> {{ comment_count }}
       </strong>
       <hr>
     </div>
   </div>
+</div>
 
   <!-- Comments Section -->
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-10">
-
-      <div class="card mb-4 mt-3 shadow-lg border-0 p-4">
-        <!-- Comments Header -->
-        <div class="row">
-          <div class="col-12">
-            <strong class="text-secondary">
-              <i class="far fa-comments"></i> {{ comment_count }}
-            </strong>
-            <hr>
-          </div>
-        </div>
-
-        <!-- Comment Form (Trigger Modal) -->
-        <div class="row">
-          <div class="col-12">
-            {% if user.is_authenticated %}
-              <h4>Leave a comment:</h4>
-              <button type="button" class="btn btn-green mb-3" data-bs-toggle="modal" data-bs-target="#commentModal">
-                Write a Comment
-              </button>
-            {% else %}
-              <p>Log in to leave a comment</p>
-            {% endif %}
-          </div>
-        </div>
-
-        <!-- List of Comments -->
-        <div class="row">
-          <div class="col-12">
-            <h4>Comments:</h4>
-            {% for comment in comments %}
-              <div class="p-2 mb-3 border rounded comments
-                {% if not comment.approved and comment.author == user %} faded
-                {% elif not comment.approved %} d-none
-                {% endif %}">
-                
-                <!-- Comment Author and Date -->
-                <p class="font-weight-bold mb-1">
-                  {{ comment.author }}
-                  <span class="font-weight-normal">{{ comment.created_on }}</span> wrote:
-                </p>
-
-                <!-- Comment Body -->
-                <div id="comment{{ comment.id }}" class="mb-2">
-                  {{ comment.body | linebreaks }}
-                </div>
-
-                <!-- Approval Notice -->
-                {% if not comment.approved and comment.author == user %}
-                  <p class="approval text-muted">This comment is awaiting approval</p>
-                {% endif %}
-
-                <!-- Comment Actions -->
-                {% if user.is_authenticated and comment.author == user %}
-                  <div class="comment-actions mt-2">
-                    <button class="btn btn-delete btn-sm" comment_id="{{ comment.id }}">Delete</button>
-                    <button class="btn btn-edit btn-sm" comment_id="{{ comment.id }}">Edit</button>
-                  </div>
-                {% endif %}
-              </div>
-            {% endfor %}
-          </div>
-        </div>
+    <!-- Make a Comment Card -->
+    <div class="col-md-10 card mb-4 shadow-lg border-0 p-4">
+      <div class="card-body">
+        {% if user.is_authenticated %}
+          <h4>Leave a comment:</h4>
+          <button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#commentModal">
+            Write a Comment
+          </button>
+        {% else %}
+          <p>Log in to leave a comment</p>
+        {% endif %}
       </div>
+    </div>
 
+    <!-- List of Comments Card -->
+    <div class="col-md-10 card mb-4 shadow-lg border-0 p-4">
+      <div class="card-body">
+        <h4>Comments:</h4>
+        {% for comment in comments %}
+          <div class="p-2 comments
+            {% if not comment.approved and comment.author == user %} faded
+            {% elif not comment.approved %} d-none
+            {% endif %}">
+
+            <!-- Comment Author and Date -->
+            <p class="font-weight-bold">
+              {{ comment.author }}
+              <span class="font-weight-normal">{{ comment.created_on }}</span> wrote:
+            </p>
+
+            <!-- Comment Body -->
+            <div id="comment{{ comment.id }}">
+              {{ comment.body | linebreaks }}
+            </div>
+
+            <!-- Approval Notice -->
+            {% if not comment.approved and comment.author == user %}
+              <p class="approval">This comment is awaiting approval</p>
+            {% endif %}
+
+            <!-- Comment Actions -->
+            {% if user.is_authenticated and comment.author == user %}
+              <div class="comment-actions mt-2">
+                <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+                <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+              </div>
+            {% endif %}
+
+          </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
+
 
 
 <!-- Comment Modal Form -->
