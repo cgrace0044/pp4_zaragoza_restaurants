@@ -115,8 +115,10 @@
     <!-- Make a Comment Card -->
     <div class="col-md-10 card mb-4 shadow-lg border-0 p-4">
       <div class="card-body">
+        <h4>Leave a comment:</h4>
+        <hr class="home-break">
+        <br>
         {% if user.is_authenticated %}
-          <h4>Leave a comment:</h4>
           <button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#commentModal">
             Write a Comment
           </button>
@@ -130,6 +132,8 @@
     <div class="col-md-10 card mb-4 shadow-lg border-0 p-4">
       <div class="card-body">
         <h4>Comments:</h4>
+        <hr class="home-break">
+        <br>
         {% for comment in comments %}
           <div class="p-2 comments
             {% if not comment.approved and comment.author == user %} faded
