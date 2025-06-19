@@ -148,7 +148,9 @@ def toggle_like(request, slug):
 
     if request.user in restaurant.likes.all():
         restaurant.likes.remove(request.user)
+        messages.info(request, f'You have unliked {restaurant.name}.')
     else:
         restaurant.likes.add(request.user)
+        messages.success(request, f'You have liked {restaurant.name}.')
 
     return redirect("restaurant_detail", slug=restaurant.slug)

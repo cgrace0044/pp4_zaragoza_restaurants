@@ -60,8 +60,11 @@ img {
     color: #fff;
 }
 
-.btn-green:hover {
-    box-shadow: 0px 0px 4px #fff !important;
+.btn-green:hover,
+.btn-edit:hover,
+.btn-delete:hover {
+    box-shadow: 0px 0px 6px rgb(57, 57, 57) !important;
+    color:#fff;
 }
 
 /*--------------------------------------------Home Page*/
@@ -185,7 +188,7 @@ i:hover {
 }
 
 .like-action i:hover {
-  background: white;
+  box-shadow: 0px 0px 4px rgb(57, 57, 57) !important;
 }
 
 .like-action p {
