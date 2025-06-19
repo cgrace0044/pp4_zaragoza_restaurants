@@ -119,8 +119,10 @@ def toggle_favourite(request, slug):
 
     if request.user in restaurant.favourites.all():
         restaurant.favourites.remove(request.user)
+        messages.info(request, f"You have removed '{restaurant.name}' from your favourites.")
     else:
         restaurant.favourites.add(request.user)
+        messages.success(request, f"You have added '{restaurant.name}' to your favourites.")
 
     return redirect(request.META.get("HTTP_REFERER", reverse("home")))
 
