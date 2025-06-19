@@ -6,15 +6,8 @@
 <!-- Hero Section -->
 <section class="masthead">
   <div class="container px-2 py-3">
-    <div class="row flex-md-row-reverse py-3 m-0">
-
-      <!-- Restaurant Image -->
-      <div class="col-md-7 col-lg-5 p-0 pl-md-5 align-self-center">
-        <img src="{{ restaurant.image.url }}" class="img-fluid" alt="restaurant_image">
-      </div>
-
-      <!-- Restaurant Info and Action Buttons -->
-      <div class="col-md-5 col-lg-7 hero-text-outer text-center">
+    <div class="row justify-content-center py-3 m-0">
+      <div class="col-lg-10 hero-text-outer text-center">
         <div class="hero-info">
           <h1 class="mt-4 mb-2 hero-text">{{ restaurant.title }}</h1>
           <p class="restaurant-name">{{ restaurant.name }}</p>
@@ -51,47 +44,58 @@
               </div>
             {% endif %}
           </div>
-
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- Restaurant Details Section -->
 <div class="container">
-  <div class="row">
-    <div class="col card mb-4 mt-3">
-      <div class="card-body">
-        <div class="card-text">
+  <div class="row justify-content-center">
+    <div class="col-md-10 card mb-4 mt-3 shadow-lg border-0 p-4">
 
-          <!-- Location and Price Range -->
+      <!-- Info and Image Row -->
+      <div class="row g-4 align-items-center mb-4">
+
+        <!-- Location and Price -->
+        <div class="col-md-7">
           <div class="row">
-            <div class="col-6">
+            <div class="col-12 mb-3">
               <h3>Location</h3>
               <hr class="home-break">
               <p>{{ restaurant.location | safe }}</p>
             </div>
-            <div class="col-6">
+            <div class="col-12">
               <h3>Price</h3>
               <hr class="home-break">
               <p>€{{ restaurant.low_price_range | safe }} - €{{ restaurant.high_price_range | safe }}</p>
             </div>
           </div>
+        </div>
 
-          <br>
+        <!-- Image Column -->
+        <div class="col-md-5">
+          <img src="{{ restaurant.image.url }}"
+               class="img-fluid rounded shadow-sm"
+               alt="{{ restaurant.title }} image"
+               style="object-fit: cover; max-height: 250px; width: 100%;">
+        </div>
 
-          <!-- Description -->
+      </div>
+
+      <!-- Description Full Width -->
+      <div class="row">
+        <div class="col-12">
           <h3>Description</h3>
           <hr class="home-break">
-          <p class="card-text">{{ restaurant.description | safe }}</p>
-          <br>
-
+          <p>{{ restaurant.description | safe }}</p>
         </div>
       </div>
+
     </div>
   </div>
+</div>
 
   <!-- Comments Header -->
   <div class="row">
@@ -104,63 +108,78 @@
   </div>
 
   <!-- Comments Section -->
-  <div class="row">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
 
-    <!-- Comment Form (Trigger Modal) -->
-    <div class="col-12">
-      <div class="card-body">
-        {% if user.is_authenticated %}
-          <h4>Leave a comment:</h4>
-          <button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#commentModal">
-            Write a Comment
-          </button>
-        {% else %}
-          <p>Log in to leave a comment</p>
-        {% endif %}
-      </div>
-    </div>
-
-    <!-- List of Comments -->
-    <div class="col-12">
-      <div class="card-body">
-        <h4>Comments:</h4>
-        {% for comment in comments %}
-          <div class="p-2 comments
-            {% if not comment.approved and comment.author == user %} faded
-            {% elif not comment.approved %} d-none
-            {% endif %}">
-            
-            <!-- Comment Author and Date -->
-            <p class="font-weight-bold">
-              {{ comment.author }}
-              <span class="font-weight-normal">{{ comment.created_on }}</span> wrote:
-            </p>
-
-            <!-- Comment Body -->
-            <div id="comment{{ comment.id }}">
-              {{ comment.body | linebreaks }}
-            </div>
-
-            <!-- Approval Notice -->
-            {% if not comment.approved and comment.author == user %}
-              <p class="approval">This comment is awaiting approval</p>
-            {% endif %}
-
-            <!-- Comment Actions -->
-            {% if user.is_authenticated and comment.author == user %}
-              <div class="comment-actions mt-2">
-                <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-                <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
-              </div>
-            {% endif %}
-
+      <div class="card mb-4 mt-3 shadow-lg border-0 p-4">
+        <!-- Comments Header -->
+        <div class="row">
+          <div class="col-12">
+            <strong class="text-secondary">
+              <i class="far fa-comments"></i> {{ comment_count }}
+            </strong>
+            <hr>
           </div>
-        {% endfor %}
-      </div>
-    </div>
+        </div>
 
+        <!-- Comment Form (Trigger Modal) -->
+        <div class="row">
+          <div class="col-12">
+            {% if user.is_authenticated %}
+              <h4>Leave a comment:</h4>
+              <button type="button" class="btn btn-green mb-3" data-bs-toggle="modal" data-bs-target="#commentModal">
+                Write a Comment
+              </button>
+            {% else %}
+              <p>Log in to leave a comment</p>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- List of Comments -->
+        <div class="row">
+          <div class="col-12">
+            <h4>Comments:</h4>
+            {% for comment in comments %}
+              <div class="p-2 mb-3 border rounded comments
+                {% if not comment.approved and comment.author == user %} faded
+                {% elif not comment.approved %} d-none
+                {% endif %}">
+                
+                <!-- Comment Author and Date -->
+                <p class="font-weight-bold mb-1">
+                  {{ comment.author }}
+                  <span class="font-weight-normal">{{ comment.created_on }}</span> wrote:
+                </p>
+
+                <!-- Comment Body -->
+                <div id="comment{{ comment.id }}" class="mb-2">
+                  {{ comment.body | linebreaks }}
+                </div>
+
+                <!-- Approval Notice -->
+                {% if not comment.approved and comment.author == user %}
+                  <p class="approval text-muted">This comment is awaiting approval</p>
+                {% endif %}
+
+                <!-- Comment Actions -->
+                {% if user.is_authenticated and comment.author == user %}
+                  <div class="comment-actions mt-2">
+                    <button class="btn btn-delete btn-sm" comment_id="{{ comment.id }}">Delete</button>
+                    <button class="btn btn-edit btn-sm" comment_id="{{ comment.id }}">Edit</button>
+                  </div>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
+
 
 <!-- Comment Modal Form -->
 <div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
