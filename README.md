@@ -80,7 +80,7 @@ The Montserrat font is the main font used for the body of the website with the P
 
 <summary>Login</summary>
 
-![Login](docs/readme_images/login_page.webp)
+![Login](docs/readme_images/login.webp)
 </details>
 
 <details>
