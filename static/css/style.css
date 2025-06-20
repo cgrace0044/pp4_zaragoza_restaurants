@@ -145,8 +145,8 @@ i:hover {
 }
 
 .link {
-    color: #9Da57E;
-    text-decoration: none;
+    color: #4E5424;
+    text-decoration: underline;
 }
 
 .link:hover,
