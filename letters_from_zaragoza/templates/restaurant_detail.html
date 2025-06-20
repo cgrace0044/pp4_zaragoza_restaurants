@@ -37,7 +37,7 @@
               <div class="like-action">
                 <form action="{% url 'toggle_like' restaurant.slug %}" method="post">
                   {% csrf_token %}
-                  <button type="submit">
+                  <button type="submit" aria-label="like this restaurant">
                     <i class="fa fa-thumbs-up" aria-hidden="true"></i>
                   </button>
                 </form>
@@ -63,12 +63,12 @@
         <div class="col-md-7">
           <div class="row">
             <div class="col-12 mb-3">
-              <h3>Location</h3>
+              <h2>Location</h2>
               <hr class="home-break">
               <p>{{ restaurant.location | safe }}</p>
             </div>
             <div class="col-12">
-              <h3>Price</h3>
+              <h2>Price</h2>
               <hr class="home-break">
               <p>€{{ restaurant.low_price_range | safe }} - €{{ restaurant.high_price_range | safe }}</p>
             </div>
@@ -87,7 +87,7 @@
       <!-- Description Full Width -->
       <div class="row">
         <div class="col-12">
-          <h3>Description</h3>
+          <h2>Description</h2>
           <hr class="home-break">
           <p>{{ restaurant.description | safe }}</p>
         </div>
@@ -115,9 +115,8 @@
     <!-- Make a Comment Card -->
     <div class="col-md-10 card mb-4 shadow-lg border-0 p-4">
       <div class="card-body">
-        <h4>Leave a comment:</h4>
+        <h3>Leave a comment:</h3>
         <hr class="home-break">
-        <br>
         {% if user.is_authenticated %}
           <button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#commentModal">
             Write a Comment
@@ -131,9 +130,8 @@
     <!-- List of Comments Card -->
     <div class="col-md-10 card mb-4 shadow-lg border-0 p-4">
       <div class="card-body">
-        <h4>Comments:</h4>
+        <h3>Comments:</h3>
         <hr class="home-break">
-        <br>
         {% for comment in comments %}
           <div class="p-2 comments
             {% if not comment.approved and comment.author == user %} faded

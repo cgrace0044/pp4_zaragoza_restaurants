@@ -6,23 +6,23 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 |----------------|:------------:|:-------------:|:---------------:|:---:|
 |                |              |               |                 |     |
 | Desktop        |              |               |                 |     |
-| Home           |          100 |           100 |             100 | 100 |
-| Restaurants    |           98 |           100 |             100 | 100 |
-| Rest Detail    |           98 |           100 |             100 | 100 |
-| About          |           99 |            99 |             100 | 100 |
-| Contact        |           99 |            100|             100 | 100 |
-| Favourites     |           99 |           100 |             100 | 100 |
+| Home           |           81 |           100 |             100 | 100 |
+| Restaurants    |           99 |           100 |             100 | 100 |
+| Rest Detail    |           96 |           100 |             100 | 100 |
+| About          |           77 |           100 |             100 | 100 |
+| Contact        |           99 |           100 |             100 | 100 |
+| Favourites     |           85 |           100 |             100 | 100 |
 | Login          |           100|           100 |             100 | 100 |
 | Logout         |           98 |           100 |             100 | 100 |
 | Register       |           98 |           100 |             100 | 100 |
 |                |              |               |                 |     |
 | Mobile         |              |               |                 |     |
-| Home           |           94 |           100 |             100 | 100 |
-| Restaurants    |           94 |           100 |             100 | 100 |
-| Rest Detail    |           94 |           100 |             100 | 100 |
-| About          |           93 |            98 |             100 | 100 |
+| Home           |           74 |           100 |             100 | 100 |
+| Restaurants    |           89 |           100 |             100 | 100 |
+| Rest Detail    |           70 |           100 |             100 | 100 |
+| About          |           98 |           100 |             100 | 100 |
 | Contact        |           93 |           100 |             100 | 100 |
-| Favourites     |           94 |           100 |             100 | 100 |
+| Favourites     |           84 |           100 |             100 | 100 |
 | Login          |           93 |           100 |             100 | 100 |
 | Logout         |           94 |           100 |             100 | 100 |
 | Register       |           94 |           100 |             100 | 100 |
@@ -54,6 +54,8 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 - #### Footer not staying at bottom of screen
      - **Bug**: Footer not staying at the bottom of the screen when displaying on pages without fullscreen content and didn't want to use a sticky footer. 
      - **Fix**: Was able to utilise the calc() CSS function and make the page content 100% of the viewport height less the height of the footer and this solved the problem. 
+
+- #### 
 
 ### Unfixed bugs:
 There are no known unfixed bugs. 
