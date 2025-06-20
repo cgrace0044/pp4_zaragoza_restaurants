@@ -95,6 +95,10 @@ Please see the database schema created for the project below:
 
 ![Database](docs/readme_images/database_schema.webp)
 
+## Testing
+
+Testing and results can be found [here](/testing.md)
+
 ## Features
 
 ### Header
