@@ -1,3 +1,32 @@
+### Lighthouse
+
+Lighthouse validation was run on all pages (both mobile and desktop) in order to check accessibility and performance. 
+
+| Page           | Performance  | Accessibility | Best Practices  | SEO |
+|----------------|:------------:|:-------------:|:---------------:|:---:|
+|                |              |               |                 |     |
+| Desktop        |              |               |                 |     |
+| Home           |          100 |           100 |             100 | 100 |
+| Restaurants    |           98 |           100 |             100 | 100 |
+| Rest Detail    |           98 |           100 |             100 | 100 |
+| About          |           99 |            99 |             100 | 100 |
+| Contact        |           99 |            100|             100 | 100 |
+| Favourites     |           99 |           100 |             100 | 100 |
+| Login          |           100|           100 |             100 | 100 |
+| Logout         |           98 |           100 |             100 | 100 |
+| Register       |           98 |           100 |             100 | 100 |
+|                |              |               |                 |     |
+| Mobile         |              |               |                 |     |
+| Home           |           94 |           100 |             100 | 100 |
+| Restaurants    |           94 |           100 |             100 | 100 |
+| Rest Detail    |           94 |           100 |             100 | 100 |
+| About          |           93 |            98 |             100 | 100 |
+| Contact        |           93 |           100 |             100 | 100 |
+| Favourites     |           94 |           100 |             100 | 100 |
+| Login          |           93 |           100 |             100 | 100 |
+| Logout         |           94 |           100 |             100 | 100 |
+| Register       |           94 |           100 |             100 | 100 |
+
 ## Bugs 
 
 ### Fixed Bugs
