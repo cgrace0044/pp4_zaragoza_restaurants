@@ -171,6 +171,31 @@ Add the following Config Vars in Heroku:
 
 The site is now live and operational.
 
+## Forking this repository
+- Locate the repository at this link [Letters from Zaragoza](https://github.com/cgrace0044/pp4_zaragoza_restaurants).
+- The fork button is located on the right side of the repository menu 
+- To copy the repository to your Github account, click the button
+
+## Cloning this repository
+To clone this repository follow the below steps: 
+
+1. Locate the repository at this link [Letters from Zaragoza](https://github.com/cgrace0044/pp4_zaragoza_restaurants). 
+2. Navigate to the main page of the repository and click **Code**.
+3. Open **Terminal**.
+4. In Terminal, change the current working directory to the desired location of the cloned directory.
+5. Type **'git clone'**, and then paste the URL copied from GitHub earlier. 
+6. Type **'Enter'** to create the local clone. 
+
+Any changes required to the website, they can be made, committed and pushed to Github.
+
+## Languages
+
+- [Python](https://www.python.org/) 
+- [Markdown](https://en.wikipedia.org/wiki/Markdown)
+- [HTML](https://developer.mozilla.org/en-US/docs/Glossary/HTML5 "HTML")
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS "CSS")
+- [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript "JS")
+
 ## Frameworks - Libraries - Programs Used
 - [Django](https://www.djangoproject.com/): Main python framework used in the development of this project
 - [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html): authentication library used to create the user accounts
@@ -191,3 +216,4 @@ The site is now live and operational.
 - [Summernote](https://summernote.org/): A WYSIWYG editor to allow users to edit their posts
 - [Cloudinary](https://cloudinary.com/): the image hosting service used to upload images
 - [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/): CSS Framework for developing responsiveness and styling
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/): Used to manage Django forms, making form rendering in templates simpler and more elegant.
