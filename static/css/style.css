@@ -321,7 +321,13 @@ div.about-section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.signup li {
+.signup ul.errorlist li,
+.login ul.errorlist li {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.signup ul:not(.errorlist) {
     display: none;
 }
 
