@@ -102,7 +102,5 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
      - **Bug**: Footer not staying at the bottom of the screen when displaying on pages without fullscreen content and didn't want to use a sticky footer. 
      - **Fix**: Was able to utilise the calc() CSS function and make the page content 100% of the viewport height less the height of the footer and this solved the problem. 
 
-- #### 
-
 ### Unfixed bugs:
 There are no known unfixed bugs. 
