@@ -29,6 +29,31 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 
 ## Manual Testing
 
+### Site Navigation
+| Element               | Action     | Expected Result                                                      | Pass/Fail |
+|-----------------------|------------|----------------------------------------------------------------------|-----------|
+| NavBar                |            |                                                                      |           |
+| Site Name (logo area) | Click      | Redirect to home                                                     | Pass      |
+| Home Link             | Click      | Redirect to home                                                     | Pass      |
+| Restaurants Link      | Click      | Open Browse Restaurants page                                         | Pass      |
+| About Link            | Click      | Open About page                                                      | Pass      |
+| Contact Link          | Click      | Open Contact page                                                    | Pass      |
+| Register Link         | Display    | Not visible if user logged in                                        | Pass      |
+| Register Link         | Click      | Open Register page                                                   | Pass      |
+| Login Link            | Display    | Not visible if user logged in                                        | Pass      |
+| Login Link            | Click      | Open Login page                                                      | Pass      |
+| Login Link            | Display    | Changes to profile name when user logged in with dropdown menu       | Pass      |
+| Favourites Link       | Display    | Only visible if user logged in                                       | Pass      |
+| Favourites Link       | Click      | Open Favourites page                                                 | Pass      |
+| Logout Link           | Display    | Only visible if user logged in                                       | Pass      |
+| Logout Link           | Click      | Open logout confirmation page                                        | Pass      |
+| All Nav Links         | Hover      | Slightly darker text                                                 | Pass      |
+| Hamburger Menu        | Responsive | Display when screen size reduces to tablet                           | Pass      |
+| My Account Dropdown   | Responsive | Contents move into hamburger menu when screen size reduces to medium | Pass      |
+|                       |            |                                                                      |           |
+| Footer                |            |                                                                      |           |
+| All links             | Click      | Open in new tab and to correct location                              | Pass      |
+
 ### Home Page
 | Element                    | Action                                    | Expected Result                            | Pass/Fail |
 |----------------------------|-------------------------------------------|--------------------------------------------|-----------|
