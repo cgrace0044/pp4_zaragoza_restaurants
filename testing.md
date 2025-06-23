@@ -80,8 +80,30 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Write a Comment Button         | Display             | Only displays if user is logged in                                                                                      | Pass      |
 | Write a Comment Button         | Click               | Clicking on write a comment opens the 'leave a comment' modal                                                           | Pass      |
 | Write a Comment Button         | Hover               | Hovering over the write a comment button creates the desired box shadow effect                                          | Pass      |
+| Write a Comment Modal:Close    | Hover               | Hovering over the close button within the write a comment modal creates the desired box shadow effect                   | Pass      |
+| Write a Comment Modal:Close    | Click               | Clicking on the close button within the write a comment modal returns the user to the restaurant detail page            | Pass      |
+| Write a Comment Modal:Submit   | Leave empty         | On submit form won't submit                                                                                             | Pass      |
+| Write a Comment Modal:Submit   | Leave empty         | Error message displays                                                                                                  | Pass      |
+| Write a Comment Modal:Submit   | Hover               | Hovering over the submit button within the write a comment modal creates the desired box shadow effect                  | Pass      |
+| Write a Comment Modal:Submit   | Click               | Clicking on the submit button within the write a comment modal returns the user to the restaurant detail page           | Pass      |
+| Write a Comment Modal:Submit   | Click               | Clicking on the submit button adds the comment to the comments section. Below the comment it states awaiting approval   | Pass      |
+| Write a Comment Modal:Submit   | Click               | Clicking on the submit button informs the user that their comment was submitted and is awaiting approval                | Pass      |
+| Write a Comment Modal:Submit   | Click               | The comment submitted success message fades after 2 seconds                                                             | Pass      |
 | User Comments                  | Display             | Comments are in ascending order                                                                                         | Pass      |
-
+| User Comments                  | Display             | Comments display the username, the date, the time, the comment and if the comment is awaiting approval                  | Pass      |
+| User Comments                  | Display             | If a comment is awaiting approval it is only visible by the comment author                                              | Pass      |
+| Edit Comment Button            | Display             | Only displays if user is logged in and the user is the author of the comment                                            | Pass      |
+| Edit Comment Button            | Click               | Clicking on 'edit' opens the 'leave a comment' modal with the author's comment already populated                        | Pass      |
+| Edit Comment Button            | Hover               | Hovering over the 'edit' button creates the desired box shadow effect                                                   | Pass      |
+| Delete Comment Button          | Display             | Only displays if user is logged in and the user is the author of the comment                                            | Pass      |
+| Delete Comment Button          | Click               | Clicking on 'delete' opens the 'delete comment' modal asking the author if they are sure they want to delete.           | Pass      |
+| Delete Comment Button          | Hover               | Hovering over the 'delete' button creates the desired box shadow effect                                                 | Pass      |
+| Delete Comment Modal:Close     | Click               | Clicking the close button within the modal dismisses the modal and returns the user to the restaurant detail page       | Pass      |
+| Delete Comment Modal:Close     | Hover               | Hovering over the close button within the modal slightly changes the colour of the button                               | Pass      |
+| Delete Comment Modal:Delete    | Click               | Clicking the delete button within the modal deletes the comment and returns the user to the restaurant detail page      | Pass      |
+| Delete Comment Modal:Delete    | Hover               | Hovering over the delete button within the modal slightly changes the colour of the button                              | Pass      |
+| Delete Comment Modal:Delete    | Click               | A sucess message appears stating that the comment has been deleted                                                      | Pass      |
+| Delete Comment Modal:Delete    | Click               | The success message fades after 2 seconds.                                                                              | Pass      |
 
 ### Django All Auth Pages
 | Element                    | Action                                    | Expected Result                            | Pass/Fail |
