@@ -36,7 +36,24 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | G. Started Contact Link    | Click                                     | Redirect to contact page                   | Pass      |
 | G. Started About Link      | Click                                     | Redirect to about page                     | Pass      |
 | G. Started Login Link      | Click                                     | Redirect to login page                     | Pass      |
-| Login link                 | logged in/ logged out                     | login link only displays when not logged in| Pass      |
+| Login link                 | Logged in/ Logged out                     | login link only displays when not logged in| Pass      |
+
+### Restaurants Page
+| Element                    | Action                         | Expected Result                                                             | Pass/Fail |
+|----------------------------|--------------------------------|-----------------------------------------------------------------------------|-----------|
+| Restaurant Card            | Display correct content        | Displays correct title, restaurant name and image                           | Pass      |
+| Restaurant Card            | Click                          | Clicking inside restaurant card brings you to correct restaurant detail page| Pass      |
+| Restaurant Card            | Pagination                     | 8 restaurant cards will appear per page                                     | Pass      |
+| Link                       | Pagination link                | Pagination arrow takes you to the next set of restaurants page              | Pass      |
+| Login link                 | Logged in/ Logged out          | login link only displays when not logged in.                                | Pass      |
+
+| Element     | Action                  | Expected Result                                                                         | Pass/Fail |
+|-------------|-------------------------|-----------------------------------------------------------------------------------------|-----------|
+| Restaur Card | Display correct content | Display correct image, recipe title and cooktime                                        | Pass      |
+| Recipe Card | Click                   | Clicking anywhere inside the recipe card takes you to the correct recipe's detail page. | Pass      |
+| Recipe Card | Pagination              | Site will paginate 8 recipe cards to a page                                             | Pass      |
+| Recipe Card | Order                   | Recipes are sorted by newest to oldest                                                  | Pass      |
+| Recipe Card | Hover                   | Add gold border                                                                         | Pass      |
 
 ### Django All Auth Pages
 | Element                    | Action                                    | Expected Result                            | Pass/Fail |
