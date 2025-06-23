@@ -60,7 +60,7 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Add to favourites button       | Click               | Restaurant is added to user's favourites page                                                                           | Pass      |
 | Add to favourites button       | Click               | Success message appears informing the user that the 'restaurant name' has been added to their favourites                | Pass      |
 | Add to favourites button       | Click               | Success message fades after 2 seconds                                                                                   | Pass      |
-| Remove from favourites button  | Display             | Only visible if user is logged in.                                                                                      | Pass      |
+| Remove from favourites button  | Display             | Only visible if user is logged in                                                                                      | Pass      |
 | Remove from favourites button  | Hover               | Hovering over the remove from favourites button creates the desired box shadow effect                                   | Pass      |
 | Remove from favourites button  | Click               | Restaurant is removed from user's favourites page                                                                       | Pass      |
 | Remove from favourites button  | Click               | Success message appears informing the user that the 'restaurant name' has been removed from their favourites            | Pass      |
@@ -74,7 +74,7 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Like Button                    | Click               | Success message appears informing the user they have liked the restaurant (restaurant is named)                         | Pass      |
 | Like Button                    | Click               | Message appears informing the user they have unliked a restaurant (restaurant is named)                                 | Pass      |
 | Like Button                    | Click               | Messages fade automatically after 2 seconds                                                                             | Pass      |
-| Login to Interact Button       | Display             | Login to Interact Button appears instead of like/favourites button when user is not logged in                           | Pass      |
+| Login to Interact Button       | Display             | Login to Interact Button appears instead of like/add to favourites buttons when user is not logged in                   | Pass      |
 | Login to Interact Button       | Click               | User is redirected to login page                                                                                        | Pass      |
 | Login to Interact Button       | Hover               | Hovering over the Login to Interact button creates the desired box shadow effect                                        | Pass      |
 | Write a Comment Button         | Display             | Only displays if user is logged in                                                                                      | Pass      |
@@ -96,7 +96,7 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Edit Comment Button            | Click               | Clicking on 'edit' opens the 'leave a comment' modal with the author's comment already populated                        | Pass      |
 | Edit Comment Button            | Hover               | Hovering over the 'edit' button creates the desired box shadow effect                                                   | Pass      |
 | Delete Comment Button          | Display             | Only displays if user is logged in and the user is the author of the comment                                            | Pass      |
-| Delete Comment Button          | Click               | Clicking on 'delete' opens the 'delete comment' modal asking the author if they are sure they want to delete.           | Pass      |
+| Delete Comment Button          | Click               | Clicking on 'delete' opens the 'delete comment' modal asking the author if they are sure they want to delete            | Pass      |
 | Delete Comment Button          | Hover               | Hovering over the 'delete' button creates the desired box shadow effect                                                 | Pass      |
 | Delete Comment Modal:Close     | Click               | Clicking the close button within the modal dismisses the modal and returns the user to the restaurant detail page       | Pass      |
 | Delete Comment Modal:Close     | Hover               | Hovering over the close button within the modal slightly changes the colour of the button                               | Pass      |
