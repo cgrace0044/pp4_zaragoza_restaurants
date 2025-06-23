@@ -44,16 +44,44 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Restaurant Card            | Display correct content        | Displays correct title, restaurant name and image                           | Pass      |
 | Restaurant Card            | Click                          | Clicking inside restaurant card brings you to correct restaurant detail page| Pass      |
 | Restaurant Card            | Pagination                     | 8 restaurant cards will appear per page                                     | Pass      |
-| Link                       | Pagination link                | Pagination arrow takes you to the next set of restaurants page              | Pass      |
-| Login link                 | Logged in/ Logged out          | login link only displays when not logged in.                                | Pass      |
+| Restaurant Card            | Hover                          | Hovering over a restaurant card creates the desired box shadow effect       | Pass      |
+| Restaurant Card            | Media Display                  | 4 restaurants appearing per row on desktop, 3 on tablet and one on mobile   | Pass      |
+| Link                       | Pagination link                | Pagination arrow takes you to the next set of restaurant reviews            | Pass      |
+| Link                       | Pagination link                | On the second page or more a back arrow pagination button appears           | Pass      |
+| Link                       | Pagination Hover               | Hovering over the pagination link creates the desired box shadow effect     | Pass      |
 
-| Element     | Action                  | Expected Result                                                                         | Pass/Fail |
-|-------------|-------------------------|-----------------------------------------------------------------------------------------|-----------|
-| Restaur Card | Display correct content | Display correct image, recipe title and cooktime                                        | Pass      |
-| Recipe Card | Click                   | Clicking anywhere inside the recipe card takes you to the correct recipe's detail page. | Pass      |
-| Recipe Card | Pagination              | Site will paginate 8 recipe cards to a page                                             | Pass      |
-| Recipe Card | Order                   | Recipes are sorted by newest to oldest                                                  | Pass      |
-| Recipe Card | Hover                   | Add gold border                                                                         | Pass      |
+### Restaurant Detail Page
+
+| Element                        | Action              | Expected Result                                                                                                         | Pass/Fail |
+|--------------------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------|-----------|
+| Restaurant Review Content      | Display             | Display correct post title, restaurant name, location, price, description and restaurant image                          | Pass      |
+| Add to favourites button       | Display             | Only visible if user is logged in                                                                                       | Pass      |
+| Add to favourites button       | Hover               | Hovering over the add to favourites button creates the desired box shadow effect                                        | Pass      |
+| Add to favourites button       | Click               | Restaurant is added to user's favourites page                                                                           | Pass      |
+| Add to favourites button       | Click               | Success message appears informing the user that the 'restaurant name' has been added to their favourites                | Pass      |
+| Add to favourites button       | Click               | Success message fades after 2 seconds                                                                                   | Pass      |
+| Remove from favourites button  | Display             | Only visible if user is logged in.                                                                                      | Pass      |
+| Remove from favourites button  | Hover               | Hovering over the remove from favourites button creates the desired box shadow effect                                   | Pass      |
+| Remove from favourites button  | Click               | Restaurant is removed from user's favourites page                                                                       | Pass      |
+| Remove from favourites button  | Click               | Success message appears informing the user that the 'restaurant name' has been removed from their favourites            | Pass      |
+| Remove from favourites button  | Click               | Success message fades after 2 seconds                                                                                   | Pass      |
+| Like Button                    | Display             | Only visible if user is logged in                                                                                       | Pass      |
+| Like Button                    | Hover               | Hovering over the like button creates the desired box shadow effect                                                     | Pass      |
+| Like Button                    | Click               | Restaurant is liked by the user                                                                                         | Pass      |
+| Like Button                    | Click               | Click the like button a second time and the restaurant is unliked by the user                                           | Pass      |
+| Like Button                    | Click               | Like count is incremented by one when a user likes a post                                                               | Pass      |
+| Like Button                    | Click               | Like count is decremented by one when a user unlikes a post                                                             | Pass      |
+| Like Button                    | Click               | Success message appears informing the user they have liked the restaurant (restaurant is named)                         | Pass      |
+| Like Button                    | Click               | Message appears informing the user they have unliked a restaurant (restaurant is named)                                 | Pass      |
+| Like Button                    | Click               | Messages fade automatically after 2 seconds                                                                             | Pass      |
+| Login to Interact Button       | Display             | Login to Interact Button appears instead of like/favourites button when user is not logged in                           | Pass      |
+| Login to Interact Button       | Click               | User is redirected to login page                                                                                        | Pass      |
+| Login to Interact Button       | Hover               | Hovering over the Login to Interact button creates the desired box shadow effect                                        | Pass      |
+| Write a Comment Button         | Display             | Only displays if user is logged in                                                                                      | Pass      |
+| Write a Comment Button         | Click               | Clicking on write a comment opens the 'leave a comment' modal                                                           | Pass      |
+| Write a Comment Button         | Hover               | Hovering over the write a comment button creates the desired box shadow effect                                          | Pass      |
+| User Comments                  | Display             | Comments are in ascending order                                                                                         | Pass      |
+
 
 ### Django All Auth Pages
 | Element                    | Action                                    | Expected Result                            | Pass/Fail |
