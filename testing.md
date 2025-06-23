@@ -6,7 +6,7 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 |----------------|:------------:|:-------------:|:---------------:|:---:|
 |                |              |               |                 |     |
 | Desktop        |              |               |                 |     |
-| Home           |           81 |           100 |             100 | 100 |
+| Home           |           87 |           100 |             100 | 100 |
 | Restaurants    |           99 |           100 |             100 | 100 |
 | Rest Detail    |           96 |           100 |             100 | 100 |
 | About          |           77 |           100 |             100 | 100 |
@@ -17,10 +17,10 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Register       |           98 |           100 |             100 | 100 |
 |                |              |               |                 |     |
 | Mobile         |              |               |                 |     |
-| Home           |           74 |           100 |             100 | 100 |
+| Home           |           75 |           100 |             100 | 100 |
 | Restaurants    |           89 |           100 |             100 | 100 |
-| Rest Detail    |           70 |           100 |             100 | 100 |
-| About          |           98 |           100 |             100 | 100 |
+| Rest Detail    |           72 |           100 |             100 | 100 |
+| About          |           89 |           100 |             100 | 100 |
 | Contact        |           93 |           100 |             100 | 100 |
 | Favourites     |           84 |           100 |             100 | 100 |
 | Login          |           93 |           100 |             100 | 100 |
