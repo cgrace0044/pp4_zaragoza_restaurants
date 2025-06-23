@@ -29,6 +29,15 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 
 ## Manual Testing
 
+### Home Page
+| Element                    | Action                                    | Expected Result                            | Pass/Fail |
+|----------------------------|-------------------------------------------|--------------------------------------------|-----------|
+| G. Started Restaurants Link| Click                                     | Redirect to browse_restaurants page        | Pass      |
+| G. Started Contact Link    | Click                                     | Redirect to contact page                   | Pass      |
+| G. Started About Link      | Click                                     | Redirect to about page                     | Pass      |
+| G. Started Login Link      | Click                                     | Redirect to login page                     | Pass      |
+| Login link                 | logged in/ logged out                     | login link only displays when not logged in| Pass      |
+
 ### Django All Auth Pages
 | Element                    | Action                                    | Expected Result                            | Pass/Fail |
 |----------------------------|-------------------------------------------|--------------------------------------------|-----------|
