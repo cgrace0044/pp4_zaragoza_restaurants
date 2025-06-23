@@ -104,6 +104,10 @@ Testing and results can be found [here](/testing.md)
 ### Header
 
 ### Footer
+![footer](docs/readme_images/footer.webp)
+- The footer contains a span stating 'Follow Our Tasty Zaragoza Journey'
+- The footer section includes links to Facebook, Instagram, Twitter and Youtube.
+- Clicking the links in the footer opens separate tabs.
 
 ### Home Page
 
@@ -111,17 +115,17 @@ Testing and results can be found [here](/testing.md)
 
 **Sign Up**
 
-![header](docs/readme_images/signup.webp)
+![register](docs/readme_images/signup.webp)
 
 **Log In**
 
-![header](docs/readme_images/login.webp)
+![login](docs/readme_images/login.webp)
 
 **Log Out**
 
-![header](docs/readme_images/logout.webp)
+![logout](docs/readme_images/logout.webp)
 
-- Django allauth was installed and used to create the Sign up, Log in and Log out functionality. 
+- Django allauth was installed and used to create the Register, Log in and Log out functionality. 
 
 ## Deployment
 In order to deploy the app to Heroku the following steps were followed:
