@@ -180,6 +180,7 @@ Testing and results can be found [here](/testing.md)
 
 - The masthead section of each restaurant review contains the post title, the restaurant name, an add to favourites button as well as a like button.
 - The 'add to favourites' button and the 'like' button only appears if the user is logged in.
+- If a user clicks add to favourites or like they will be informed of the same via Django messages.
 - If the user is not logged in a link to the login page appears.
 
 **Restaurant Details Card**
@@ -210,6 +211,12 @@ Testing and results can be found [here](/testing.md)
 - The comment modal contains a body textfield together with a submit and close button.
 - Clicking submit will inform the user that their comment is awaiting approval.
 - Clicking close will take the user back to the restaurant review.
+
+**Delete Confirmation Modal**
+
+![delete modal](docs/readme_images/delete_modal.webp)
+
+- If a user chooses to delete a comment they are asked if they are sure via a delete confirmation modal. 
 
 ### User Account Pages
 
