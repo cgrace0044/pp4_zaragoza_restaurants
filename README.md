@@ -150,53 +150,125 @@ Testing and results can be found [here](/testing.md)
 
 - Django allauth was installed and used to create the Register, Log in and Log out functionality. 
 
-## Deployment
-In order to deploy the app to Heroku the following steps were followed:
-### Create the Heroku App:
-- Update requirements.txt file within your IDE using command pip3 freeze > requirements.txt
-- Heroku will use the above list to install these packages into your application before the project is run.
-- Sign into Heroku or create an account if you don't yet have one.
-- From the Heroku dashboard click 'Create New App'.
-- Name the App and select your region. The App name will need to be something unique.
-- Now select 'Create App'
+## 🚀 Deployment to Heroku
 
-### Attach the Postgres database:
-- Click on the settings tab within your App and scroll to Config Vars.
-- Click Reveal Config Vars.
-- As a key type DATABASE_URL and the corresponding value should be your postgres database. 
+To deploy your Django app to Heroku, follow the steps below:
 
-### Prepare the environment and settings.py file:
-- In VS Code ensure you have an env.py file created in your route directory.
-- Both your database value and your secret key should be located in your env.py file.
-- Update the settings.py file to import the env.py file and add the SECRETKEY and DATABASE_URL file paths.
-- Comment out the default database configuration from Django.
-- Save files and make migrations.
-- Add Cloudinary URL to env.py
-- Add the cloudinary libraries to the list of installed apps.
-- Add the STATIC files settings - the url, storage path, directory path, root path, media url and default file storage path.
-- Link the file to the templates directory in Heroku.
-- Change the templates directory to TEMPLATES_DIR
-- Add Heroku to the ALLOWED_HOSTS list the format ['app_name.heroku.com', 'localhost']
+---
 
-### Create files / directories
-- Create a file named "Procfile" in the main directory and add the following: web: gunicorn project-name.wsgi
+### 1. ✅ Prepare the Application
 
-### Update Heroku Config Vars
-Add the following Config Vars in Heroku:
-- SECRET_KEY value 
-- CLOUDINARY_URL
-- PORT = 8000
+- Update `requirements.txt` by running:  
+  ```bash
+  pip3 freeze > requirements.txt
+  ```
+  Heroku uses this file to install dependencies.
 
-### Deploy
-- Click add buildpack and select python, save changes, and click node.js and save changes.
-- Go to the deploy section and click Github and 'Connect to Github'
-- Search for the Github repository name within the search bar.
-- Click search and then connect to link up the repository to Heroku.
-- You can setup automatic deploys or else you can manually deploy from branch (main) each time.
-- Click on deploy from branch (main) and the app will build.
-- Once complete click view to be taken to the deployed app.
+- Ensure your project is production-ready:
+  - Secret keys and sensitive variables are stored in `env.py`.
+  - Static and media file settings are configured properly.
+  - Your `settings.py` is updated for production (see below).
 
-The site is now live and operational.
+---
+
+### 2. 🔧 Create a Heroku App
+
+1. Log in or sign up at [Heroku](https://heroku.com).
+2. From the Heroku Dashboard, click **"Create New App"**.
+3. Choose a unique app name and select your region.
+4. Click **"Create App"** to proceed.
+
+---
+
+### 3. 📦 Attach a Postgres Database
+
+1. In the app dashboard, go to the **"Settings"** tab.
+2. Scroll to **"Config Vars"** and click **"Reveal Config Vars"**.
+3. Add a new key-value pair:
+   - **Key:** `DATABASE_URL`
+   - **Value:** Your Postgres database URL.
+
+---
+
+### 4. ⚙️ Configure Environment and `settings.py`
+
+- Create an `env.py` file in your project root:
+  ```python
+  import os
+
+  os.environ['SECRET_KEY'] = 'your-secret-key'
+  os.environ['DATABASE_URL'] = 'your-database-url'
+  os.environ['CLOUDINARY_URL'] = 'your-cloudinary-url'
+  ```
+- In `settings.py`:
+  - Import `env.py`.
+  - Replace default `DATABASES` config with the one sourced from `DATABASE_URL`.
+  - Set `SECRET_KEY = os.environ.get('SECRET_KEY')`.
+  - Add Cloudinary settings for media file handling.
+  - Configure static files:
+    ```python
+    STATIC_URL = '/static/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
+    MEDIA_URL = '/media/'
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+    ```
+  - Update templates path if necessary:
+    ```python
+    TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+    ```
+  - Add your Heroku app to `ALLOWED_HOSTS`:
+    ```python
+    ALLOWED_HOSTS = ['your-app-name.herokuapp.com', 'localhost']
+    ```
+
+---
+
+### 5. 📁 Create a `Procfile`
+
+- In the project root, create a file named `Procfile` (no extension) with:
+  ```
+  web: gunicorn project_name.wsgi
+  ```
+
+---
+
+### 6. 🔑 Set Config Vars on Heroku
+
+In the **Config Vars** section of your Heroku app, add:
+
+- `SECRET_KEY`
+- `CLOUDINARY_URL`
+- `PORT` = `8000`
+
+---
+
+### 7. 🛠 Add Buildpacks
+
+1. Go to the **Settings** tab.
+2. Under **Buildpacks**, add the following (in order):
+   - Python
+   - Node.js
+
+---
+
+### 8. 🔁 Connect to GitHub & Deploy
+
+1. Go to the **Deploy** tab.
+2. Select **GitHub** as your deployment method.
+3. Search for your repository and click **Connect**.
+4. Choose your deployment method:
+   - **Enable Automatic Deploys** *(recommended)*, or
+   - **Manual Deploy** from the `main` branch.
+5. Click **Deploy Branch** to start deployment.
+6. Once deployment completes, click **"View"** to access your live site.
+
+---
+
+### ✅ Your Site is Now Live!
+
+Your Django app is now deployed and operational on Heroku.
 
 ## Forking this repository
 - Locate the repository at this link [Letters from Zaragoza](https://github.com/cgrace0044/pp4_zaragoza_restaurants).
