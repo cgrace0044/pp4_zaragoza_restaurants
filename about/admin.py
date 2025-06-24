@@ -6,6 +6,11 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
     summernote_fields = ("about_zaragoza", "about_me")
+    list_display = (
+        "title",
+        "location",
+        "email",
+    )
 
 
 @admin.register(Contact)
