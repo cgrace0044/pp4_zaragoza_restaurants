@@ -102,7 +102,16 @@ The project board is very effective as it allows the project manager to move iss
 
 ![Board](docs/readme_images/project_board.webp)
 
-The 7 Epics listed above were documented within the Github project as Milestones. A Github Issue was created for each User Story which was then allocated to a milestone(Epic). Each User Story has defined acceptance criteria to make it clear when the User Story has been completed. The acceptance criteria are further broken down into tasks to facilitate the User Story's execution.
+The below epics (as detailed above) were documented in Github projects as milestones:
+- User Profile
+- User Navigation
+- Review Interaction
+- Review Management
+- About Letters from Zaragoza
+- Contact
+- Celebrate Reviews
+
+Each epic has a number of user stories which are broken down into acceptance criteria and further broken down as tasks. Once tasks were complete they were marked as done within the checklist. Issues were moved to 'Done' within the project board once complete. 
 
 ## Data Model
 Please see the database schema created for the project below: 
