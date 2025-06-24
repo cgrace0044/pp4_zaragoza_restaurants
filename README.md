@@ -127,7 +127,21 @@ Testing and results can be found [here](/testing.md)
 
 ## Features
 
-### Header
+### Header and Navigation Bar
+![header](docs/readme_images/nav.webp)
+
+- The logo section of the navbar simply contains the name Letters From Zaragoza - links to the home page.
+- The navigation bar is very clean cut. This is on purpose so that the user is drawn towards the restaurant images.
+- The navigation bar is present at the top of every page.
+- On hover the link font slightly darkens.
+- When the user is logged in their username will show in the navbar together with a dropdown to their favourites and a logout option.
+- When the user is not logged in links to the login and register pages will show (as below).
+
+![header](docs/readme_images/nav_login.webp)
+
+- The navigation bar is fully responsive and converts to a hamburger icon on small screens (as below).
+
+![header](docs/readme_images/nav_mobile.webp)
 
 ### Footer
 ![footer](docs/readme_images/footer.webp)
