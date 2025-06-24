@@ -62,7 +62,6 @@ def restaurant_detail(request, slug):
 
 @login_required
 def comment_edit(request, slug, comment_id):
-
     """
     Allows a logged-in user to edit their own comment on a restaurant.
     The comment will be marked as unapproved after editing.
@@ -88,9 +87,8 @@ def comment_edit(request, slug, comment_id):
 
 @login_required
 def comment_delete(request, slug, comment_id):
-
     """
-   Allows a logged-in user to delete their own comment.
+    Allows a logged-in user to delete their own comment.
     """
 
     queryset = Restaurant.objects.filter(status=1)
@@ -110,7 +108,6 @@ def comment_delete(request, slug, comment_id):
 
 @login_required
 def toggle_favourite(request, slug):
-
     """
     Allows a logged-in user to add or remove a restaurant from their favourites.
     """
@@ -119,29 +116,30 @@ def toggle_favourite(request, slug):
 
     if request.user in restaurant.favourites.all():
         restaurant.favourites.remove(request.user)
-        messages.info(request, f"You have removed '{restaurant.name}' from your favourites.")
+        messages.info(
+            request, f"You have removed '{restaurant.name}' from your favourites."
+        )
     else:
         restaurant.favourites.add(request.user)
-        messages.success(request, f"You have added '{restaurant.name}' to your favourites.")
+        messages.success(
+            request, f"You have added '{restaurant.name}' to your favourites."
+        )
 
     return redirect(request.META.get("HTTP_REFERER", reverse("home")))
 
 
 @login_required
 def favourite_list(request):
-
     """
     Displays a list of restaurants favourited by the logged-in user.
     """
 
     favourites = request.user.favourite.all()
-    return render(
-        request, "favourite_list.html", {"favourites": favourites})
+    return render(request, "favourite_list.html", {"favourites": favourites})
 
 
 @login_required
 def toggle_like(request, slug):
-
     """
     Allows a logged-in user to like or unlike a restaurant.
     """
@@ -150,9 +148,9 @@ def toggle_like(request, slug):
 
     if request.user in restaurant.likes.all():
         restaurant.likes.remove(request.user)
-        messages.info(request, f'You have unliked {restaurant.name}.')
+        messages.info(request, f"You have unliked {restaurant.name}.")
     else:
         restaurant.likes.add(request.user)
-        messages.success(request, f'You have liked {restaurant.name}.')
+        messages.success(request, f"You have liked {restaurant.name}.")
 
     return redirect("restaurant_detail", slug=restaurant.slug)

@@ -7,7 +7,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -16,36 +15,98 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Restaurant',
+            name="Restaurant",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=200, unique=True)),
-                ('slug', models.SlugField(max_length=200, unique=True)),
-                ('name', models.CharField(max_length=100)),
-                ('location', models.CharField(max_length=200, unique=True)),
-                ('low_price_range', models.IntegerField(default=0)),
-                ('high_price_range', models.IntegerField(default=10)),
-                ('description', models.TextField()),
-                ('created_on', models.DateTimeField(auto_now_add=True)),
-                ('image', cloudinary.models.CloudinaryField(default='placeholder', max_length=255, verbose_name='image')),
-                ('status', models.IntegerField(choices=[(0, 'Save for later'), (1, 'Publish now')], default=0)),
-                ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='restaurant_review', to=settings.AUTH_USER_MODEL)),
-                ('favourites', models.ManyToManyField(blank=True, default=None, related_name='favourite', to=settings.AUTH_USER_MODEL)),
-                ('likes', models.ManyToManyField(blank=True, related_name='restaurant_like', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=200, unique=True)),
+                ("slug", models.SlugField(max_length=200, unique=True)),
+                ("name", models.CharField(max_length=100)),
+                ("location", models.CharField(max_length=200, unique=True)),
+                ("low_price_range", models.IntegerField(default=0)),
+                ("high_price_range", models.IntegerField(default=10)),
+                ("description", models.TextField()),
+                ("created_on", models.DateTimeField(auto_now_add=True)),
+                (
+                    "image",
+                    cloudinary.models.CloudinaryField(
+                        default="placeholder", max_length=255, verbose_name="image"
+                    ),
+                ),
+                (
+                    "status",
+                    models.IntegerField(
+                        choices=[(0, "Save for later"), (1, "Publish now")], default=0
+                    ),
+                ),
+                (
+                    "author",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="restaurant_review",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+                (
+                    "favourites",
+                    models.ManyToManyField(
+                        blank=True,
+                        default=None,
+                        related_name="favourite",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+                (
+                    "likes",
+                    models.ManyToManyField(
+                        blank=True,
+                        related_name="restaurant_like",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Comment',
+            name="Comment",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('body', models.TextField()),
-                ('approved', models.BooleanField(default=False)),
-                ('created_on', models.DateTimeField(auto_now=True)),
-                ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='commenter', to=settings.AUTH_USER_MODEL)),
-                ('restaurant', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments', to='letters_from_zaragoza.restaurant')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("body", models.TextField()),
+                ("approved", models.BooleanField(default=False)),
+                ("created_on", models.DateTimeField(auto_now=True)),
+                (
+                    "author",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="commenter",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+                (
+                    "restaurant",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="comments",
+                        to="letters_from_zaragoza.restaurant",
+                    ),
+                ),
             ],
             options={
-                'ordering': ['created_on'],
+                "ordering": ["created_on"],
             },
         ),
     ]

@@ -30,7 +30,9 @@ def contact_us(request):
             success_message = "Your message was sent successfully."
             contact_form = ContactForm()  # reset form after success
     else:
-        initial_data = {"email": request.user.email} if request.user.is_authenticated else {}
+        initial_data = (
+            {"email": request.user.email} if request.user.is_authenticated else {}
+        )
         contact_form = ContactForm(initial=initial_data)
 
     return render(
