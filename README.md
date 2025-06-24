@@ -169,8 +169,18 @@ Testing and results can be found [here](/testing.md)
 
 - The Restaurants page contains cards for the best restaurant by category in Zaragoza (e.g. best burger, best ramen etc)
 - Eight reviews are contained on each page and then pagination kicks in. A link to the next page of reviews shows at the bottom of the page.
+- A back button also displays on the second page or more.
 - Each restaurant card contains the post title, the restaurant name and an image of the restaurant.
 - Only reviews with the status of published are included here. Clicking anywhere inside the card will take the user to the detailed restaurant review.
+
+### Restaurant Detail Page
+**Masthead Section**
+
+![masthead](letters_from_zaragoza/templates/restaurant_detail.html)
+
+- The masthead section of each restaurant review contains the post title, the restaurant name, an add to favourites button as well as a like button.
+- The 'add to favourites' button and the 'like' button only appears if the user is logged in.
+- If the user is not logged in a link to the login page appears.
 
 ### User Account Pages
 
