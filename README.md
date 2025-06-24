@@ -150,6 +150,12 @@ Testing and results can be found [here](/testing.md)
 - Clicking the links in the footer opens separate tabs.
 
 ### Home Page
+**Hero Section**
+
+![hero](docs/readme_images/hero.webp)
+
+- The home page includes a hero section which encourages the user to 'discover the best restaurants in Zaragoza, Spain'.
+- The hero section contains a carousel which contains images of some of the restaurants that are reviewed on the site.
 
 ### User Account Pages
 
