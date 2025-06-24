@@ -191,7 +191,6 @@ To deploy your Django app to Heroku, follow the steps below:
   ```
 - Comment out the default database configuration from Django.
 - Save files and make migrations.
-- Add Cloudinary URL to env.py
 - Add the cloudinary libraries to the list of installed apps.
 - Add the STATIC files settings - the url, storage path, directory path, root path, media url and default file storage path.
 - Link the file to the templates directory in Heroku.
@@ -200,7 +199,6 @@ To deploy your Django app to Heroku, follow the steps below:
     ```python
     ALLOWED_HOSTS = ['your-app-name.herokuapp.com', 'localhost']
     ```
-
 ### 5. Create a `Procfile`
 
 - In the project root, create a file named `Procfile` (no extension) with:
@@ -214,8 +212,7 @@ In the **Config Vars** section of your Heroku app, add:
 
 - `SECRET_KEY`
 - `CLOUDINARY_URL`
-- `PORT` = `8000`
-- `SECRET_KEY`
+- `DATABASE_URL`
 
 ### 9. Connect to GitHub & Deploy
 
@@ -228,28 +225,33 @@ In the **Config Vars** section of your Heroku app, add:
 5. Click **Deploy Branch** to start deployment.
 6. Once deployment completes, click **"View"** to access your live site.
 
-Important!: Ensure that your Heroku app URL is added to the ALLOWED_HOSTS setting in the settings.py file. Additionally, verify that the DEBUG setting is set to False, and the requirements.txt and Procfile are up to date and committed to GitHub.
+Important!: Verify that the DEBUG setting is set to False, and the requirements.txt and Procfile are up to date and committed to GitHub.
 
 ### Your Site is Now Live!
 
 Your Django app is now deployed and operational on Heroku.
 
-## Forking this repository
-- Locate the repository at this link [Letters from Zaragoza](https://github.com/cgrace0044/pp4_zaragoza_restaurants).
-- The fork button is located on the right side of the repository menu 
-- To copy the repository to your Github account, click the button
+## Forking this Repository
 
-## Cloning this repository
-To clone this repository follow the below steps: 
+To fork the repository:
 
-1. Locate the repository at this link [Letters from Zaragoza](https://github.com/cgrace0044/pp4_zaragoza_restaurants). 
-2. Navigate to the main page of the repository and click **Code**.
-3. Open **Terminal**.
-4. In Terminal, change the current working directory to the desired location of the cloned directory.
-5. Type **'git clone'**, and then paste the URL copied from GitHub earlier. 
-6. Type **'Enter'** to create the local clone. 
+1. Visit the repository: [Letters from Zaragoza](https://github.com/cgrace0044/pp4_zaragoza_restaurants).
+2. Click the **Fork** button in the upper-right corner of the page.
+3. This will create a copy of the repository under your own GitHub account.
 
-Any changes required to the website, they can be made, committed and pushed to Github.
+## Cloning this Repository
+
+To clone the repository to your local machine:
+
+1. Go to the repository: [Letters from Zaragoza](https://github.com/cgrace0044/pp4_zaragoza_restaurants).
+2. On the main page, click the **Code** button.
+3. Copy the provided URL (use HTTPS or SSH).
+4. Open your **Terminal** or **Command Prompt**.
+5. Navigate to the directory where you want the cloned folder to be created.
+6. Run the following command:
+
+   ```bash
+   git clone https://github.com/your-username/pp4_zaragoza_restaurants.git
 
 ## Languages
 
