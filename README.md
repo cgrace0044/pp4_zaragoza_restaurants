@@ -215,15 +215,9 @@ In the **Config Vars** section of your Heroku app, add:
 - `SECRET_KEY`
 - `CLOUDINARY_URL`
 - `PORT` = `8000`
+- `SECRET_KEY`
 
-### 7. Add Buildpacks
-
-1. Go to the **Settings** tab.
-2. Under **Buildpacks**, add the following (in order):
-   - Python
-   - Node.js
-
-### 8. Connect to GitHub & Deploy
+### 9. Connect to GitHub & Deploy
 
 1. Go to the **Deploy** tab.
 2. Select **GitHub** as your deployment method.
@@ -233,6 +227,8 @@ In the **Config Vars** section of your Heroku app, add:
    - **Manual Deploy** from the `main` branch.
 5. Click **Deploy Branch** to start deployment.
 6. Once deployment completes, click **"View"** to access your live site.
+
+Important!: Ensure that your Heroku app URL is added to the ALLOWED_HOSTS setting in the settings.py file. Additionally, verify that the DEBUG setting is set to False, and the requirements.txt and Procfile are up to date and committed to GitHub.
 
 ### Your Site is Now Live!
 
