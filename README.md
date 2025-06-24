@@ -141,8 +141,6 @@ Testing and results can be found [here](/testing.md)
 
 - The navigation bar is fully responsive and converts to a hamburger icon on small screens (as below).
 
-![header](docs/readme_images/nav_mobile.webp)
-
 ### Footer
 ![footer](docs/readme_images/footer.webp)
 - The footer contains a span stating 'Follow Our tasty Zaragoza journey'.
@@ -162,8 +160,17 @@ Testing and results can be found [here](/testing.md)
 ![gstarted](docs/readme_images/get_started.webp)
 
 - The Get Started section contains a brief overview of what the site offers with links to restaurants, contact, about and login.
-- The links are contained within the Font Awesome icons.
-- If the user is already authenticated the login link does not appear.
+- The links are contained within Font Awesome icons.
+- If the user is already authenticated the login link does not appear. 
+
+### Browse Restaurants
+
+![browse restaurants](docs/readme_images/browse_restaurants.webp)
+
+- The Restaurants page contains cards for the best restaurant by category in Zaragoza (e.g. best burger, best ramen etc)
+- Eight reviews are contained on each page and then pagination kicks in. A link to the next page of reviews shows at the bottom of the page.
+- Each restaurant card contains the post title, the restaurant name and an image of the restaurant.
+- Only reviews with the status of published are included here. Clicking anywhere inside the card will take the user to the detailed restaurant review.
 
 ### User Account Pages
 
