@@ -164,11 +164,6 @@ To deploy your Django app to Heroku, follow the steps below:
   ```
   Heroku uses this file to install dependencies.
 
-- Ensure your project is production-ready:
-  - Secret keys and sensitive variables are stored in `env.py`.
-  - Static and media file settings are configured properly.
-  - Your `settings.py` is updated for production (see below).
-
 ### 2. Create a Heroku App
 
 1. Log in or sign up at [Heroku](https://heroku.com).
@@ -194,25 +189,14 @@ To deploy your Django app to Heroku, follow the steps below:
   os.environ['DATABASE_URL'] = 'your-database-url'
   os.environ['CLOUDINARY_URL'] = 'your-cloudinary-url'
   ```
-- In `settings.py`:
-  - Import `env.py`.
-  - Replace default `DATABASES` config with the one sourced from `DATABASE_URL`.
-  - Set `SECRET_KEY = os.environ.get('SECRET_KEY')`.
-  - Add Cloudinary settings for media file handling.
-  - Configure static files:
-    ```python
-    STATIC_URL = '/static/'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-
-    MEDIA_URL = '/media/'
-    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-    ```
-  - Update templates path if necessary:
-    ```python
-    TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-    ```
-  - Add your Heroku app to `ALLOWED_HOSTS`:
+- Comment out the default database configuration from Django.
+- Save files and make migrations.
+- Add Cloudinary URL to env.py
+- Add the cloudinary libraries to the list of installed apps.
+- Add the STATIC files settings - the url, storage path, directory path, root path, media url and default file storage path.
+- Link the file to the templates directory in Heroku.
+- Change the templates directory to TEMPLATES_DIR
+- Add your Heroku app to `ALLOWED_HOSTS`:
     ```python
     ALLOWED_HOSTS = ['your-app-name.herokuapp.com', 'localhost']
     ```
@@ -223,8 +207,6 @@ To deploy your Django app to Heroku, follow the steps below:
   ```
   web: gunicorn project_name.wsgi
   ```
-
----
 
 ### 6. Set Config Vars on Heroku
 
