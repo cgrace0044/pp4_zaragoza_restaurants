@@ -157,6 +157,14 @@ Testing and results can be found [here](/testing.md)
 - The home page includes a hero section which encourages the user to 'discover the best restaurants in Zaragoza, Spain'.
 - The hero section contains a carousel which contains images of some of the restaurants that are reviewed on the site.
 
+**Get Started Section**
+
+![gstarted](docs/readme_images/get_started.webp)
+
+- The Get Started section contains a brief overview of what the site offers with links to restaurants, contact, about and login.
+- The links are contained within the Font Awesome icons.
+- If the user is already authenticated the login link does not appear.
+
 ### User Account Pages
 
 **Sign Up**
