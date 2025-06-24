@@ -150,13 +150,13 @@ Testing and results can be found [here](/testing.md)
 
 - Django allauth was installed and used to create the Register, Log in and Log out functionality. 
 
-## 🚀 Deployment to Heroku
+## Deployment to Heroku
 
 To deploy your Django app to Heroku, follow the steps below:
 
 ---
 
-### 1. ✅ Prepare the Application
+### 1. Prepare the Application
 
 - Update `requirements.txt` by running:  
   ```bash
@@ -169,18 +169,14 @@ To deploy your Django app to Heroku, follow the steps below:
   - Static and media file settings are configured properly.
   - Your `settings.py` is updated for production (see below).
 
----
-
-### 2. 🔧 Create a Heroku App
+### 2. Create a Heroku App
 
 1. Log in or sign up at [Heroku](https://heroku.com).
 2. From the Heroku Dashboard, click **"Create New App"**.
 3. Choose a unique app name and select your region.
 4. Click **"Create App"** to proceed.
 
----
-
-### 3. 📦 Attach a Postgres Database
+### 3. Attach a Postgres Database
 
 1. In the app dashboard, go to the **"Settings"** tab.
 2. Scroll to **"Config Vars"** and click **"Reveal Config Vars"**.
@@ -188,9 +184,7 @@ To deploy your Django app to Heroku, follow the steps below:
    - **Key:** `DATABASE_URL`
    - **Value:** Your Postgres database URL.
 
----
-
-### 4. ⚙️ Configure Environment and `settings.py`
+### 4. Configure Environment and `settings.py`
 
 - Create an `env.py` file in your project root:
   ```python
@@ -223,9 +217,7 @@ To deploy your Django app to Heroku, follow the steps below:
     ALLOWED_HOSTS = ['your-app-name.herokuapp.com', 'localhost']
     ```
 
----
-
-### 5. 📁 Create a `Procfile`
+### 5. Create a `Procfile`
 
 - In the project root, create a file named `Procfile` (no extension) with:
   ```
@@ -234,7 +226,7 @@ To deploy your Django app to Heroku, follow the steps below:
 
 ---
 
-### 6. 🔑 Set Config Vars on Heroku
+### 6. Set Config Vars on Heroku
 
 In the **Config Vars** section of your Heroku app, add:
 
@@ -242,18 +234,14 @@ In the **Config Vars** section of your Heroku app, add:
 - `CLOUDINARY_URL`
 - `PORT` = `8000`
 
----
-
-### 7. 🛠 Add Buildpacks
+### 7. Add Buildpacks
 
 1. Go to the **Settings** tab.
 2. Under **Buildpacks**, add the following (in order):
    - Python
    - Node.js
 
----
-
-### 8. 🔁 Connect to GitHub & Deploy
+### 8. Connect to GitHub & Deploy
 
 1. Go to the **Deploy** tab.
 2. Select **GitHub** as your deployment method.
@@ -264,9 +252,7 @@ In the **Config Vars** section of your Heroku app, add:
 5. Click **Deploy Branch** to start deployment.
 6. Once deployment completes, click **"View"** to access your live site.
 
----
-
-### ✅ Your Site is Now Live!
+### Your Site is Now Live!
 
 Your Django app is now deployed and operational on Heroku.
 
