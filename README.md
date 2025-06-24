@@ -182,6 +182,27 @@ Testing and results can be found [here](/testing.md)
 - The 'add to favourites' button and the 'like' button only appears if the user is logged in.
 - If the user is not logged in a link to the login page appears.
 
+**Restaurant Details Card**
+
+![restaurant details card](docs/readme_images/r_details_card.webp)
+
+- Each detailed restaurant card contains the restaurant location, price, description and restaurant image.
+- On hover there is a nice box shadow effect to make the card stand out.
+
+**Comments Section**
+
+![comments section](docs/readme_images/comments_section.webp)
+
+- The comments section starts with a Font Awesome comments symbol together with a comment counter.
+- Below there is a make a comment card. Clicking on 'write a comment' opens the comment modal.
+- Making a comment is only available to logged in users.
+- Below there is a second card which contains the comments already made.
+- Users will see all approved comments plus their own comments which have yet to have been approved.
+- Users' own comments will also provide the user to edit/delete comments.
+    - clicking edit will open the comment modal and will prepopulate the existing comment.
+    - click delete will bring the user to a delete confirmation modal. 
+
+
 ### User Account Pages
 
 **Sign Up**
