@@ -37,6 +37,10 @@ The live link can be found here - [Letters from Zaragoza](https://letters-from-z
 - As a site owner I can monitor contact requests via a database so that I can keep track of contact requests.
 - As a site owner I can mark each contact request as read once complete so that I can keep track of my progress.
 
+#### EPIC | Celebrate Restaurant Reviews
+- As a Site User I can like or unlike a restaurant review so that I can interact with posts
+- As a Site User I can add/remove restaurants from my favourites so that I can be reminded which restaurants I like
+
 ### Design
 When picking the colours for the website I researched a number of food blogs. I noticed that on the majority of these websites minimal colour was used. This allows the images of the food to really shine.  
 
@@ -90,6 +94,12 @@ The Montserrat font is the main font used for the body of the website with the P
 ![Contact](docs/wireframes/contact_wireframe.webp)
 </details>
 
+## Agile Methodology
+
+Github projects was used to manage the development process using an agile approach. Please see link to project board [here](https://github.com/users/cgrace0044/projects/5/views/1)
+
+The 7 Epics listed above were documented within the Github project as Milestones. A Github Issue was created for each User Story which was then allocated to a milestone(Epic). Each User Story has defined acceptance criteria to make it clear when the User Story has been completed. The acceptance criteria are further broken down into tasks to facilitate the User Story's execution.
+
 ## Data Model
 Please see the database schema created for the project below: 
 
@@ -105,8 +115,8 @@ Testing and results can be found [here](/testing.md)
 
 ### Footer
 ![footer](docs/readme_images/footer.webp)
-- The footer contains a span stating 'Follow Our Tasty Zaragoza Journey'
-- The footer section includes links to Facebook, Instagram, Twitter and Youtube.
+- The footer contains a span stating 'Follow Our tasty Zaragoza journey'.
+- Links to Twitter, Instagram, Facebook and Youtube are also included.
 - Clicking the links in the footer opens separate tabs.
 
 ### Home Page
