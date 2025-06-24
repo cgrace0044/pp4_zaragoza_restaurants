@@ -176,7 +176,7 @@ Testing and results can be found [here](/testing.md)
 ### Restaurant Detail Page
 **Masthead Section**
 
-![masthead](letters_from_zaragoza/templates/restaurant_detail.html)
+![masthead](docs/readme_images/masthead.webp)
 
 - The masthead section of each restaurant review contains the post title, the restaurant name, an add to favourites button as well as a like button.
 - The 'add to favourites' button and the 'like' button only appears if the user is logged in.
