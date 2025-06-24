@@ -198,10 +198,16 @@ Testing and results can be found [here](/testing.md)
 - Making a comment is only available to logged in users.
 - Below there is a second card which contains the comments already made.
 - Users will see all approved comments plus their own comments which have yet to have been approved.
-- Users' own comments will also provide the user to edit/delete comments.
+- Each comment contains the username, the date and the time together with the comment.
+- Users' own comments will also provide the user the opportunity to edit/delete comments.
     - clicking edit will open the comment modal and will prepopulate the existing comment.
     - click delete will bring the user to a delete confirmation modal. 
 
+**Comments Modal**
+
+![comment modal](docs/readme_images/comment modal.webp)
+
+- The comment modal contains a body textfield together with a submit and close button.
 
 ### User Account Pages
 
