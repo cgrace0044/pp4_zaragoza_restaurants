@@ -205,9 +205,11 @@ Testing and results can be found [here](/testing.md)
 
 **Comments Modal**
 
-![comment modal](docs/readme_images/comment modal.webp)
+![comment modal](docs/readme_images/comment_modal.webp)
 
 - The comment modal contains a body textfield together with a submit and close button.
+- Clicking submit will inform the user that their comment is awaiting approval.
+- Clicking close will take the user back to the restaurant review.
 
 ### User Account Pages
 
