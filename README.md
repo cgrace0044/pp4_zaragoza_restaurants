@@ -51,10 +51,13 @@ Colour palette from Coolors
 
 The colours I chose are quite neutral. I have predominently kept the backgrounds white or close to white and then I picked variations on greens and beiges.
 
-Great care was taken to establish a good contrast between background colours and text at all times to ensure maximum user accessibility. 
+Great care was taken to establish a good contrast between background colours and text at all times to ensure maximum user accessibility. This was tested using Lighthouse.
+
+#### Imagery
+All images come from admin user uploads. The images are all my own and they are served via Cloudinary. The images are filled with colour to make the food appetising.
 
 #### Fonts
-The Montserrat font is the main font used for the body of the website with the Playfair Display font used for the main headings on the home page. These fonts were imported via Google Fonts. Sans Serif is the backup font, in case for any reason the main font isn't being imported into the site correctly.
+The Montserrat font is the main font used for the body of the website. The Imperial Script font was used for the name of the restaurant on the restaurant detail page. This font gives an 'upmarket' feel. These fonts were imported via Google Fonts. Sans Serif is the backup font, in case for any reason the main font isn't being imported into the site correctly.
 
 #### Wireframes
 
