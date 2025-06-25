@@ -127,7 +127,11 @@ Each epic has a number of user stories which are broken down into acceptance cri
 ## Data Model
 Please see the database schema created for the project below: 
 
-![Database](docs/readme_images/database_schema.webp)
+![Database](docs/readme_images/lucidchart.webp)
+
+The database schema outlines the structure and relationships between key tables for the platform.
+
+This schema was generated using Lucidchart
 
 ---
 
