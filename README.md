@@ -218,6 +218,8 @@ Testing and results can be found [here](/testing.md)
 
 - If a user chooses to delete a comment they are asked if they are sure via a delete confirmation modal. 
 
+### Favourites Page
+
 ### User Account Pages
 
 **Sign Up**
