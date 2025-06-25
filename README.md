@@ -222,7 +222,7 @@ Testing and results can be found [here](/testing.md)
 
 ![favourites](docs/readme_images/my_favourites.webp)
 
-- A link to the favourites page becomes visible within the user profile dropdown in the navigation bar.
+- A link to the favourites page becomes visible within the user profile dropdown in the navigation bar when the user is logged in.
 - This page will show any restaurant that the user has added to their favourites.
 - Clicking anywhere inside cards will bring the user to the detailed restaurant page - there the user can remove the restaurant from their favourites if they wish. 
 
@@ -242,12 +242,13 @@ Testing and results can be found [here](/testing.md)
 ![logout](docs/readme_images/logout.webp)
 
 - Django allauth was installed and used to create the Register, Log in and Log out functionality. 
+- Messages confirm to the user when they have logged in/logged out successfully. 
+
+---
 
 ## Deployment to Heroku
 
 To deploy your Django app to Heroku, follow the steps below:
-
----
 
 ### 1. Prepare the Application
 
