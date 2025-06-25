@@ -224,7 +224,7 @@ Testing and results can be found [here](/testing.md)
 
 **Register**
 
-![register](/Users/carolinegrace/Downloads/register.webp)
+![register](docs/readme_images/register.webp)
 
 **Log In**
 
