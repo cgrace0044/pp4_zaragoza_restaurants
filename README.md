@@ -6,6 +6,8 @@ The site displays a blog of the best restaurants by category in the city (e.g. b
 
 The live link can be found here - [Letters from Zaragoza](https://letters-from-zaragoza-663ab0086474.herokuapp.com/).
 
+---
+
 ### User Stories
 
 #### EPIC | User Profile
@@ -40,6 +42,8 @@ The live link can be found here - [Letters from Zaragoza](https://letters-from-z
 #### EPIC | Celebrate Restaurant Reviews
 - As a Site User I can like or unlike a restaurant review so that I can interact with posts
 - As a Site User I can add/remove restaurants from my favourites so that I can be reminded which restaurants I like
+
+---
 
 ### Design
 When picking the colours for the website I researched a number of food blogs. I noticed that on the majority of these websites minimal colour was used. This allows the images of the food to really shine.  
@@ -97,6 +101,8 @@ The Montserrat font is the main font used for the body of the website. The Imper
 ![Contact](docs/wireframes/contact_wireframe.webp)
 </details>
 
+---
+
 ## Agile Methodology
 
 Github projects was used to manage the development process using an agile approach. Please see link to project board [here](https://github.com/users/cgrace0044/projects/5/views/1)
@@ -116,14 +122,20 @@ The below epics (as detailed above) were documented in Github projects as milest
 
 Each epic has a number of user stories which are broken down into acceptance criteria and further broken down as tasks. Once tasks were complete they were marked as done within the checklist. Issues were moved to 'Done' within the project board once complete. 
 
+---
+
 ## Data Model
 Please see the database schema created for the project below: 
 
 ![Database](docs/readme_images/database_schema.webp)
 
+---
+
 ## Testing
 
 Testing and results can be found [here](/testing.md)
+
+---
 
 ## Features
 
@@ -325,6 +337,8 @@ Important!: Verify that the DEBUG setting is set to False, and the requirements.
 
 Your Django app is now deployed and operational on Heroku.
 
+---
+
 ## Forking this Repository
 
 To fork the repository:
@@ -332,6 +346,8 @@ To fork the repository:
 1. Visit the repository: [Letters from Zaragoza](https://github.com/cgrace0044/pp4_zaragoza_restaurants).
 2. Click the **Fork** button in the upper-right corner of the page.
 3. This will create a copy of the repository under your own GitHub account.
+
+---
 
 ## Cloning this Repository
 
@@ -347,6 +363,8 @@ To clone the repository to your local machine:
    ```bash
    git clone https://github.com/your-username/pp4_zaragoza_restaurants.git
 
+---
+
 ## Languages
 
 - [Python](https://www.python.org/) 
@@ -354,6 +372,8 @@ To clone the repository to your local machine:
 - [HTML](https://developer.mozilla.org/en-US/docs/Glossary/HTML5 "HTML")
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS "CSS")
 - [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript "JS")
+
+---
 
 ## Frameworks - Libraries - Programs Used
 - [Django](https://www.djangoproject.com/): Main python framework used in the development of this project
@@ -376,3 +396,5 @@ To clone the repository to your local machine:
 - [Cloudinary](https://cloudinary.com/): the image hosting service used to upload images
 - [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/): CSS Framework for developing responsiveness and styling
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/): Used to manage Django forms, making form rendering in templates simpler and more elegant.
+
+---
