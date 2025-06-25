@@ -238,6 +238,15 @@ Testing and results can be found [here](/testing.md)
 - This page will show any restaurant that the user has added to their favourites.
 - Clicking anywhere inside cards will bring the user to the detailed restaurant page - there the user can remove the restaurant from their favourites if they wish. 
 
+### Contact Form
+
+![contact](docs/readme_images/contact.webp)
+
+- The contact form has three fields; name, email and message.
+- All fields are mandatory. If one is left blank the form won't submit and an error message is shown.
+- If the user is logged in their email address will automatically populate. This is so we don't ask the user for the same information twice.
+- When the form is submitted a success message is shown to say the message was sent successfully. 
+
 ### User Account Pages
 
 **Register**
