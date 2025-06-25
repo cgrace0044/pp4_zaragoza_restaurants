@@ -2,11 +2,11 @@
 
 ### EPIC | User Profile
 
-| User Story                                                                                  | Comment |
-|---------------------------------------------------------------------------------------------|---------|
-| As a Site User I can register an account so that I can comment on posts.                    |         |
-| As a Site User I can login/logout of my account so that I can keep my account secure.       |         |
-| As a Site User I can view my login status so that I know whether I am logged in or not.    |         |
+| User Story                                                                                   | Complete                                                                                              |
+|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| As a Site User I can register an account so that I can comment on posts.                    | ✅ - Users can register on the register page and only authenticated users can comment on posts.       |
+| As a Site User I can login/logout of my account so that I can keep my account secure.       | ✅ - Login is available via the login page and the logout functionality appears once user is logged in. |
+| As a Site User I can view my login status so that I know whether I am logged in or not.     | ✅ - Login status is shown via Django messages and, once logged in, the username appears in the navbar. |
 
 ### EPIC | User Navigation
 
