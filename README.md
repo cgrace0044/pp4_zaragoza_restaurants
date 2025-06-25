@@ -222,11 +222,12 @@ Testing and results can be found [here](/testing.md)
 
 ### User Account Pages
 
-**Sign Up**
+**Register**
 
-![register](docs/readme_images/signup.webp)
+![register](/Users/carolinegrace/Downloads/register.webp)
 
 **Log In**
+
 
 ![login](docs/readme_images/login.webp)
 
