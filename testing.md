@@ -10,12 +10,13 @@
 
 ### EPIC | User Navigation
 
-| User Story                                                                                                  | Comment |
-|-------------------------------------------------------------------------------------------------------------|---------|
-| As a Site User I can access the homepage and immediately understand the purpose of the site.               |         |
-| As a Site User I can easily navigate the site so that I do not get easily lost and I know where I am.      |         |
-| As a Site User I can view a list of the best restaurants by category so that I can select a review to read.|         |
-| As a Site User I can click on a review on the restaurants page so that I can know more about the restaurant.|        |
+| User Story                                                                                                   | Comment                                                                                                                                                                         |
+|-------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| As a Site User I can access the homepage and immediately understand the purpose of the site.                | ✅ - Clear homepage hero section with a short tagline outlining purpose of site. "Get Started" section includes clear links so users can quickly understand what is on offer.   |
+| As a Site User I can easily navigate the site so that I do not get easily lost and I know where I am.       | ✅ - The same navbar is available on all pages. The current page is clearly shown via a darkened text in the navbar.                                                           |
+| As a Site User I can view a list of the best restaurants by category so that I can select a review to read. | ✅ - The Restaurants page contains all the restaurant reviews by category. The page is clear and concise.                                                                      |
+| As a Site User I can click on a review on the restaurants page so that I can know more about the restaurant.| ✅ - All restaurant links were validated and take the user to the correct detailed restaurant page.                                                                             |
+
 
 ### EPIC | Review Interaction
 
