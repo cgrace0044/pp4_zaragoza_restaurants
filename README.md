@@ -247,6 +247,21 @@ Testing and results can be found [here](/testing.md)
 - If the user is logged in their email address will automatically populate. This is so we don't ask the user for the same information twice.
 - When the form is submitted a success message is shown to say the message was sent successfully. 
 
+### About
+
+**About Section**
+![about](docs/readme_images/contact.webp)
+
+- The about section contains two separate parts: About Zaragoza and About Me.
+- An image of a classic Spanish paella is shown,
+
+**Map**
+![map](docs/readme_images/map.webp)
+
+- Below the about section there is a map marking where Letters From Zaragoza is located. This is done via an intergration with the Google Maps API. 
+- It is not necessary to hide Google maps API keys. However I have restricted the usage to specific domains. 
+- There is an email address shown. When clicked the email link opens an email window with the 'To' field automatically populated with the Letters From Zaragoza email address.
+
 ### User Account Pages
 
 **Register**
