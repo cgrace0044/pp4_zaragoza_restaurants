@@ -220,6 +220,12 @@ Testing and results can be found [here](/testing.md)
 
 ### Favourites Page
 
+![favourites](docs/readme_images/my_favourites.webp)
+
+- A link to the favourites page becomes visible within the user profile dropdown in the navigation bar.
+- This page will show any restaurant that the user has added to their favourites.
+- Clicking anywhere inside cards will bring the user to the detailed restaurant page - there the user can remove the restaurant from their favourites if they wish. 
+
 ### User Account Pages
 
 **Register**
