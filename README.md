@@ -129,15 +129,39 @@ Please see the database schema created for the project below:
 
 ![Database](docs/readme_images/lucidchart.webp)
 
-The database schema outlines the structure and relationships between key tables for the platform.
+The database schema outlines the structure and relationships between key tables for the platform. This schema was generated using Lucidchart.
 
-This schema was generated using Lucidchart
+- The Restaurant model was created to provide the structure of restaurant reviews on the website.
+- The Comment model allows the user to comment on restaurant reviews.
+- The About model outlines the structure for the about section on the website.
+- Django AllAuth was used for the user authentication system.
+- The Contact model creates the structure for the contact form.
 
 ---
 
 ## Testing
 
 Testing and results can be found [here](/testing.md)
+
+---
+
+## Security Features and Defensive Design
+
+### User Authentication
+
+- Django's @loginrequired decorator to only allow certain access to logged in users (e.g. favourites, likes, comments etc).
+- Some HTML only displays to logged in users using 'if user is authenticated' functionality.
+
+### Password Management
+- Django enforces strong password policies to enhance user account security.
+
+### Form Validation
+If incorrect or empty data is added to a form, the form won't submit and a warning will appear to the user informing them what field raised the error. 
+
+### Database Security
+The database url and secret key are stored in the env.py file to prevent unwanted connections to the database and this was set up before the first push to Github.
+
+Cross-Site Request Forgery (CSRF) tokens were used on all forms throughout this site to enhance security.
 
 ---
 
@@ -283,6 +307,13 @@ Testing and results can be found [here](/testing.md)
 
 - Django allauth was installed and used to create the Register, Log in and Log out functionality. 
 - Messages confirm to the user when they have logged in/logged out successfully. 
+
+---
+
+### Future Features
+- Within the login page I would like to implement social media login.
+- Within the contact form it would be good to have a calendar system to allow potential collaborators to setup a meeting.
+- A page outlining potential foodie trips you could do within driving distance of Zaragoza.
 
 ---
 
