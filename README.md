@@ -473,3 +473,5 @@ To clone the repository to your local machine:
 ## Acknowledgments
 
 Many thanks to my mentor Simen Daehlin for his support and advice. Thank you also to the Code Institute Slack community - a quick search on here often resolved many of the bugs I had. Thanks to my family for their support during this project. 
+
+---

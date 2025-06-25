@@ -26,6 +26,7 @@ img {
     color: #4E5424;
     font-weight: 300;
     text-align: center;
+    font-size: 27px;
 }
 
 /* Buttons */
@@ -43,7 +44,7 @@ img {
 
 .btn-delete {
     color: #fff;
-    background: #E84610;
+    background: #4E5424;
 }
 
 .btn-outline-dark {
@@ -60,8 +61,11 @@ img {
     color: #fff;
 }
 
-.btn-green:hover {
-    box-shadow: 0px 0px 4px #fff !important;
+.btn-green:hover,
+.btn-edit:hover,
+.btn-delete:hover {
+    box-shadow: 0px 0px 6px rgb(57, 57, 57) !important;
+    color:#fff;
 }
 
 /*--------------------------------------------Home Page*/
@@ -73,6 +77,11 @@ img {
     border: none;
 }
 
+.navbar .nav-link.active {
+  color: #212529;
+  font-weight: 600;
+}
+
 .dropdown-menu .dropdown-item:hover,
 .dropdown-menu .dropdown-item:focus {
     background-color: #e9ecef; 
@@ -82,6 +91,10 @@ img {
 .hero {
     background-color: #E8E4E2;
     margin-bottom: 30px;
+}
+
+.hero-text{
+    font-size: 40px;
 }
 
 i {
@@ -137,8 +150,8 @@ i:hover {
 }
 
 .link {
-    color: #9Da57E;
-    text-decoration: none;
+    color: #4E5424;
+    text-decoration: underline;
 }
 
 .link:hover,
@@ -148,7 +161,7 @@ i:hover {
 }
 
 .faded {
-    color: rgb(172, 175, 175);
+    color: #445261;
 }
 
 /*--------------------------------------------Restaurant Detail*/
@@ -185,7 +198,7 @@ i:hover {
 }
 
 .like-action i:hover {
-  background: white;
+  box-shadow: 0px 0px 4px rgb(57, 57, 57) !important;
 }
 
 .like-action p {
@@ -229,10 +242,11 @@ footer p {
 /*--------------------------------------------About*/
 
 /* Map */
-div#map {
-    min-height: 360px;
-    margin-bottom: 20px;
+#map {
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
+    margin: 20px;
 }
 
 div.about-section {
@@ -241,6 +255,10 @@ div.about-section {
 
 .about-zaragoza {
     margin-bottom: 20px;
+}
+
+.email{
+    color:#000;
 }
 
 /*--------------------------------------------Browse Restaurants*/
@@ -308,7 +326,13 @@ div.about-section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.signup li {
+.signup ul.errorlist li,
+.login ul.errorlist li {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.signup ul:not(.errorlist) {
     display: none;
 }
 

@@ -1,3 +1,61 @@
+## User Story Testing
+
+### EPIC | User Profile
+
+| User Story                                                                                  | Comment |
+|---------------------------------------------------------------------------------------------|---------|
+| As a Site User I can register an account so that I can comment on posts.                    |         |
+| As a Site User I can login/logout of my account so that I can keep my account secure.       |         |
+| As a Site User I can view my login status so that I know whether I am logged in or not.    |         |
+
+### EPIC | User Navigation
+
+| User Story                                                                                                  | Comment |
+|-------------------------------------------------------------------------------------------------------------|---------|
+| As a Site User I can access the homepage and immediately understand the purpose of the site.               |         |
+| As a Site User I can easily navigate the site so that I do not get easily lost and I know where I am.      |         |
+| As a Site User I can view a list of the best restaurants by category so that I can select a review to read.|         |
+| As a Site User I can click on a review on the restaurants page so that I can know more about the restaurant.|        |
+
+### EPIC | Review Interaction
+
+| User Story                                                                                                     | Comment |
+|----------------------------------------------------------------------------------------------------------------|---------|
+| As a Site User I can comment on a restaurant review so that I can give my feedback.                          |         |
+| As a Site User I can edit and delete comments so that I can easily make changes if I made a mistake.         |         |
+| As a Site Admin I can review or disapprove comments so that only appropriate comments are displayed on the site.|      |
+
+### EPIC | Review Management
+
+| User Story                                                                                                            | Comment |
+|-----------------------------------------------------------------------------------------------------------------------|---------|
+| As a Site Admin I can create, read, update and delete reviews so that I can manage my content.                       |         |
+| As Site Admin I can mark my reviews as 'save for later' or 'publish now' depending on whether they are finished or not.|        |
+
+### EPIC | About Letters from Zaragoza
+
+| User Story                                                                                      | Comment |
+|--------------------------------------------------------------------------------------------------|---------|
+| As a site user I can click on the About link so that I can read about the site.                 |         |
+| As a Site Admin I can create or update the about page content so that it is available on the site.|        |
+
+### EPIC | Contact
+
+| User Story                                                                                                                   | Comment |
+|------------------------------------------------------------------------------------------------------------------------------|---------|
+| As a site user I can contact the site owner via the contact form so that I can make suggestions/propose collaboration opportunities.|    |
+| As a site owner I can monitor contact requests via a database so that I can keep track of contact requests.                 |         |
+| As a site owner I can mark each contact request as read once complete so that I can keep track of my progress.              |         |
+
+### EPIC | Celebrate Restaurant Reviews
+
+| User Story                                                                                              | Comment |
+|----------------------------------------------------------------------------------------------------------|---------|
+| As a Site User I can like or unlike a restaurant review so that I can interact with posts.              |         |
+| As a Site User I can add/remove restaurants from my favourites so that I can be reminded which restaurants I like.|     |
+
+---
+
 ### Lighthouse
 
 Lighthouse validation was run on all pages (both mobile and desktop) in order to check accessibility and performance. 
@@ -26,6 +84,8 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Login          |           93 |           100 |             100 | 100 |
 | Logout         |           94 |           100 |             100 | 100 |
 | Register       |           94 |           100 |             100 | 100 |
+
+---
 
 ## Manual Testing
 
@@ -199,6 +259,8 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Logout button              | Click                                     | Success message confirming log out appears | Pass      |
 | Logout button              | Click                                     | Success message fades after 2 seconds      | Pass      |
 
+---
+
 ## Bugs 
 
 ### Fixed Bugs
@@ -229,3 +291,5 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 
 ### Unfixed bugs:
 There are no known unfixed bugs. 
+
+---

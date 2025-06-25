@@ -17,32 +17,38 @@
 
     <!-- Favourite Restaurants Grid -->
     <div class="row card-deck">
-        {% for restaurant in favourites %}
-            <div class="col-sm-6 col-md-4 col-lg-3 px-1 d-flex align-items-stretch">
-                <div class="card card-detail restaurant-card mb-3 shadow-sm mx-auto mx-sm-2">
+        {% if favourites %}
+            {% for restaurant in favourites %}
+                <div class="col-sm-6 col-md-4 col-lg-3 px-1 d-flex align-items-stretch">
+                    <div class="card card-detail restaurant-card mb-3 shadow-sm mx-auto mx-sm-2">
                     
-                    <!-- Display restaurant image or fallback placeholder -->
-                    {% if "placeholder" in restaurant.image.url %}
-                        <img class="card-img-top" src="{% static 'images/pilar_zaragoza.webp' %}" alt="placeholder image">
-                    {% else %}
-                        <img src="{{ restaurant.image.url }}" alt="restaurant image" class="card-img-top">
-                    {% endif %}
+                        <!-- Display restaurant image or fallback placeholder -->
+                        {% if "placeholder" in restaurant.image.url %}
+                            <img class="card-img-top" src="{% static 'images/pilar_zaragoza.webp' %}" alt="placeholder image">
+                        {% else %}
+                            <img src="{{ restaurant.image.url }}" alt="restaurant image" class="card-img-top">
+                        {% endif %}
 
-                    <!-- Restaurant Info -->
-                    <div class="card-body pb-1">
-                        <h2 class="card-title restaurant-detail-title text-truncate">
-                            {{ restaurant.title }}
-                        </h2>
-                        <p class="card-text">
-                            <span>{{ restaurant.name }}</span>
-                        </p>
+                        <!-- Restaurant Info -->
+                        <div class="card-body pb-1">
+                            <h2 class="card-title restaurant-detail-title text-truncate">
+                                {{ restaurant.title }}
+                            </h2>
+                            <p class="card-text">
+                                <span>{{ restaurant.name }}</span>
+                            </p>
 
-                        <!-- Link to restaurant detail page -->
-                        <a href="{% url 'restaurant_detail' restaurant.slug %}" class="stretched-link" aria-label="restaurant-detail"></a>
+                            <!-- Link to restaurant detail page -->
+                            <a href="{% url 'restaurant_detail' restaurant.slug %}" class="stretched-link" aria-label="restaurant-detail"></a>
+                        </div>
                     </div>
                 </div>
+            {% endfor %}
+            {% else %}
+            <div class="col-12 text-center py-4">
+            <p class="lead text-muted">You haven't added any restaurants to your favourites yet.</p>
             </div>
-        {% endfor %}
+        {% endif %}
     </div>
 
     <!-- Pagination Controls -->

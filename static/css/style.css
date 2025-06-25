@@ -77,6 +77,10 @@ img {
     border: none;
 }
 
+.navbar .nav-link.active {
+  color: #495057;
+}
+
 .dropdown-menu .dropdown-item:hover,
 .dropdown-menu .dropdown-item:focus {
     background-color: #e9ecef; 

@@ -21,8 +21,9 @@
             <div class="card-body p-4">
                 <!-- Success message alert, shown after form submission -->
                 {% if success_message %}
-                    <div class="alert alert-success text-center" role="alert">
+                    <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
                         {{ success_message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 {% endif %}
 
