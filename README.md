@@ -442,7 +442,7 @@ To clone the repository to your local machine:
 - [Responsinator](http://www.responsinator.com/) - Used to verify responsiveness of website on different devices.
 - [Balsamiq](https://balsamiq.com/) - Used to generate Wireframe images.
 - [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - Used for overall development and tweaking, including testing responsiveness and performance.
-- [Font Awesome](https://fontawesome.com/) - Used for icons in information bar.
+- [Font Awesome](https://fontawesome.com/) - Used for various icons throughout the site.
 - [GitHub](https://github.com/) - Used for version control and agile tool.
 - [Google Fonts](https://fonts.google.com/) - Used to import and alter fonts on the page.
 - [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
@@ -451,9 +451,25 @@ To clone the repository to your local machine:
 - [Coolors](https://coolors.co/) - Used to create colour palette.
 - [Favicon](https://favicon.io/) - Used to create the favicon.
 - [Lucidchart](https://lucid.app/documents#/dashboard) - used to create the database schema design
-- [Summernote](https://summernote.org/): A WYSIWYG editor to allow users to edit their posts
+- [Summernote](https://summernote.org/): A WYSIWYG editor
 - [Cloudinary](https://cloudinary.com/): the image hosting service used to upload images
 - [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/): CSS Framework for developing responsiveness and styling
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/): Used to manage Django forms, making form rendering in templates simpler and more elegant.
 
 ---
+
+## Credits
+
+- [W3Schools](https://www.w3schools.com/)
+- [Django Docs](https://docs.djangoproject.com/en/4.0/)
+- [Bootstrap 5 Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Stack Overflow](https://stackoverflow.com/)
+- [Unsplash](https://unsplash.com/): The paella image on the site was sourced from unsplash.com
+- [Pexels](https://www.pexels.com/): The image of the Pilar cathedral in Zaragoza was sourced from Pexels. This is a default image on the site - used if other images won't upload.
+- [Code Institute - Blog Walkthrough Project](https://github.com/Code-Institute-Solutions/django-blog-sourcecode)
+
+---
+
+## Acknowledgments
+
+Many thanks to my mentor Simen Daehlin for his support and advice. Thank you also to the Code Institute Slack community - a quick search on here often resolved many of the bugs I had. Thanks to my family for their support during this project. 
