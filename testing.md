@@ -80,6 +80,7 @@
 ![nav login](docs/readme_images/nav_login.webp)
 
 </details>
+
 ---
 
 ### EPIC | User Navigation
@@ -103,7 +104,8 @@
 <details>
 <summary>📸 View Screenshot – Homepage Hero & Get Started</summary>
 
-![Homepage](docs/readme_images/homepage.webp)
+![Homepage](docs/readme_images/hero.webp)
+![Get Started](docs/readme_images/get_started.webp)
 
 </details>
 
@@ -119,7 +121,7 @@
 <details>
 <summary>📸 View Screenshot – Navigation Bar Highlight</summary>
 
-![Navbar](docs/readme_images/navbar.webp)
+![Navbar](docs/readme_images/nav.webp)
 
 </details>
 
@@ -135,7 +137,7 @@
 <details>
 <summary>📸 View Screenshot – Restaurants by Category</summary>
 
-![Restaurant List](docs/readme_images/restaurant_list.webp)
+![Restaurant List](docs/readme_images/browse_restaurants.webp)
 
 </details>
 
