@@ -474,7 +474,6 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Logout Link           | Click      | Open logout confirmation page                                        | Pass      |
 | All Nav Links         | Hover      | Slightly darker text                                                 | Pass      |
 | Hamburger Menu        | Responsive | Display when screen size reduces to tablet                           | Pass      |
-| My Account Dropdown   | Responsive | Contents move into hamburger menu when screen size reduces to medium | Pass      |
 |                       |            |                                                                      |           |
 | Footer                |            |                                                                      |           |
 | All links             | Click      | Open in new tab and to correct location                              | Pass      |
@@ -488,6 +487,15 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | G. Started Login Link      | Click                                     | Redirect to login page                     | Pass      |
 | G. Started Links           | Hover                                     | On hover get started links go darker green | Pass      |
 | Login link                 | Logged in/ Logged out                     | login link only displays when not logged in| Pass      |
+
+### About Section
+| Element                    | Action                       | Expected Result                                                          | Pass/Fail |
+|----------------------------|------------------------------|--------------------------------------------------------------------------|-----------|
+| About Content              | Display                      | Correct content displays: About Zaragoza, About Me, Location, Contact Us | Pass      |
+| Google Map                 | Display                      | Google map displays with marker on Valdespartera location                | Pass      |
+| Google Map                 | Hover                        | Cursor changes to pointer on hover over Google map                       | Pass      |
+| Email address              | Hover                        | Text lightens on hover to show it is a link.                             | Pass      |
+| Email address              | Click                        | On click a draft email is opened with the email address in the To field  | Pass      |
 
 ### Restaurants Page
 | Element                    | Action                         | Expected Result                                                             | Pass/Fail |
@@ -568,16 +576,6 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Message field              | Leave empty                               | Error message displays                     | Pass      |
 | Send message button        | Hover                                     | Cursor changes to pointer                  | Pass      |
 | Send message button        | Click                                     | Success message confirming message sent    | Pass      |
-
-### About Section
-| Element                    | Action                       | Expected Result                                                          | Pass/Fail |
-|----------------------------|------------------------------|--------------------------------------------------------------------------|-----------|
-| About Content              | Display                      | Correct content displays: About Zaragoza, About Me, Location, Contact Us | Pass      |
-| Google Map                 | Display                      | Google map displays with marker on Valdespartera location                | Pass      |
-| Google Map                 | Hover                        | Cursor changes to pointer on hover over Google map                       | Pass      |
-| Email address              | Hover                        | On hover email address changes to blue to show it is a link              | Pass      |
-| Email address              | Click                        | On click a draft email is opened with the email address in the To field  | Pass      |
-
 
 ### Django All Auth Pages
 | Element                    | Action                                    | Expected Result                            | Pass/Fail |
