@@ -8,6 +8,51 @@ The live link can be found here - [Letters from Zaragoza](https://letters-from-z
 
 ---
 
+## 📚 Table of Contents
+
+- [Letters from Zaragoza](#letters-from-zaragoza)
+- [User Stories](#user-stories)
+  - [User Profile](#epic--user-profile)
+  - [User Navigation](#epic--user-navigation)
+  - [Review Interaction](#epic--review-interaction)
+  - [Review Management](#epic--review-management)
+  - [About Letters from Zaragoza](#epic--about-letters-from-zaragoza)
+  - [Contact](#epic--contact)
+  - [Celebrate Restaurant Reviews](#epic--celebrate-restaurant-reviews)
+- [Design](#design)
+  - [Colour Scheme](#colour-scheme)
+  - [Imagery](#imagery)
+  - [Fonts](#fonts)
+  - [Wireframes](#wireframes)
+- [Agile Methodology](#agile-methodology)
+- [Data Model](#data-model)
+- [Testing](#testing)
+- [Security Features and Defensive Design](#security-features-and-defensive-design)
+  - [User Authentication](#user-authentication)
+  - [Password Management](#password-management)
+  - [Form Validation](#form-validation)
+  - [Database Security](#database-security)
+- [Features](#features)
+  - [Header and Navigation Bar](#header-and-navigation-bar)
+  - [Footer](#footer)
+  - [Home Page](#home-page)
+  - [Browse Restaurants](#browse-restaurants)
+  - [Restaurant Detail Page](#restaurant-detail-page)
+  - [Favourites Page](#favourites-page)
+  - [Contact Form](#contact-form)
+  - [About](#about)
+  - [User Account Pages](#user-account-pages)
+- [Future Features](#future-features)
+- [Deployment to Heroku](#deployment-to-heroku)
+- [Forking this Repository](#forking-this-repository)
+- [Cloning this Repository](#cloning-this-repository)
+- [Languages](#languages)
+- [Frameworks - Libraries - Programs Used](#frameworks---libraries---programs-used)
+- [Credits](#credits)
+- [Acknowledgments](#acknowledgments)
+
+---
+
 ### User Stories
 
 #### EPIC | User Profile
