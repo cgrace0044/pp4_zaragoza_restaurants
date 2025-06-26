@@ -8,8 +8,9 @@
 | As a Site User I can login/logout of my account so that I can keep my account secure.       | ✅        | <details><summary>View Story</summary><br>[User Story – Login/Logout](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/16)</details> |
 | As a Site User I can view my login status so that I know whether I am logged in or not.     | ✅        | <details><summary>View Story</summary><br>[User Story – View Login Status](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/17)</details> |
 
+---
 
-## 🧪 User Story 1: Register an Account to Comment on Posts
+#### 🧪 User Story 1: Register an Account to Comment on Posts
 
 **As a Site User I can register an account so that I can comment on posts.**
 
@@ -34,7 +35,7 @@
 
 ---
 
-## 🧪 User Story 2: Login/Logout Functionality
+#### 🧪 User Story 2: Login/Logout Functionality
 
 **As a Site User I can login/logout of my account so that I can keep my account secure.**
 
@@ -58,7 +59,7 @@
 
 ---
 
-## 🧪 User Story 3: View Login Status
+#### 🧪 User Story 3: View Login Status
 
 **As a Site User I can view my login status so that I know whether I am logged in or not.**
 
@@ -79,17 +80,80 @@
 ![nav login](docs/readme_images/nav_login.webp)
 
 </details>
-
+---
 
 ### EPIC | User Navigation
 
-| User Story                                                                                                   | Comment                                                                                                                                                                         |
-|-------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| As a Site User I can access the homepage and immediately understand the purpose of the site.                | ✅ - Clear homepage hero section with a short tagline outlining purpose of site. "Get Started" section includes clear links so users can quickly understand what is on offer.   |
-| As a Site User I can easily navigate the site so that I do not get easily lost and I know where I am.       | ✅ - The same navbar is available on all pages. The current page is clearly shown via a darkened text in the navbar.                                                           |
-| As a Site User I can view a list of the best restaurants by category so that I can select a review to read. | ✅ - The Restaurants page contains all the restaurant reviews by category. The page is clear and concise.                                                                      |
-| As a Site User I can click on a review on the restaurants page so that I can know more about the restaurant.| ✅ - All restaurant links were validated and take the user to the correct detailed restaurant page.                                                                             |
+| User Story                                                                                                   | Complete | Link |
+|-------------------------------------------------------------------------------------------------------------|----------|------|
+| As a Site User I can access the homepage and immediately understand the purpose of the site.                | ✅        | <details><summary>View Story</summary><br>[User Story – Homepage Purpose](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/18)</details> |
+| As a Site User I can easily navigate the site so that I do not get easily lost and I know where I am.       | ✅        | <details><summary>View Story</summary><br>[User Story – Site Navigation](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/19)</details> |
+| As a Site User I can view a list of the best restaurants by category so that I can select a review to read. | ✅        | <details><summary>View Story</summary><br>[User Story – Restaurant List](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/20)</details> |
+| As a Site User I can click on a review on the restaurants page so that I can know more about the restaurant.| ✅        | <details><summary>View Story</summary><br>[User Story – View Restaurant Detail](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/21)</details> |
 
+---
+
+#### 🧪 User Story 4: Understand the Purpose of the Site
+
+**As a Site User I can access the homepage and immediately understand the purpose of the site.**
+
+- Clear **hero section** with a short tagline explaining the site.
+- "Get Started" section includes helpful links to direct the user.
+
+<details>
+<summary>📸 View Screenshot – Homepage Hero & Get Started</summary>
+
+![Homepage](docs/readme_images/homepage.webp)
+
+</details>
+
+---
+
+#### 🧪 User Story 5: Navigate the Site with Ease
+
+**As a Site User I can easily navigate the site so that I do not get easily lost and I know where I am.**
+
+- The same **navigation bar** appears on all pages.
+- The current page is **clearly highlighted** using bold/darkened text.
+
+<details>
+<summary>📸 View Screenshot – Navigation Bar Highlight</summary>
+
+![Navbar](docs/readme_images/navbar.webp)
+
+</details>
+
+---
+
+#### 🧪 User Story 6: View Restaurants by Category
+
+**As a Site User I can view a list of the best restaurants by category so that I can select a review to read.**
+
+- The **Restaurants** page categorizes all reviews clearly.
+- Page layout is simple and focused for easy scanning.
+
+<details>
+<summary>📸 View Screenshot – Restaurants by Category</summary>
+
+![Restaurant List](docs/readme_images/restaurant_list.webp)
+
+</details>
+
+---
+
+#### 🧪 User Story 7: Access Restaurant Review Details
+
+**As a Site User I can click on a review on the restaurants page so that I can know more about the restaurant.**
+
+- All restaurant links have been **validated** and lead to the correct review page.
+- Review pages contain detailed restaurant information.
+
+<details>
+<summary>📸 View Screenshot – Restaurant Detail Page</summary>
+
+![Restaurant Detail](docs/readme_images/restaurant_detail.webp)
+
+</details>
 
 ### EPIC | Review Interaction
 
