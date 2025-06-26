@@ -9,8 +9,7 @@
 | As a Site User I can view my login status so that I know whether I am logged in or not.     | ✅        | <details><summary>View Story</summary><br>[User Story – View Login Status](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/17)</details> |
 
 
-
-*As a Site User I can register an account so that I can comment on posts.*
+*User Story 1: As a Site User I can register an account so that I can comment on posts.*
 
 Users can register on the register page.
 
