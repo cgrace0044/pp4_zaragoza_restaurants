@@ -206,7 +206,7 @@ Cross-Site Request Forgery (CSRF) tokens were used on all forms throughout this 
 ## Features
 
 ### Header and Navigation Bar
-![header](docs/readme_images/navbar.webp)
+![header](docs/readme_images/nav_username.webp)
 
 - The logo section of the navbar simply contains the name Letters From Zaragoza - links to the home page.
 - The navigation bar is very clean cut. This is on purpose so that the user is drawn towards the restaurant images.
@@ -215,9 +215,9 @@ Cross-Site Request Forgery (CSRF) tokens were used on all forms throughout this 
 - When the user is logged in their username will show in the navbar together with a dropdown to their favourites and a logout option.
 - When the user is not logged in links to the login and register pages will show (as below).
 
-![header](docs/readme_images/nav_username.webp)
+![header](docs/readme_images/navbar.webp)
 
-- The navigation bar is fully responsive and converts to a hamburger icon on small screens (as below).
+- The navigation bar is fully responsive and converts to a hamburger icon on small screens.
 
 ### Footer
 ![footer](docs/readme_images/footer.webp)
@@ -235,7 +235,7 @@ Cross-Site Request Forgery (CSRF) tokens were used on all forms throughout this 
 
 **Get Started Section**
 
-![gstarted](docs/readme_images/get_started.webp)
+![gstarted](docs/readme_images/get_s.webp)
 
 - The Get Started section contains a brief overview of what the site offers with links to restaurants, contact, about and login.
 - The links are contained within Font Awesome icons.

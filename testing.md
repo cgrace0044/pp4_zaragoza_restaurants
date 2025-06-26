@@ -128,7 +128,7 @@
 <summary>📸 View Screenshot – Homepage Hero & Get Started</summary>
 
 ![Homepage](docs/readme_images/hero.webp)
-![Get Started](docs/readme_images/get_started.webp)
+![Get Started](docs/readme_images/get_s.webp)
 
 </details>
 
