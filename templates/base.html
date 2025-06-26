@@ -60,10 +60,6 @@
                                aria-current="page" href="{% url 'browse_restaurants' %}">Restaurants</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == about_url %}active{% endif %}" aria-current="page"
-                               href="{{ about_url }}">About</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link {% if request.path == contact_url %}active{% endif %}" aria-current="page"
                                href="{% url 'contact' %}">Contact</a>
                         </li>

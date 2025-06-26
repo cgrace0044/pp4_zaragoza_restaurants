@@ -85,7 +85,7 @@
             <!-- Feature: About -->
             <div class="col-12 col-md-3 mb-2">
                 <div class="feature-image mb-2">
-                    <a href="{% url 'about' %}" aria-label="about">
+                    <a href="#about" aria-label="about">
                         <i class="fa-solid fa-address-card fa-5x"></i>
                     </a>
                 </div>
@@ -114,4 +114,13 @@
     </div>
 </section>
 
+{% include "about/about.html" %}
+
+{% endblock %}
+
+{% block extrajs %}
+
+<script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyAo-XWuOU0rWg7tpb9U7GlxzCj8JHaDtro", v: "weekly"});</script>
+<script src="/static/js/maps.js"></script>
 {% endblock %}

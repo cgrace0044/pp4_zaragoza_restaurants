@@ -3,6 +3,8 @@ from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+
+from about.models import About
 from .models import Restaurant, Comment
 from .forms import CommentForm
 
@@ -12,6 +14,12 @@ class Home(generic.TemplateView):
     """View for rendering the homepage"""
 
     template_name = "index.html"
+
+
+def home(request):
+    about = About.objects.all().order_by("-updated_on").first()
+
+    return render(request, "index.html",{"about": about})
 
 
 class RestaurantList(generic.ListView):
