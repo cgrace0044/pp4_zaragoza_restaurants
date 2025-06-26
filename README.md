@@ -316,10 +316,9 @@ Cross-Site Request Forgery (CSRF) tokens were used on all forms throughout this 
 ### About
 
 **About Section**
-![about](docs/readme_images/contact.webp)
+![about](docs/readme_images/about_index.webp)
 
 - The about section contains two separate parts: About Zaragoza and About Me.
-- An image of a classic Spanish paella is shown,
 
 **Map**
 ![map](docs/readme_images/map.webp)
