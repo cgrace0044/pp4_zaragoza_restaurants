@@ -6,6 +6,8 @@ The site displays a blog of the best restaurants by category in the city (e.g. b
 
 The live link can be found here - [Letters from Zaragoza](https://letters-from-zaragoza-663ab0086474.herokuapp.com/).
 
+![Responsive](docs/readme_images/responsive.webp)
+
 ---
 
 ## 📚 Table of Contents
