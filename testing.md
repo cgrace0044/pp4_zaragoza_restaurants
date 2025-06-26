@@ -161,9 +161,9 @@
 
 | User Story                                                                                                    | Complete | Link |
 |--------------------------------------------------------------------------------------------------------------|----------|------|
-| As a Site User I can comment on a restaurant review so that I can give my feedback.                         | ✅        | <details><summary>View Story</summary><br>[User Story – Comment on Review](#)</details> |
-| As a Site User I can edit and delete comments so that I can easily make changes if I made a mistake.        | ✅        | <details><summary>View Story</summary><br>[User Story – Edit/Delete Comments](#)</details> |
-| As a Site Admin I can review or disapprove comments so that only appropriate comments are displayed.        | ✅        | <details><summary>View Story</summary><br>[User Story – Approve Comments](#)</details> |
+| As a Site User I can comment on a restaurant review so that I can give my feedback.                         | ✅        | <details><summary>View Story</summary><br>[User Story – Comment on Review](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/22)</details> |
+| As a Site User I can edit and delete comments so that I can easily make changes if I made a mistake.        | ✅        | <details><summary>View Story</summary><br>[User Story – Edit/Delete Comments](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/23)</details> |
+| As a Site Admin I can review or disapprove comments so that only appropriate comments are displayed.        | ✅        | <details><summary>View Story</summary><br>[User Story – Approve Comments](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/24)</details> |
 
 ---
 
@@ -226,8 +226,8 @@
 
 | User Story                                                                                                                | Complete | Link |
 |---------------------------------------------------------------------------------------------------------------------------|----------|------|
-| As a Site Admin I can create, read, update and delete reviews so that I can manage my content.                          | ✅        | <details><summary>View Story</summary><br>[User Story – Manage Reviews](#)</details> |
-| As Site Admin I can mark reviews as 'save for later' or 'publish now' depending on whether they are finished or not.     | ✅        | <details><summary>View Story</summary><br>[User Story – Draft/Publish](#)</details> |
+| As a Site Admin I can create, read, update and delete reviews so that I can manage my content.                          | ✅        | <details><summary>View Story</summary><br>[User Story – Manage Reviews](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/25)</details> |
+| As Site Admin I can mark reviews as 'save for later' or 'publish now' depending on whether they are finished or not.     | ✅        | <details><summary>View Story</summary><br>[User Story – Draft/Publish](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/26)</details> |
 
 ---
 
