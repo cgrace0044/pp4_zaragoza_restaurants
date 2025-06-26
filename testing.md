@@ -1,6 +1,6 @@
 ## User Story Testing
 
-### EPIC | User Profile
+### EPIC 1 | User Profile
 
 | User Story                                                                                   | Complete | Link |
 |----------------------------------------------------------------------------------------------|----------|------|
@@ -83,7 +83,7 @@
 
 ---
 
-### EPIC | User Navigation
+### EPIC 2 | User Navigation
 
 | User Story                                                                                                   | Complete | Link |
 |-------------------------------------------------------------------------------------------------------------|----------|------|
@@ -153,48 +153,247 @@
 <details>
 <summary>📸 View Screenshot – Restaurant Detail Page</summary>
 
-![Restaurant Detail](docs/readme_images/restaurant_detail.webp)
+![Restaurant Detail](docs/readme_images/r_details_card.webp)
 
 </details>
 
-### EPIC | Review Interaction
+### EPIC 3 | Review Interaction
 
-| User Story                                                                                                     | Comment |
-|----------------------------------------------------------------------------------------------------------------|---------|
-| As a Site User I can comment on a restaurant review so that I can give my feedback.                          |         |
-| As a Site User I can edit and delete comments so that I can easily make changes if I made a mistake.         |         |
-| As a Site Admin I can review or disapprove comments so that only appropriate comments are displayed on the site.|      |
-
-### EPIC | Review Management
-
-| User Story                                                                                                            | Comment |
-|-----------------------------------------------------------------------------------------------------------------------|---------|
-| As a Site Admin I can create, read, update and delete reviews so that I can manage my content.                       |         |
-| As Site Admin I can mark my reviews as 'save for later' or 'publish now' depending on whether they are finished or not.|        |
-
-### EPIC | About Letters from Zaragoza
-
-| User Story                                                                                      | Comment |
-|--------------------------------------------------------------------------------------------------|---------|
-| As a site user I can click on the About link so that I can read about the site.                 |         |
-| As a Site Admin I can create or update the about page content so that it is available on the site.|        |
-
-### EPIC | Contact
-
-| User Story                                                                                                                   | Comment |
-|------------------------------------------------------------------------------------------------------------------------------|---------|
-| As a site user I can contact the site owner via the contact form so that I can make suggestions/propose collaboration opportunities.|    |
-| As a site owner I can monitor contact requests via a database so that I can keep track of contact requests.                 |         |
-| As a site owner I can mark each contact request as read once complete so that I can keep track of my progress.              |         |
-
-### EPIC | Celebrate Restaurant Reviews
-
-| User Story                                                                                              | Comment |
-|----------------------------------------------------------------------------------------------------------|---------|
-| As a Site User I can like or unlike a restaurant review so that I can interact with posts.              |         |
-| As a Site User I can add/remove restaurants from my favourites so that I can be reminded which restaurants I like.|     |
+| User Story                                                                                                    | Complete | Link |
+|--------------------------------------------------------------------------------------------------------------|----------|------|
+| As a Site User I can comment on a restaurant review so that I can give my feedback.                         | ✅        | <details><summary>View Story</summary><br>[User Story – Comment on Review](#)</details> |
+| As a Site User I can edit and delete comments so that I can easily make changes if I made a mistake.        | ✅        | <details><summary>View Story</summary><br>[User Story – Edit/Delete Comments](#)</details> |
+| As a Site Admin I can review or disapprove comments so that only appropriate comments are displayed.        | ✅        | <details><summary>View Story</summary><br>[User Story – Approve Comments](#)</details> |
 
 ---
+
+#### 🧪 User Story 8: Comment on a Restaurant Review
+
+**As a Site User I can comment on a restaurant review so that I can give my feedback.**
+
+- Only logged-in users can comment.
+- A **comment modal** appears when clicking "Write a Comment".
+
+<details>
+<summary>📸 View Screenshot – Comment Modal (Logged In)</summary>
+
+![Comment Modal](docs/readme_images/comment_modal.webp)
+
+</details>
+
+- Non-logged-in users are prompted to log in.
+
+<details>
+<summary>📸 View Screenshot – Comment Blocked (Not Logged In)</summary>
+
+![Blocked Comment](docs/readme_images/login_comment.webp)
+
+</details>
+
+---
+
+#### 🧪 User Story 9: Edit and Delete Comments
+
+**As a Site User I can edit and delete comments so that I can easily make changes if I made a mistake.**
+
+- Logged-in users see **Edit** and **Delete** options on their own comments.
+
+<details>
+<summary>📸 View Screenshot – Edit/Delete Buttons</summary>
+
+![Edit Delete](docs/readme_images/edit_delete_comment.webp)
+
+</details>
+
+---
+
+#### 🧪 User Story 10: Approve/Disapprove Comments
+
+**As a Site Admin I can review or disapprove comments so that only appropriate comments are displayed on the site.**
+
+- Admin moderation is done through the **Django admin panel**.
+
+<details>
+<summary>📸 View Screenshot – Admin Comment Moderation</summary>
+
+![Admin Comments](docs/readme_images/admin_comments.webp)
+
+</details>
+
+---
+
+### EPIC 4 | Review Management
+
+| User Story                                                                                                                | Complete | Link |
+|---------------------------------------------------------------------------------------------------------------------------|----------|------|
+| As a Site Admin I can create, read, update and delete reviews so that I can manage my content.                          | ✅        | <details><summary>View Story</summary><br>[User Story – Manage Reviews](#)</details> |
+| As Site Admin I can mark reviews as 'save for later' or 'publish now' depending on whether they are finished or not.     | ✅        | <details><summary>View Story</summary><br>[User Story – Draft/Publish](#)</details> |
+
+---
+
+#### 🧪 User Story 11: Manage Reviews via Admin
+
+**As a Site Admin I can create, read, update and delete reviews so that I can manage my content.**
+
+- Full CRUD functionality available through **Django admin**.
+
+<details>
+<summary>📸 View Screenshot – Review Admin Panel</summary>
+
+![Review Admin](docs/readme_images/admin_reviews.webp)
+
+</details>
+
+---
+
+#### 🧪 User Story 12: Save Draft or Publish Reviews
+
+**As Site Admin I can mark reviews as 'save for later' or 'publish now'.**
+
+- **Draft/Published** toggle available in the review form.
+
+<details>
+<summary>📸 View Screenshot – Draft vs Publish Option</summary>
+
+![Draft Publish](docs/readme_images/publish_toggle.webp)
+
+</details>
+
+---
+
+### EPIC 5 | About Letters from Zaragoza
+
+| User Story                                                                                      | Complete | Link |
+|--------------------------------------------------------------------------------------------------|----------|------|
+| As a Site User I can click on the About link to learn more about the site.                      | ✅        | <details><summary>View Story</summary><br>[User Story – About Page](#)</details> |
+| As a Site Admin I can update the About page content.                                             | ✅        | <details><summary>View Story</summary><br>[User Story – Update About Content](#)</details> |
+
+---
+
+#### 🧪 User Story 13: View About Page
+
+**As a Site User I can click on the About link to learn more about the site.**
+
+- Contains **intro text**, **contact info**, and a **map location**.
+
+<details>
+<summary>📸 View Screenshot – About Page</summary>
+
+![About Page](docs/readme_images/about_page.webp)
+
+</details>
+
+---
+
+#### 🧪 User Story 14: Update About Page Content
+
+**As a Site Admin I can update the About page content.**
+
+- About content editable via **Django admin** under the "About" model.
+
+<details>
+<summary>📸 View Screenshot – About Page Admin</summary>
+
+![About Admin](docs/readme_images/admin_about.webp)
+
+</details>
+
+---
+
+### EPIC 6 | Contact
+
+| User Story                                                                                                                         | Complete | Link |
+|------------------------------------------------------------------------------------------------------------------------------------|----------|------|
+| As a Site User I can contact the site owner via a form.                                                                           | ✅        | <details><summary>View Story</summary><br>[User Story – Contact Form](#)</details> |
+| As a Site Owner I can monitor contact requests via a database.                                                                   | ✅        | <details><summary>View Story</summary><br>[User Story – Contact Dashboard](#)</details> |
+| As a Site Owner I can mark contact requests as read once complete.                                                               | ✅        | <details><summary>View Story</summary><br>[User Story – Mark Read](#)</details> |
+
+---
+
+#### 🧪 User Story 15: Submit Contact Form
+
+**As a Site User I can contact the site owner via a form.**
+
+- **Name**, **email**, and **message** fields are included.
+- Used to send **suggestions or collaboration requests**.
+
+<details>
+<summary>📸 View Screenshot – Contact Form</summary>
+
+![Contact Form](docs/readme_images/contact_form.webp)
+
+</details>
+
+---
+
+#### 🧪 User Story 16: Monitor Contact Requests
+
+**As a Site Owner I can monitor contact requests via a database.**
+
+- All messages are stored and visible in **Django admin**.
+
+<details>
+<summary>📸 View Screenshot – Contact Admin View</summary>
+
+![Contact Admin](docs/readme_images/admin_contact.webp)
+
+</details>
+
+---
+
+#### 🧪 User Story 17: Mark Contact Requests as Read
+
+**As a Site Owner I can mark contact requests as read.**
+
+- Checkbox for marking **read/unread status** is available.
+
+<details>
+<summary>📸 View Screenshot – Mark as Read</summary>
+
+![Mark Read](docs/readme_images/contact_read_toggle.webp)
+
+</details>
+
+---
+
+### EPIC 7 | Celebrate Restaurant Reviews
+
+| User Story                                                                                                          | Complete | Link |
+|--------------------------------------------------------------------------------------------------------------------|----------|------|
+| As a Site User I can like or unlike a restaurant review to interact with posts.                                   | ✅        | <details><summary>View Story</summary><br>[User Story – Like Reviews](#)</details> |
+| As a Site User I can add/remove restaurants from favourites to keep track of the ones I enjoy.                    | ✅        | <details><summary>View Story</summary><br>[User Story – Favourite Reviews](#)</details> |
+
+---
+
+#### 🧪 User Story 18: Like/Unlike Restaurant Reviews
+
+**As a Site User I can like or unlike a restaurant review to interact with posts.**
+
+- Like/unlike available on each **restaurant detail page**.
+- Only visible to **logged-in users**.
+
+<details>
+<summary>📸 View Screenshot – Like Button</summary>
+
+![Like Button](docs/readme_images/like_button.webp)
+
+</details>
+
+---
+
+#### 🧪 User Story 19: Add/Remove from Favourites
+
+**As a Site User I can add/remove restaurants from favourites.**
+
+- Favourites toggle appears on **restaurant detail page**.
+- Accessible from **user’s account** or profile area.
+
+<details>
+<summary>📸 View Screenshot – Favourite Button</summary>
+
+![Favourite Button](docs/readme_images/favourite_button.webp)
+
+</details>
 
 ### Lighthouse
 
