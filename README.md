@@ -233,7 +233,7 @@ Google Maps API key is restricted to certain domains. Therefore although it is p
 
 ### Footer
 ![footer](docs/readme_images/footer.webp)
-- The footer contains a span stating *Follow Our tasty Zaragoza journey*.
+- The footer contains a span stating *Follow our tasty Zaragoza journey*.
 - Links to **Twitter**, **Instagram**, **Facebook** and **Youtube** are also included.
 - Clicking the links in the footer opens separate tabs.
 
@@ -259,7 +259,7 @@ Google Maps API key is restricted to certain domains. Therefore although it is p
 ![about](docs/readme_images/about_section.webp)
 
 - The about section contains two separate parts: **About Zaragoza** and **About Me**.
-- The text is separated by a **featured restaurants section**. In the admin panel of the restaurant model the admin user can choose to check the featured checkbox. Doing this will make the restaurants appear here in this 'featured restaurants' section. The restaurants are clickable and will bring you to the restaurant detail page.
+- The text is separated by a **Featured Restaurants Section**. In the admin panel of the restaurant model the admin user can choose to check the featured checkbox. Doing this will make the restaurants appear here in this 'featured restaurants' section. The restaurants are clickable and will bring you to the restaurant detail page.
 
 ![featured](docs/readme_images/featured.webp)
 
@@ -289,7 +289,7 @@ Google Maps API key is restricted to certain domains. Therefore although it is p
 
 ![masthead](docs/readme_images/masthead.webp)
 
-- The masthead section of each restaurant review contains 
+- The masthead section of each restaurant review contains: 
   - the post title
   - the restaurant name 
   - an add to favourites button
@@ -309,7 +309,7 @@ Google Maps API key is restricted to certain domains. Therefore although it is p
 
 ![comments section](docs/readme_images/comments_section.webp)
 
-- The comments section starts with a Font Awesome comments symbol together with a comment counter.
+- The comments section starts with a **Font Awesome** comments symbol together with a comment counter.
 - Below there is a **make a comment card**. Clicking on *write a comment* opens the comment modal.
 - Making a comment is only available to logged in users.
 - Below there is a second card which contains the comments already made.
@@ -345,7 +345,7 @@ Google Maps API key is restricted to certain domains. Therefore although it is p
 
 ![contact](docs/readme_images/contact.webp)
 
-- The contact form has three fields; name, email and message.
+- The contact form has three fields; **name**, **email** and **message**.
 - All fields are mandatory. If one is left blank the form won't submit and an error message is shown.
 - If the user is logged in their email address will automatically populate. This is so we don't ask the user for the same information twice.
 - When the form is submitted a success message is shown to say the message was sent successfully. 
@@ -486,11 +486,11 @@ To clone the repository to your local machine:
 
 ## Languages
 
-- [Python](https://www.python.org/) 
-- [Markdown](https://en.wikipedia.org/wiki/Markdown)
-- [HTML](https://developer.mozilla.org/en-US/docs/Glossary/HTML5 "HTML")
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS "CSS")
-- [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript "JS")
+- Python
+- Markdown
+- HTML
+- CSS
+- JS
 
 ---
 
@@ -524,7 +524,6 @@ To clone the repository to your local machine:
 - [Django Docs](https://docs.djangoproject.com/en/4.0/)
 - [Bootstrap 5 Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - [Stack Overflow](https://stackoverflow.com/)
-- [Unsplash](https://unsplash.com/): The paella image on the site was sourced from unsplash.com
 - [Pexels](https://www.pexels.com/): The image of the Pilar cathedral in Zaragoza was sourced from Pexels. This is a default image on the site - used if other images won't upload.
 - [Code Institute - Blog Walkthrough Project](https://github.com/Code-Institute-Solutions/django-blog-sourcecode)
 
