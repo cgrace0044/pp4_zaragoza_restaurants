@@ -26,6 +26,7 @@ class Restaurant(models.Model):
         User, related_name="favourite", default=None, blank=True
     )
     likes = models.ManyToManyField(User, related_name="restaurant_like", blank=True)
+    featured = models.BooleanField(default=False, help_text="Check to feature this restaurant")
 
     def __str__(self):
         return f"{self.name} | written by {self.author}"

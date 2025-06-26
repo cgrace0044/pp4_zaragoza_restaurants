@@ -8,12 +8,14 @@ from about.models import About
 from .models import Restaurant, Comment
 from .forms import CommentForm
 
-
-
 def home(request):
     about = About.objects.all().order_by("-updated_on").first()
+    featured_restaurants = Restaurant.objects.filter(featured=True, status=1)[:6]
 
-    return render(request, "index.html",{"about": about})
+    return render(request, "index.html", {
+        "about": about,
+        "featured_restaurants": featured_restaurants
+    })
 
 
 class RestaurantList(generic.ListView):

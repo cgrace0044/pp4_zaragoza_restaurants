@@ -374,6 +374,46 @@ div.about-section {
     text-decoration: underline;
 }
 
+.pilar-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.featured-restaurants {
+    background-color: #F9FAFC;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.featured-restaurant-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.featured-restaurant-img:hover {
+    transform: scale(1.05);
+}
+
+.featured-restaurant-name {
+    font-size: 1rem;
+    color: #4E5424;
+    font-weight: 500;
+    margin: 0;
+}
+
+.featured-restaurant-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 /*--------------------------------------------Browse Restaurants*/
 
 /* Restaurant Cards */
