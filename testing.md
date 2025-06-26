@@ -4,9 +4,9 @@
 
 | User Story                                                                                   | Complete | Link |
 |----------------------------------------------------------------------------------------------|----------|------|
-| As a Site User I can register an account so that I can comment on posts.                    | ✅        | <details><summary>View Story</summary><br>[User Story – Register & Comment](https://github.com/users/cgrace0044/projects/5#card-XXXXX)</details> |
-| As a Site User I can login/logout of my account so that I can keep my account secure.       | ✅        | <details><summary>View Story</summary><br>[User Story – Login/Logout](https://github.com/users/cgrace0044/projects/5#card-YYYYY)</details> |
-| As a Site User I can view my login status so that I know whether I am logged in or not.     | ✅        | <details><summary>View Story</summary><br>[User Story – View Login Status](https://github.com/users/cgrace0044/projects/5#card-ZZZZZ)</details> |
+| As a Site User I can register an account so that I can comment on posts.                    | ✅        | <details><summary>View Story</summary><br>[User Story – Register & Comment](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/15)</details> |
+| As a Site User I can login/logout of my account so that I can keep my account secure.       | ✅        | <details><summary>View Story</summary><br>[User Story – Login/Logout](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/16)</details> |
+| As a Site User I can view my login status so that I know whether I am logged in or not.     | ✅        | <details><summary>View Story</summary><br>[User Story – View Login Status](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/17)</details> |
 
 
 
