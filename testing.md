@@ -435,7 +435,6 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Home           |           87 |           100 |             100 | 100 |
 | Restaurants    |           99 |           100 |             100 | 100 |
 | Rest Detail    |           96 |           100 |             100 | 100 |
-| About          |           77 |           100 |             100 | 100 |
 | Contact        |           99 |           100 |             100 | 100 |
 | Favourites     |           85 |           100 |             100 | 100 |
 | Login          |           100|           100 |             100 | 100 |
@@ -446,7 +445,6 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Home           |           75 |           100 |             100 | 100 |
 | Restaurants    |           89 |           100 |             100 | 100 |
 | Rest Detail    |           72 |           100 |             100 | 100 |
-| About          |           89 |           100 |             100 | 100 |
 | Contact        |           93 |           100 |             100 | 100 |
 | Favourites     |           84 |           100 |             100 | 100 |
 | Login          |           93 |           100 |             100 | 100 |
@@ -464,7 +462,6 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Site Name (logo area) | Click      | Redirect to home                                                     | Pass      |
 | Home Link             | Click      | Redirect to home                                                     | Pass      |
 | Restaurants Link      | Click      | Open Browse Restaurants page                                         | Pass      |
-| About Link            | Click      | Open About page                                                      | Pass      |
 | Contact Link          | Click      | Open Contact page                                                    | Pass      |
 | Register Link         | Display    | Not visible if user logged in                                        | Pass      |
 | Register Link         | Click      | Open Register page                                                   | Pass      |
@@ -487,7 +484,7 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 |----------------------------|-------------------------------------------|--------------------------------------------|-----------|
 | G. Started Restaurants Link| Click                                     | Redirect to browse_restaurants page        | Pass      |
 | G. Started Contact Link    | Click                                     | Redirect to contact page                   | Pass      |
-| G. Started About Link      | Click                                     | Redirect to about page                     | Pass      |
+| G. Started About Link      | Click                                     | Redirect to about section on home page     | Pass      |
 | G. Started Login Link      | Click                                     | Redirect to login page                     | Pass      |
 | G. Started Links           | Hover                                     | On hover get started links go darker green | Pass      |
 | Login link                 | Logged in/ Logged out                     | login link only displays when not logged in| Pass      |
