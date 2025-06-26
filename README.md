@@ -196,7 +196,7 @@ Testing and results can be found [here](/testing.md)
 
 ### User Authentication
 
-- Django's @loginrequired decorator to only allow certain access to logged in users (e.g. favourites, likes, comments etc).
+- Django's @loginrequired decorator was used to only allow certain access to logged in users (e.g. favourites, likes, comments etc).
 - Some HTML only displays to logged in users using 'if user is authenticated' functionality.
 
 ### Password Management
@@ -209,6 +209,9 @@ If incorrect or empty data is added to a form, the form won't submit and a warni
 The database url and secret key are stored in the env.py file to prevent unwanted connections to the database and this was set up before the first push to Github.
 
 Cross-Site Request Forgery (CSRF) tokens were used on all forms throughout this site to enhance security.
+
+### Google Maps API Key
+Google Maps API key is restricted to certain domains. Therefore although it is public is cannot be used by others.
 
 ---
 
