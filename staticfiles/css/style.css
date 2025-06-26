@@ -78,8 +78,7 @@ img {
 }
 
 .navbar .nav-link.active {
-  color: #212529;
-  font-weight: 600;
+  color: #495057;
 }
 
 .dropdown-menu .dropdown-item:hover,
@@ -115,17 +114,36 @@ i:hover {
 .thin {
     font-weight: 300;
 }
+.features-box {
+    background-color: #F9FAFC;
+    border-radius: 15px;
+    padding: 40px 30px;
+    max-width: 1200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
 
-.feature-image {
+.feature-image-outer {
+    padding: 0 15px;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #4E5424;
+    margin-top: 10px;
     text-align: center;
 }
 
 .feature-text {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #333;
     text-align: center;
-    font-size: 17px;
 }
 
-.feature-title {
+.feature-image {
     text-align: center;
 }
 
@@ -259,6 +277,134 @@ div.about-section {
 
 .email{
     color:#000;
+}
+
+.map-contact-box {
+    background-color: #F9FAFC;
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.map-contact-box .section-heading {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #4E5424;
+    margin-bottom: 1rem;
+}
+
+.map-contact-box p {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: #333;
+    line-height: 1.6;
+}
+
+.map-contact-box .email {
+    font-weight: 500;
+    color: #4E5424;
+}
+
+.map-contact-box .email:hover {
+    color: #9DA57E;
+    text-decoration: underline;
+}
+
+/*-------------------- About Section --------------------*/
+
+.about-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #4E5424;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.home-break {
+    border-top: 2px solid #4E5424;
+    margin: 1rem 0;
+}
+
+.map-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.section-heading {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #4E5424;
+    margin-bottom: 1rem;
+}
+
+.email {
+    color: #4E5424;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.email:hover {
+    color: #9DA57E;
+    text-decoration: underline;
+}
+
+.pilar-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.featured-restaurants {
+    background-color: #F9FAFC;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.featured-restaurant-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.featured-restaurant-img:hover {
+    transform: scale(1.05);
+}
+
+.featured-restaurant-name {
+    font-size: 1rem;
+    color: #4E5424;
+    font-weight: 500;
+    margin: 0;
+}
+
+.featured-restaurant-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 /*--------------------------------------------Browse Restaurants*/
