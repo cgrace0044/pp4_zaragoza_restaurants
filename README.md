@@ -231,7 +231,7 @@ Cross-Site Request Forgery (CSRF) tokens were used on all forms throughout this 
 ![hero](docs/readme_images/hero.webp)
 
 - The home page includes a hero section which encourages the user to 'discover the best restaurants in Zaragoza, Spain'.
-- The hero section contains a carousel which contains images of some of the restaurants that are reviewed on the site.
+- The hero section includes a carousel which contains images of some of the restaurants that are reviewed on the site.
 
 **Get Started Section**
 
@@ -239,7 +239,23 @@ Cross-Site Request Forgery (CSRF) tokens were used on all forms throughout this 
 
 - The Get Started section contains a brief overview of what the site offers with links to restaurants, contact, about and login.
 - The links are contained within Font Awesome icons.
-- If the user is already authenticated the login link does not appear. 
+- If the user is already authenticated the login link does not appear.
+- The about section is an anchor link since this section is also on the landing page.
+
+**About Section**
+![about](docs/readme_images/about_section.webp)
+
+- The about section contains two separate parts: About Zaragoza and About Me.
+- The text is separated by a featured restaurants section. In the admin panel of the restaurant model the admin user can choose to check the featured checkbox. Doing this will make the restaurants appear here in this 'featured restaurants' section. The restaurants are clickable and will bring you to the restaurant detail page.
+
+![featured](docs/readme_images/featured.webp)
+
+**Map/Contact Section**
+![map](docs/readme_images/map_contact.webp)
+
+- Below the about section there is a map marking where Letters From Zaragoza is located. This is done via an intergration with the Google Maps API. 
+- It is not necessary to hide Google maps API keys. However I have restricted the usage to specific domains. 
+- There is an email address shown. When clicked the email link opens an email window with the 'To' field automatically populated with the Letters From Zaragoza email address.
 
 ### Browse Restaurants
 
@@ -312,20 +328,6 @@ Cross-Site Request Forgery (CSRF) tokens were used on all forms throughout this 
 - All fields are mandatory. If one is left blank the form won't submit and an error message is shown.
 - If the user is logged in their email address will automatically populate. This is so we don't ask the user for the same information twice.
 - When the form is submitted a success message is shown to say the message was sent successfully. 
-
-### About
-
-**About Section**
-![about](docs/readme_images/about_index.webp)
-
-- The about section contains two separate parts: About Zaragoza and About Me.
-
-**Map**
-![map](docs/readme_images/map.webp)
-
-- Below the about section there is a map marking where Letters From Zaragoza is located. This is done via an intergration with the Google Maps API. 
-- It is not necessary to hide Google maps API keys. However I have restricted the usage to specific domains. 
-- There is an email address shown. When clicked the email link opens an email window with the 'To' field automatically populated with the Letters From Zaragoza email address.
 
 ### User Account Pages
 
