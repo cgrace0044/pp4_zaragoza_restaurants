@@ -8,6 +8,13 @@
 | As a Site User I can login/logout of my account so that I can keep my account secure.       | ✅ - Login is available via the login page and the logout functionality appears once user is logged in. |
 | As a Site User I can view my login status so that I know whether I am logged in or not.     | ✅ - Login status is shown via Django messages and, once logged in, the username appears in the navbar. |
 
+*As a Site User I can register an account so that I can comment on posts.*
+
+Users can register on the register page.
+<details><summary>Screenshot</summary>![register](docs/readme_images/register.webp)</details>  
+
+Only authenticated users can comment on posts
+
 ### EPIC | User Navigation
 
 | User Story                                                                                                   | Comment                                                                                                                                                                         |
