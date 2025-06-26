@@ -12,13 +12,6 @@ The live link can be found here - [Letters from Zaragoza](https://letters-from-z
 
 - [Letters from Zaragoza](#letters-from-zaragoza)
 - [User Stories](#user-stories)
-  - [User Profile](#epic--user-profile)
-  - [User Navigation](#epic--user-navigation)
-  - [Review Interaction](#epic--review-interaction)
-  - [Review Management](#epic--review-management)
-  - [About Letters from Zaragoza](#epic--about-letters-from-zaragoza)
-  - [Contact](#epic--contact)
-  - [Celebrate Restaurant Reviews](#epic--celebrate-restaurant-reviews)
 - [Design](#design)
   - [Colour Scheme](#colour-scheme)
   - [Imagery](#imagery)
