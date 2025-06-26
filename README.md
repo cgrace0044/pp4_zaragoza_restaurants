@@ -129,6 +129,7 @@ Below are the wireframes which I prepared before starting the project. Naturally
 ![Restaurant Detail](docs/wireframes/restaurant_detail_wireframe.webp)
 
 - Originally my restaurant model contained an opening hours section but in the end I didn't think it was necessary.
+- The comment form was changed to a model to make the restaurant detail page look cleaner.
 </details>
 
 <details>
@@ -179,7 +180,7 @@ The database schema outlines the structure and relationships between key tables 
 
 - The Restaurant model was created to provide the structure of restaurant reviews on the website.
 - The Comment model allows the user to comment on restaurant reviews.
-- The About model outlines the structure for the about section on the website.
+- The About model outlines the structure for the about section on the homepage.
 - Django AllAuth was used for the user authentication system.
 - The Contact model creates the structure for the contact form.
 
