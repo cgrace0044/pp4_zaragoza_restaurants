@@ -2,16 +2,23 @@
 
 ### EPIC | User Profile
 
-| User Story                                                                                   | Complete                                                                                              |
-|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| As a Site User I can register an account so that I can comment on posts.                    | ✅ - Users can register on the register page and only authenticated users can comment on posts.       |
-| As a Site User I can login/logout of my account so that I can keep my account secure.       | ✅ - Login is available via the login page and the logout functionality appears once user is logged in. |
-| As a Site User I can view my login status so that I know whether I am logged in or not.     | ✅ - Login status is shown via Django messages and, once logged in, the username appears in the navbar. |
+| User Story                                                                                   | Complete | Link |
+|----------------------------------------------------------------------------------------------|----------|------|
+| As a Site User I can register an account so that I can comment on posts.                    | ✅        | <details><summary>View Story</summary><br>[User Story – Register & Comment](https://github.com/users/cgrace0044/projects/5#card-XXXXX)</details> |
+| As a Site User I can login/logout of my account so that I can keep my account secure.       | ✅        | <details><summary>View Story</summary><br>[User Story – Login/Logout](https://github.com/users/cgrace0044/projects/5#card-YYYYY)</details> |
+| As a Site User I can view my login status so that I know whether I am logged in or not.     | ✅        | <details><summary>View Story</summary><br>[User Story – View Login Status](https://github.com/users/cgrace0044/projects/5#card-ZZZZZ)</details> |
+
+
 
 *As a Site User I can register an account so that I can comment on posts.*
 
 Users can register on the register page.
-<details><summary>Screenshot</summary> ![register](docs/readme_images/register.webp)</details>  
+
+<summary>View Screenshot</summary>
+
+![Register Page](docs/readme_images/register.webp)
+
+</details>  
 
 Only authenticated users can comment on posts
 
