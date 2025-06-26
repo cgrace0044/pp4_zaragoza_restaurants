@@ -255,6 +255,7 @@ Google Maps API key is restricted to certain domains. Therefore although it is p
 - The about section is an anchor link since this section is also on the landing page.
 
 **About Section**
+
 ![about](docs/readme_images/about_section.webp)
 
 - The about section contains two separate parts: About Zaragoza and About Me.
@@ -263,21 +264,25 @@ Google Maps API key is restricted to certain domains. Therefore although it is p
 ![featured](docs/readme_images/featured.webp)
 
 **Map/Contact Section**
+
 ![map](docs/readme_images/map_contact.webp)
 
-- Below the about section there is a map marking where Letters From Zaragoza is located. This is done via an intergration with the Google Maps API. 
-- It is not necessary to hide Google maps API keys. However I have restricted the usage to specific domains. 
+- Below the about section there is a map marking where Letters From Zaragoza is located. This is done via an integration with the Google Maps API. 
+- It is not necessary to hide Google Maps API keys. However I have restricted the usage to specific domains. 
 - There is an email address shown. When clicked the email link opens an email window with the 'To' field automatically populated with the Letters From Zaragoza email address.
 
 ### Browse Restaurants
 
 ![browse restaurants](docs/readme_images/browse_restaurants.webp)
 
-- The Restaurants page contains cards for the best restaurant by category in Zaragoza (e.g. best burger, best ramen etc)
-- Eight reviews are contained on each page and then pagination kicks in. A link to the next page of reviews shows at the bottom of the page.
-- A back button also displays on the second page or more.
-- Each restaurant card contains the post title, the restaurant name and an image of the restaurant.
-- Only reviews with the status of published are included here. Clicking anywhere inside the card will take the user to the detailed restaurant review.
+- The **Restaurants page** contains cards for the best restaurant by category in Zaragoza (e.g. best burger, best ramen etc).
+- **Pagination** shows eight reviews per page, with a link to the next page at the bottom.
+- A **back button** also displays on the second page or more.
+- **Each restaurant card** includes 
+  - the post title, 
+  - the restaurant name and 
+  - an image of the restaurant.
+- Only **published reviews** are shown. Clicking anywhere inside the card will take the user to the detailed restaurant review.
 
 ### Restaurant Detail Page
 **Masthead Section**
