@@ -103,11 +103,15 @@ The Montserrat font is the main font used for the body of the website. The Imper
 
 #### Wireframes
 
+Below are the wireframes which I prepared before starting the project. Naturally the wireframes are slightly different to the final product but they served as a really good means to plan out the project.
+
 <details>
 
  <summary>Landing Page</summary>
 
 ![Landing Page](docs/wireframes/landing_wireframe.webp)
+
+- An about section and a map/contact section was also included on the landing page in the end.
 </details>
 
 <details>
@@ -123,6 +127,8 @@ The Montserrat font is the main font used for the body of the website. The Imper
 <summary>Restaurant Detail</summary>
 
 ![Restaurant Detail](docs/wireframes/restaurant_detail_wireframe.webp)
+
+- Originally my restaurant model contained an opening hours section but in the end I didn't think it was necessary.
 </details>
 
 <details>
@@ -130,6 +136,8 @@ The Montserrat font is the main font used for the body of the website. The Imper
 <summary>Login</summary>
 
 ![Login](docs/wireframes/login_wireframe.webp)
+
+- Social media login was not implemented but this is something I would like to implement in the future as noted in the 'Future Features' section.
 </details>
 
 <details>
