@@ -9,63 +9,77 @@
 | As a Site User I can view my login status so that I know whether I am logged in or not.     | ✅        | <details><summary>View Story</summary><br>[User Story – View Login Status](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/17)</details> |
 
 
-*User Story 1: As a Site User I can register an account so that I can comment on posts.*
+## 🧪 User Story 1: Register an Account to Comment on Posts
 
-Users can register on the register page. They are encouraged to do this on the landing page within the Get Started section.
+**As a Site User I can register an account so that I can comment on posts.**
+
+- Users can register on the **Register** page.
+- They are encouraged to do this on the landing page within the **Get Started** section.
 
 <details>
-<summary>View Screenshot</summary>
+<summary>📸 View Screenshot – Register Page</summary>
 
 ![Register Page](docs/readme_images/register.webp)
 
 </details>
 
-Only authenticated users can comment on posts
+- Only **authenticated users** can comment on posts.
 
-<summary>View Screenshot</summary>
+<details>
+<summary>📸 View Screenshot – Commenting as Logged-In User</summary>
 
 ![Login Comment](docs/readme_images/login_comment.webp)
 
 </details>
 
-*User Story 2: As a Site User I can login/logout of my account so that I can keep my account secure.*
+---
 
-Users can login via the login page:
+## 🧪 User Story 2: Login/Logout Functionality
+
+**As a Site User I can login/logout of my account so that I can keep my account secure.**
+
+- Users can log in via the **Login** page.
+
 <details>
-<summary>View Screenshot</summary>
+<summary>📸 View Screenshot – Login Page</summary>
 
 ![Login Page](docs/readme_images/login.webp)
 
 </details>
 
-The logout dropdown appears once the user is logged in:
+- Once logged in, a **logout dropdown** appears in the navigation bar.
+
 <details>
-<summary>View Screenshot</summary>
+<summary>📸 View Screenshot – Logout Dropdown</summary>
 
 ![Logout Dropdown](docs/readme_images/logout_dropdown.webp)
 
 </details>
 
-*As a Site User I can view my login status so that I know whether I am logged in or not*
-Username appears in navigation bar when user is logged in:
+---
 
-</details>
+## 🧪 User Story 3: View Login Status
 
-The logout dropdown appears once the user is logged in:
+**As a Site User I can view my login status so that I know whether I am logged in or not.**
+
+- When logged in, the **username appears** in the navigation bar.
+
 <details>
-<summary>View Screenshot</summary>
+<summary>📸 View Screenshot – Logged-In Navigation</summary>
 
 ![nav](docs/readme_images/nav.webp)
 
 </details>
 
-If user is not logged in the navigation bar will show as below.
+- When not logged in, the navigation bar reflects this accordingly.
+
 <details>
-<summary>View Screenshot</summary>
+<summary>📸 View Screenshot – Logged-Out Navigation</summary>
 
 ![nav login](docs/readme_images/nav_login.webp)
 
 </details>
+
 
 ### EPIC | User Navigation
 
