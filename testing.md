@@ -266,8 +266,8 @@
 
 | User Story                                                                                      | Complete | Link |
 |--------------------------------------------------------------------------------------------------|----------|------|
-| As a Site User I can click on the About link to learn more about the site.                      | ✅        | <details><summary>View Story</summary><br>[User Story – About Page](#)</details> |
-| As a Site Admin I can update the About page content.                                             | ✅        | <details><summary>View Story</summary><br>[User Story – Update About Content](#)</details> |
+| As a Site User I can click on the About link to learn more about the site.                      | ✅        | <details><summary>View Story</summary><br>[User Story – About Page](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/27)</details> |
+| As a Site Admin I can update the About page content.                                             | ✅        | <details><summary>View Story</summary><br>[User Story – Update About Content](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/28)</details> |
 
 ---
 
@@ -280,7 +280,7 @@
 <details>
 <summary>📸 View Screenshot – About Page</summary>
 
-![About Page](docs/readme_images/about_page.webp)
+![About Page](docs/readme_images/about_index.webp)
 
 </details>
 
@@ -295,7 +295,7 @@
 <details>
 <summary>📸 View Screenshot – About Page Admin</summary>
 
-![About Admin](docs/readme_images/admin_about.webp)
+![About Admin](docs/readme_images/about_admin.webp)
 
 </details>
 
@@ -305,9 +305,9 @@
 
 | User Story                                                                                                                         | Complete | Link |
 |------------------------------------------------------------------------------------------------------------------------------------|----------|------|
-| As a Site User I can contact the site owner via a form.                                                                           | ✅        | <details><summary>View Story</summary><br>[User Story – Contact Form](#)</details> |
-| As a Site Owner I can monitor contact requests via a database.                                                                   | ✅        | <details><summary>View Story</summary><br>[User Story – Contact Dashboard](#)</details> |
-| As a Site Owner I can mark contact requests as read once complete.                                                               | ✅        | <details><summary>View Story</summary><br>[User Story – Mark Read](#)</details> |
+| As a Site User I can contact the site owner via a form.                                                                           | ✅        | <details><summary>View Story</summary><br>[User Story – Contact Form](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/29)</details> |
+| As a Site Owner I can monitor contact requests via a database.                                                                   | ✅        | <details><summary>View Story</summary><br>[User Story – Contact Dashboard](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/30)</details> |
+| As a Site Owner I can mark contact requests as read once complete.                                                               | ✅        | <details><summary>View Story</summary><br>[User Story – Mark Read](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/31)</details> |
 
 ---
 
@@ -321,7 +321,7 @@
 <details>
 <summary>📸 View Screenshot – Contact Form</summary>
 
-![Contact Form](docs/readme_images/contact_form.webp)
+![Contact Form](docs/readme_images/contact.webp)
 
 </details>
 
@@ -336,7 +336,7 @@
 <details>
 <summary>📸 View Screenshot – Contact Admin View</summary>
 
-![Contact Admin](docs/readme_images/admin_contact.webp)
+![Contact Admin](docs/readme_images/contact_admin.webp)
 
 </details>
 
@@ -351,7 +351,7 @@
 <details>
 <summary>📸 View Screenshot – Mark as Read</summary>
 
-![Mark Read](docs/readme_images/contact_read_toggle.webp)
+![Mark Read](docs/readme_images/read.webp)
 
 </details>
 
@@ -361,8 +361,8 @@
 
 | User Story                                                                                                          | Complete | Link |
 |--------------------------------------------------------------------------------------------------------------------|----------|------|
-| As a Site User I can like or unlike a restaurant review to interact with posts.                                   | ✅        | <details><summary>View Story</summary><br>[User Story – Like Reviews](#)</details> |
-| As a Site User I can add/remove restaurants from favourites to keep track of the ones I enjoy.                    | ✅        | <details><summary>View Story</summary><br>[User Story – Favourite Reviews](#)</details> |
+| As a Site User I can like or unlike a restaurant review to interact with posts.                                   | ✅        | <details><summary>View Story</summary><br>[User Story – Like Reviews](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/32)</details> |
+| As a Site User I can add/remove restaurants from favourites to keep track of the ones I enjoy.                    | ✅        | <details><summary>View Story</summary><br>[User Story – Favourite Reviews](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/33)</details> |
 
 ---
 
@@ -376,7 +376,7 @@
 <details>
 <summary>📸 View Screenshot – Like Button</summary>
 
-![Like Button](docs/readme_images/like_button.webp)
+![Like Button](docs/readme_images/masthead.webp)
 
 </details>
 
@@ -392,7 +392,8 @@
 <details>
 <summary>📸 View Screenshot – Favourite Button</summary>
 
-![Favourite Button](docs/readme_images/favourite_button.webp)
+![Favourite Button](docs/readme_images/masthead.webp)
+![Favourite Page](docs/readme_images/my_favourites.webp)
 
 </details>
 
