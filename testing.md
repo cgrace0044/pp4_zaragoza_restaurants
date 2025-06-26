@@ -11,15 +11,61 @@
 
 *User Story 1: As a Site User I can register an account so that I can comment on posts.*
 
-Users can register on the register page.
+Users can register on the register page. They are encouraged to do this on the landing page within the Get Started section.
 
+<details>
 <summary>View Screenshot</summary>
 
 ![Register Page](docs/readme_images/register.webp)
 
-</details>  
+</details>
 
 Only authenticated users can comment on posts
+
+<summary>View Screenshot</summary>
+
+![Login Comment](docs/readme_images/login_comment.webp)
+
+</details>
+
+*User Story 2: As a Site User I can login/logout of my account so that I can keep my account secure.*
+
+Users can login via the login page:
+<details>
+<summary>View Screenshot</summary>
+
+![Login Page](docs/readme_images/login.webp)
+
+</details>
+
+The logout dropdown appears once the user is logged in:
+<details>
+<summary>View Screenshot</summary>
+
+![Logout Dropdown](docs/readme_images/logout_dropdown.webp)
+
+</details>
+
+*As a Site User I can view my login status so that I know whether I am logged in or not*
+Username appears in navigation bar when user is logged in:
+
+</details>
+
+The logout dropdown appears once the user is logged in:
+<details>
+<summary>View Screenshot</summary>
+
+![nav](docs/readme_images/nav.webp)
+
+</details>
+
+If user is not logged in the navigation bar will show as below.
+<details>
+<summary>View Screenshot</summary>
+
+![nav login](docs/readme_images/nav_login.webp)
+
+</details>
 
 ### EPIC | User Navigation
 
