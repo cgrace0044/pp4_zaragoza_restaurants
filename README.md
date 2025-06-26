@@ -220,7 +220,7 @@ Google Maps API key is restricted to certain domains. Therefore although it is p
 ### Header and Navigation Bar
 ![header](docs/readme_images/nav_username.webp)
 
-- The logo section of the navbar simply contains the name Letters From Zaragoza - links to the home page.
+- The logo section of the navbar simply contains the name **Letters From Zaragoza** - links to the home page.
 - The navigation bar is very clean cut. This is on purpose so that the user is drawn towards the restaurant images.
 - The navigation bar is present at the top of every page.
 - On hover the link font slightly darkens.
@@ -233,8 +233,8 @@ Google Maps API key is restricted to certain domains. Therefore although it is p
 
 ### Footer
 ![footer](docs/readme_images/footer.webp)
-- The footer contains a span stating 'Follow Our tasty Zaragoza journey'.
-- Links to Twitter, Instagram, Facebook and Youtube are also included.
+- The footer contains a span stating *Follow Our tasty Zaragoza journey*.
+- Links to **Twitter**, **Instagram**, **Facebook** and **Youtube** are also included.
 - Clicking the links in the footer opens separate tabs.
 
 ### Home Page
@@ -242,7 +242,7 @@ Google Maps API key is restricted to certain domains. Therefore although it is p
 
 ![hero](docs/readme_images/hero.webp)
 
-- The home page includes a hero section which encourages the user to 'discover the best restaurants in Zaragoza, Spain'.
+- The home page includes a hero section which encourages the user to *discover the best restaurants in Zaragoza, Spain*.
 - The hero section includes a carousel which contains images of some of the restaurants that are reviewed on the site.
 
 **Get Started Section**
@@ -250,7 +250,7 @@ Google Maps API key is restricted to certain domains. Therefore although it is p
 ![gstarted](docs/readme_images/get_s.webp)
 
 - The Get Started section contains a brief overview of what the site offers with links to restaurants, contact, about and login.
-- The links are contained within Font Awesome icons.
+- The links are contained within **Font Awesome** icons.
 - If the user is already authenticated the login link does not appear.
 - The about section is an anchor link since this section is also on the landing page.
 
@@ -258,8 +258,8 @@ Google Maps API key is restricted to certain domains. Therefore although it is p
 
 ![about](docs/readme_images/about_section.webp)
 
-- The about section contains two separate parts: About Zaragoza and About Me.
-- The text is separated by a featured restaurants section. In the admin panel of the restaurant model the admin user can choose to check the featured checkbox. Doing this will make the restaurants appear here in this 'featured restaurants' section. The restaurants are clickable and will bring you to the restaurant detail page.
+- The about section contains two separate parts: **About Zaragoza** and **About Me**.
+- The text is separated by a **featured restaurants section**. In the admin panel of the restaurant model the admin user can choose to check the featured checkbox. Doing this will make the restaurants appear here in this 'featured restaurants' section. The restaurants are clickable and will bring you to the restaurant detail page.
 
 ![featured](docs/readme_images/featured.webp)
 
@@ -279,9 +279,9 @@ Google Maps API key is restricted to certain domains. Therefore although it is p
 - **Pagination** shows eight reviews per page, with a link to the next page at the bottom.
 - A **back button** also displays on the second page or more.
 - **Each restaurant card** includes 
-  - the post title, 
+  - the post title
   - the restaurant name and 
-  - an image of the restaurant.
+  - an image of the restaurant
 - Only **published reviews** are shown. Clicking anywhere inside the card will take the user to the detailed restaurant review.
 
 ### Restaurant Detail Page
@@ -289,10 +289,14 @@ Google Maps API key is restricted to certain domains. Therefore although it is p
 
 ![masthead](docs/readme_images/masthead.webp)
 
-- The masthead section of each restaurant review contains the post title, the restaurant name, an add to favourites button as well as a like button.
-- The 'add to favourites' button and the 'like' button only appears if the user is logged in.
-- If a user clicks add to favourites or like they will be informed of the same via Django messages.
-- If the user is not logged in a link to the login page appears.
+- The masthead section of each restaurant review contains 
+  - the post title
+  - the restaurant name 
+  - an add to favourites button
+  - a like button
+- The **Add To Favourites** button and the **Like** button only appears if the user is logged in.
+- If a user clicks **Add To Favourites** or **Like** they will be informed of the same via Django messages.
+- If the user is **not logged in** a link to the login page appears.
 
 **Restaurant Details Card**
 
@@ -306,22 +310,22 @@ Google Maps API key is restricted to certain domains. Therefore although it is p
 ![comments section](docs/readme_images/comments_section.webp)
 
 - The comments section starts with a Font Awesome comments symbol together with a comment counter.
-- Below there is a make a comment card. Clicking on 'write a comment' opens the comment modal.
+- Below there is a **make a comment card**. Clicking on *write a comment* opens the comment modal.
 - Making a comment is only available to logged in users.
 - Below there is a second card which contains the comments already made.
 - Users will see all approved comments plus their own comments which have yet to have been approved.
 - Each comment contains the username, the date and the time together with the comment.
-- Users' own comments will also provide the user the opportunity to edit/delete comments.
-    - clicking edit will open the comment modal and will prepopulate the existing comment.
-    - click delete will bring the user to a delete confirmation modal. 
+- Users' own comments will also provide the user the opportunity to **edit** or **delete** comments.
+    - clicking **Edit** will open the comment modal and will prepopulate the existing comment.
+    - clicking **Delete** will bring the user to a delete confirmation modal. 
 
 **Comments Modal**
 
 ![comment modal](docs/readme_images/comment_modal.webp)
 
-- The comment modal contains a body textfield together with a submit and close button.
-- Clicking submit will inform the user that their comment is awaiting approval.
-- Clicking close will take the user back to the restaurant review.
+- The comment modal contains a body textfield together with a **Submit** and **Close** button.
+- Clicking **Submit** will inform the user that their comment is awaiting approval.
+- Clicking **Close** will take the user back to the restaurant review.
 
 **Delete Confirmation Modal**
 
