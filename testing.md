@@ -181,6 +181,8 @@
 
 </details>
 
+---
+
 ### EPIC 3 | Review Interaction
 
 | User Story                                                                                                    | Complete | Link |
@@ -299,12 +301,13 @@
 
 **As a Site User I can click on the About link to learn more about the site.**
 
-- Contains **intro text**, **contact info**, and a **map location**.
+- Contains **intro text**, **contact info**, and a **map location**. This is all located on the home page (the about link is an anchor link)
 
 <details>
 <summary>📸 View Screenshot – About Page</summary>
 
-![About Page](docs/readme_images/about_index.webp)
+![about](docs/readme_images/about_section.webp)
+![map](docs/readme_images/map_contact.webp)
 
 </details>
 
