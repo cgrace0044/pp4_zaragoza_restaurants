@@ -95,7 +95,7 @@
 
 </details>
 
-- When not logged in, the navigation bar reflects this accordingly.
+- When not logged in, the navigation bar reflects this accordingly by providing login/register options.
 
 <details>
 <summary>📸 View Screenshot – Logged-Out Navigation</summary>
@@ -123,6 +123,7 @@
 
 - Clear **hero section** with a short tagline explaining the site.
 - "Get Started" section includes helpful links to direct the user.
+- There is also an About section (explained in Epic 5 below)
 
 <details>
 <summary>📸 View Screenshot – Homepage Hero & Get Started</summary>
@@ -144,7 +145,7 @@
 <details>
 <summary>📸 View Screenshot – Navigation Bar Highlight</summary>
 
-![Navbar](docs/readme_images/nav.webp)
+![Navbar](docs/readme_images/navbar.webp)
 
 </details>
 
