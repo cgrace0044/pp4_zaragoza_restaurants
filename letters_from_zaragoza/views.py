@@ -9,12 +9,6 @@ from .models import Restaurant, Comment
 from .forms import CommentForm
 
 
-# Create your views here.
-class Home(generic.TemplateView):
-    """View for rendering the homepage"""
-
-    template_name = "index.html"
-
 
 def home(request):
     about = About.objects.all().order_by("-updated_on").first()

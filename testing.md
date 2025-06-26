@@ -236,6 +236,7 @@
 **As a Site Admin I can create, read, update and delete reviews so that I can manage my content.**
 
 - Full CRUD functionality available through **Django admin**.
+- By clicking on the restaurant model and selecting any of the restaurant reviews the below panel is available at the bottom of the page.
 
 <details>
 <summary>📸 View Screenshot – Review Admin Panel</summary>
@@ -250,12 +251,12 @@
 
 **As Site Admin I can mark reviews as 'save for later' or 'publish now'.**
 
-- **Draft/Published** toggle available in the review form.
+- **Draft/Published** toggle available in the review form when logged into Django Admin restaurant model.
 
 <details>
 <summary>📸 View Screenshot – Draft vs Publish Option</summary>
 
-![Draft Publish](docs/readme_images/publish_toggle.webp)
+![Draft Publish](docs/readme_images/publish.webp)
 
 </details>
 
