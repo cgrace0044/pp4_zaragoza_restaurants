@@ -206,7 +206,7 @@ Cross-Site Request Forgery (CSRF) tokens were used on all forms throughout this 
 ## Features
 
 ### Header and Navigation Bar
-![header](docs/readme_images/nav.webp)
+![header](docs/readme_images/navbar.webp)
 
 - The logo section of the navbar simply contains the name Letters From Zaragoza - links to the home page.
 - The navigation bar is very clean cut. This is on purpose so that the user is drawn towards the restaurant images.
@@ -215,7 +215,7 @@ Cross-Site Request Forgery (CSRF) tokens were used on all forms throughout this 
 - When the user is logged in their username will show in the navbar together with a dropdown to their favourites and a logout option.
 - When the user is not logged in links to the login and register pages will show (as below).
 
-![header](docs/readme_images/nav_login.webp)
+![header](docs/readme_images/nav_username.webp)
 
 - The navigation bar is fully responsive and converts to a hamburger icon on small screens (as below).
 

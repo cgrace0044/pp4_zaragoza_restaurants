@@ -1,7 +1,7 @@
 <div id="about" class="container my-5">
     <div class="row">
         <div class="col-12 col-lg-10 mx-auto">
-            <hr class="home-break">
+            <div class="map-contact-box px-3 py-4">
             <div class="about-section">
 
                 <!-- About Zaragoza -->
@@ -26,18 +26,23 @@
 
                 <!-- About Me -->
                 <div class="about-me">
-                    <hr class="home-break">
                     <p>{{ about.about_me | safe }}</p>
                 </div>
 
             </div>
+            </div>
         </div>
+    </div>
+
+    <!-- Home Break Between About and Contact -->
+    <div class="container my-4">
+        <hr class="home-break">
     </div>
 
     <!-- Map and Contact -->
     <div class="row">
         <div class="col-12 col-lg-10 mx-auto">
-            <div class="map-contact-box my-5 py-4 px-3">
+            <div class="map-contact-box px-3 py-4">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-4 mb-lg-0">
                         <div class="ratio ratio-16x9 map-wrapper">

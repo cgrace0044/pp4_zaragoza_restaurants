@@ -91,7 +91,7 @@
 <details>
 <summary>📸 View Screenshot – Logged-In Navigation</summary>
 
-![nav](docs/readme_images/nav.webp)
+![nav](docs/readme_images/nav_username.webp)
 
 </details>
 
@@ -100,7 +100,7 @@
 <details>
 <summary>📸 View Screenshot – Logged-Out Navigation</summary>
 
-![nav login](docs/readme_images/nav_login.webp)
+![nav login](docs/readme_images/navbar.webp)
 
 </details>
 
