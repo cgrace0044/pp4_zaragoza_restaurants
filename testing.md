@@ -11,7 +11,7 @@
 *As a Site User I can register an account so that I can comment on posts.*
 
 Users can register on the register page.
-<details><summary>Screenshot</summary>![register](docs/readme_images/register.webp)</details>  
+<details><summary>Screenshot</summary> ![register](docs/readme_images/register.webp)</details>  
 
 Only authenticated users can comment on posts
 
