@@ -114,6 +114,7 @@ i:hover {
 .thin {
     font-weight: 300;
 }
+
 .features-box {
     background-color: #F9FAFC;
     border-radius: 15px;
@@ -415,10 +416,6 @@ div.about-section {
     margin: auto;
 }
 
-.card-deck img {
-    border-radius: none;
-}
-
 .card:hover {
     box-shadow: 0px 0px 4px #4E5424 !important;
 }
@@ -532,7 +529,6 @@ input:-webkit-autofill {
 }
 
 .cover-text {
-    /* Final rgba value sets the opacity so it is semi-transparent */
     background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
     position: absolute;

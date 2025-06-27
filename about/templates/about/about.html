@@ -6,7 +6,7 @@
 
                 <!-- About Zaragoza -->
                 <div class="about-zaragoza mb-4">
-                    <p>{{ about.about_zaragoza | safe }}</p>
+                    <article>{{ about.about_zaragoza | safe }}</article>
                 </div>
 
                 <!-- Featured Restaurants Grid -->
@@ -17,7 +17,7 @@
                             <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
                                 <a href="{% url 'restaurant_detail' restaurant.slug %}" class="featured-restaurant-link">
                                     <img src="{{ restaurant.image.url }}" alt="{{ restaurant.name }}" class="featured-restaurant-img img-fluid">
-                                    <p class="featured-restaurant-name mt-2">{{ restaurant.name }}</p>
+                                    <article class="featured-restaurant-name mt-2">{{ restaurant.name }}</article>
                                 </a>
                             </div>
                         {% endfor %}
@@ -26,7 +26,7 @@
 
                 <!-- About Me -->
                 <div class="about-me">
-                    <p>{{ about.about_me | safe }}</p>
+                    <article>{{ about.about_me | safe }}</article>
                 </div>
 
             </div>
@@ -51,11 +51,11 @@
                     </div>
                     <div class="col-lg-6 text-center contact-info">
                         <h2 class="section-heading">Our Location</h2>
-                        <p>{{ about.location | safe }}</p>
+                        <article>{{ about.location | safe }}</article>
 
                         <h2 class="section-heading">Contact Us</h2>
                         <p>If you have any questions, feel free to contact us:</p>
-                        <p>Email: <a class="email" href="mailto:lettersfromzaragoza@gmail.com">{{ about.email | safe }}</a></p>
+                        <article>Email: <a class="email" href="mailto:lettersfromzaragoza@gmail.com">{{ about.email | safe }}</a></article>
                     </div>
                 </div>
             </div>
