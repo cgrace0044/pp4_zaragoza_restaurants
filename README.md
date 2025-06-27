@@ -50,59 +50,59 @@ The live link can be found here - [Letters from Zaragoza](https://letters-from-z
 
 ## User Stories by Epic
 
-### EPIC 1: User Profile
+### EPIC 1 | User Profile
 
-| # | User Story | Link |
-|--:|------------|------|
-| 1 | As a Site User I can register an account so that I can comment on posts. | [User Story – Register & Comment](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/15) |
-| 2 | As a Site User I can login/logout of my account so that I can keep my account secure. | [User Story – Login/Logout](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/16) |
-| 3 | As a Site User I can view my login status so that I know whether I am logged in or not. | [User Story – View Login Status](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/17) |
+| User Story                                                                                   | Link |
+|----------------------------------------------------------------------------------------------|------|
+| As a Site User I can register an account so that I can comment on posts.                    | <details><summary>View Story</summary><br>[User Story – Register & Comment](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/15)</details> |
+| As a Site User I can login/logout of my account so that I can keep my account secure.       | <details><summary>View Story</summary><br>[User Story – Login/Logout](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/16)</details> |
+| As a Site User I can view my login status so that I know whether I am logged in or not.     | <details><summary>View Story</summary><br>[User Story – View Login Status](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/17)</details> |
 
-### EPIC 2: User Navigation
+### EPIC 2 | User Navigation
 
-| # | User Story | Link |
-|--:|------------|------|
-| 4 | As a Site User I can access the homepage and immediately understand the purpose of the site. | [User Story – Homepage Purpose](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/18) |
-| 5 | As a Site User I can easily navigate the site so that I do not get easily lost and I know where I am. | [User Story – Site Navigation](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/19) |
-| 6 | As a Site User I can view a list of the best restaurants by category so that I can select a review to read. | [User Story – Restaurant List](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/20) |
-| 7 | As a Site User I can click on a review on the restaurants page so that I can know more about the restaurant. | [User Story – View Restaurant Detail](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/21) |
+| User Story                                                                                                   | Link |
+|-------------------------------------------------------------------------------------------------------------|------|
+| As a Site User I can access the homepage and immediately understand the purpose of the site.                | <details><summary>View Story</summary><br>[User Story – Homepage Purpose](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/18)</details> |
+| As a Site User I can easily navigate the site so that I do not get easily lost and I know where I am.       | <details><summary>View Story</summary><br>[User Story – Site Navigation](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/19)</details> |
+| As a Site User I can view a list of the best restaurants by category so that I can select a review to read. | <details><summary>View Story</summary><br>[User Story – Restaurant List](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/20)</details> |
+| As a Site User I can click on a review on the restaurants page so that I can know more about the restaurant.| <details><summary>View Story</summary><br>[User Story – View Restaurant Detail](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/21)</details> |
 
-### EPIC 3: Review Interaction
+### EPIC 3 | Review Interaction
 
-| # | User Story | Link |
-|--:|------------|------|
-| 8 | As a Site User I can comment on a restaurant review so that I can give my feedback. | [User Story – Comment on Review](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/22) |
-| 9 | As a Site User I can edit and delete comments so that I can easily make changes if I made a mistake. | [User Story – Edit/Delete Comments](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/23) |
-| 10 | As a Site Admin I can review or disapprove comments so that only appropriate comments are displayed on the site. | [User Story – Approve Comments](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/24) |
+| User Story                                                                                                    | Link |
+|--------------------------------------------------------------------------------------------------------------|------|
+| As a Site User I can comment on a restaurant review so that I can give my feedback.                         | <details><summary>View Story</summary><br>[User Story – Comment on Review](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/22)</details> |
+| As a Site User I can edit and delete comments so that I can easily make changes if I made a mistake.        | <details><summary>View Story</summary><br>[User Story – Edit/Delete Comments](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/23)</details> |
+| As a Site Admin I can review or disapprove comments so that only appropriate comments are displayed.        | <details><summary>View Story</summary><br>[User Story – Approve Comments](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/24)</details> |
 
-### EPIC 4: Review Management
+### EPIC 4 | Review Management
 
-| # | User Story | Link |
-|--:|------------|------|
-| 11 | As a Site Admin I can create, read, update and delete reviews so that I can manage my content. | [User Story – Manage Reviews](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/25) |
-| 12 | As Site Admin I can mark my reviews as 'save for later' or 'publish now' depending on whether they are finished or not. | [User Story – Draft/Publish](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/26) |
+| User Story                                                                                                                | Link |
+|---------------------------------------------------------------------------------------------------------------------------|------|
+| As a Site Admin I can create, read, update and delete reviews so that I can manage my content.                          | <details><summary>View Story</summary><br>[User Story – Manage Reviews](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/25)</details> |
+| As Site Admin I can mark reviews as 'save for later' or 'publish now' depending on whether they are finished or not.     | <details><summary>View Story</summary><br>[User Story – Draft/Publish](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/26)</details> |
 
-### EPIC 5: About Letters from Zaragoza
+### EPIC 5 | About Letters from Zaragoza
 
-| # | User Story | Link |
-|--:|------------|------|
-| 13 | As a site user I can click on the About link so that I can read about the site. | [User Story – About Page](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/27) |
-| 14 | As a Site Admin I can create or update the about page content so that it is available on the site. | [User Story – Update About Content](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/28) |
+| User Story                                                                                      | Link |
+|--------------------------------------------------------------------------------------------------|------|
+| As a Site User I can click on the About link to learn more about the site.                      | <details><summary>View Story</summary><br>[User Story – About Page](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/27)</details> |
+| As a Site Admin I can update the About page content.                                             | <details><summary>View Story</summary><br>[User Story – Update About Content](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/28)</details> |
 
-### EPIC 6: Contact
+### EPIC 6 | Contact
 
-| # | User Story | Link |
-|--:|------------|------|
-| 15 | As a site user I can contact the site owner via the contact form so that I can make suggestions/propose collaboration opportunities. | [User Story – Contact Form](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/29) |
-| 16 | As a site owner I can monitor contact requests via a database so that I can keep track of contact requests. | [User Story – Contact Dashboard](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/30) |
-| 17 | As a site owner I can mark each contact request as read once complete so that I can keep track of my progress. | [User Story – Mark Read](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/31) |
+| User Story                                                                                                                         | Link |
+|------------------------------------------------------------------------------------------------------------------------------------|------|
+| As a Site User I can contact the site owner via a form.                                                                           | <details><summary>View Story</summary><br>[User Story – Contact Form](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/29)</details> |
+| As a Site Owner I can monitor contact requests via a database.                                                                   | <details><summary>View Story</summary><br>[User Story – Contact Dashboard](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/30)</details> |
+| As a Site Owner I can mark contact requests as read once complete.                                                               | <details><summary>View Story</summary><br>[User Story – Mark Read](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/31)</details> |
 
-### EPIC 7: Celebrate Restaurant Reviews
+### EPIC 7 | Celebrate Restaurant Reviews
 
-| # | User Story | Link |
-|--:|------------|------|
-| 18 | As a Site User I can like or unlike a restaurant review so that I can interact with posts | [User Story – Like Reviews](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/32) |
-| 19 | As a Site User I can add/remove restaurants from my favourites so that I can be reminded which restaurants I like | [User Story – Favourite Reviews](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/33) |
+| User Story                                                                                                          | Link |
+|--------------------------------------------------------------------------------------------------------------------|------|
+| As a Site User I can like or unlike a restaurant review to interact with posts.                                   | <details><summary>View Story</summary><br>[User Story – Like Reviews](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/32)</details> |
+| As a Site User I can add/remove restaurants from favourites to keep track of the ones I enjoy.                    | <details><summary>View Story</summary><br>[User Story – Favourite Reviews](https://github.com/cgrace0044/pp4_zaragoza_restaurants/issues/33)</details> |
 
 ---
 
