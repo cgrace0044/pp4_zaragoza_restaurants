@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <!-- Home Break Between About and Contact -->
+    <!-- Home Break Between About and Map -->
     <div class="container my-4">
         <hr class="home-break">
     </div>
@@ -51,11 +51,11 @@
                     </div>
                     <div class="col-lg-6 text-center contact-info">
                         <h2 class="section-heading">Our Location</h2>
-                        {{ about.location | safe }}
+                        <p>{{ about.location | safe }}</p>
 
                         <h2 class="section-heading">Contact Us</h2>
                         <p>If you have any questions, feel free to contact us:</p>
-                        Email: <a class="email" href="mailto:lettersfromzaragoza@gmail.com">{{ about.email | safe }}</a>
+                        <p>Email: <a class="email" href="mailto:lettersfromzaragoza@gmail.com">{{ about.email | safe }}</a></p>
                     </div>
                 </div>
             </div>
