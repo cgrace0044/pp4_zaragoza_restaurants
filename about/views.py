@@ -31,7 +31,9 @@ def contact_us(request):
             contact_form = ContactForm()  # reset form after success
     else:
         initial_data = (
-            {"email": request.user.email} if request.user.is_authenticated else {}
+            {"email": request.user.email}
+            if request.user.is_authenticated
+            else {}
         )
         contact_form = ContactForm(initial=initial_data)
 

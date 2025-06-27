@@ -7,7 +7,8 @@ from django_summernote.admin import SummernoteModelAdmin
 class RestaurantAdmin(SummernoteModelAdmin):
     """Allows admin to manage restaurants via the admin panel"""
 
-    list_display = ("title", "name", "slug", "status", "created_on", "featured")
+    list_display = (
+        "title", "name", "slug", "status", "created_on", "featured")
     search_fields = ["title", "name"]
     list_filter = ("status", "created_on", "featured")
     prepopulated_fields = {"slug": ("title",)}

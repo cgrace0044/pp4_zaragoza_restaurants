@@ -25,8 +25,10 @@ class Restaurant(models.Model):
     favourites = models.ManyToManyField(
         User, related_name="favourite", default=None, blank=True
     )
-    likes = models.ManyToManyField(User, related_name="restaurant_like", blank=True)
-    featured = models.BooleanField(default=False, help_text="Check to feature this restaurant")
+    likes = models.ManyToManyField(
+        User, related_name="restaurant_like", blank=True)
+    featured = models.BooleanField(
+        default=False, help_text="Check to feature this restaurant")
 
     def __str__(self):
         return f"{self.name} | written by {self.author}"
@@ -52,7 +54,8 @@ class Comment(models.Model):
     restaurant = models.ForeignKey(
         Restaurant, on_delete=models.CASCADE, related_name="comments"
     )
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="commenter")
     body = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now=True)

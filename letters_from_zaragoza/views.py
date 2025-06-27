@@ -8,9 +8,11 @@ from about.models import About
 from .models import Restaurant, Comment
 from .forms import CommentForm
 
+
 def home(request):
     about = About.objects.all().order_by("-updated_on").first()
-    featured_restaurants = Restaurant.objects.filter(featured=True, status=1)[:6]
+    featured_restaurants = Restaurant.objects.filter(
+        featured=True, status=1)[:6]
 
     return render(request, "index.html", {
         "about": about,
@@ -48,7 +50,8 @@ def restaurant_detail(request, slug):
             comment.restaurant = restaurant
             comment.save()
             messages.add_message(
-                request, messages.SUCCESS, "Comment submitted and awaiting approval"
+                request, messages.SUCCESS,
+                "Comment submitted and awaiting approval"
             )
     comment_form = CommentForm()
 
@@ -84,7 +87,8 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, "Comment Updated!")
         else:
-            messages.add_message(request, messages.ERROR, "Error updating comment!")
+            messages.add_message(
+                request, messages.ERROR, "Error updating comment!")
 
     return HttpResponseRedirect(reverse("restaurant_detail", args=[slug]))
 
@@ -113,7 +117,8 @@ def comment_delete(request, slug, comment_id):
 @login_required
 def toggle_favourite(request, slug):
     """
-    Allows a logged-in user to add or remove a restaurant from their favourites.
+    Allows a logged-in user to add or remove a restaurant
+    from their favourites.
     """
 
     restaurant = get_object_or_404(Restaurant, slug=slug)
@@ -121,7 +126,8 @@ def toggle_favourite(request, slug):
     if request.user in restaurant.favourites.all():
         restaurant.favourites.remove(request.user)
         messages.info(
-            request, f"You have removed '{restaurant.name}' from your favourites."
+            request,
+            f"You have removed '{restaurant.name}' from your favourites."
         )
     else:
         restaurant.favourites.add(request.user)
