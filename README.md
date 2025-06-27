@@ -134,7 +134,7 @@ The [Montserrat](https://fonts.google.com/specimen/Montserrat) font is the main 
 
 #### Wireframes
 
-Below are the wireframes which I prepared before starting the project. Naturally the wireframes are slightly different to the final product but they served as a really good means to plan out the project.
+Below are the wireframes which I prepared before starting the project. Naturally the project has evolved since the wireframes were prepared and the final result is a bit different but they served as a great guide.
 
 <details>
 
@@ -142,7 +142,7 @@ Below are the wireframes which I prepared before starting the project. Naturally
 
 ![Landing Page](docs/wireframes/landing_wireframe.webp)
 
-- An about section and a map/contact section was also included on the landing page in the end.
+- I had planned on having a separate About page but following user feedback this was also included on the landing page.
 </details>
 
 <details>
@@ -562,6 +562,6 @@ To clone the repository to your local machine:
 
 ## Acknowledgments
 
-Many thanks to my mentor Simen Daehlin for his support and advice. Thank you also to the Code Institute Slack community - a quick search on here often resolved many of the bugs I had. Thanks to my family for their support during this project. 
+Many thanks to my mentor [Simen Daehlin](https://www.linkedin.com/in/simendaehlin/?originalSubdomain=uk) for his support and advice. Thank you also to the Code Institute Slack community - a quick search on here often resolved many of the bugs I had. Thanks to my family for their support during this project.
 
 ---
