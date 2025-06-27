@@ -114,13 +114,13 @@ Colour palette from Coolors
 
 ![Colour Palette](docs/readme_images/coolers.webp)
 
-| Hex Code | Color Name       | Sample        |
-|----------|------------------|---------------|
-| `#E8E4E2`| Platinum          | ![#E8E4E2](https://via.placeholder.com/30/E8E4E2/000000?text=+) |
-| `#B6BFB8`| Ash Grey          | ![#B6BFB8](https://via.placeholder.com/30/B6BFB8/000000?text=+) |
-| `#C1B3A0`| Khaki             | ![#C1B3A0](https://via.placeholder.com/30/C1B3A0/000000?text=+) |
-| `#9DA57E`| Moss Green        | ![#9DA57E](https://via.placeholder.com/30/9DA57E/000000?text=+) |
-| `#4E5424`| Dark Moss Green   | ![#4E5424](https://via.placeholder.com/30/4E5424/FFFFFF?text=+) |
+| Hex Code | Color Name       |
+|----------|------------------|
+| `#E8E4E2`| Platinum         |
+| `#B6BFB8`| Ash Grey         |
+| `#C1B3A0`| Khaki            |
+| `#9DA57E`| Moss Green       |
+| `#4E5424`| Dark Moss Green  |
 
 The colours I chose are quite neutral. I have predominently kept the backgrounds white or close to white and then I picked variations on greens and beiges.
 
