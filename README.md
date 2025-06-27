@@ -130,7 +130,7 @@ Great care was taken to establish a good contrast between background colours and
 All images come from admin user uploads. The images are all my own and they are served via Cloudinary. The images are filled with colour to make the food appetising.
 
 #### Fonts
-The Montserrat font is the main font used for the body of the website. The Imperial Script font was used for the name of the restaurant on the restaurant detail page. This font gives an 'upmarket' feel. These fonts were imported via Google Fonts. Sans Serif is the backup font, in case for any reason the main font isn't being imported into the site correctly.
+The [Montserrat](https://fonts.google.com/specimen/Montserrat) font is the main font used for the body of the website. The [Imperial Script](https://fonts.google.com/specimen/Imperial+Script) font was used for the name of the restaurant on the restaurant detail page. This font gives an 'upmarket' feel. These fonts were imported via Google Fonts. **Sans Serif** is the backup font, in case for any reason the main font isn't being imported into the site correctly.
 
 #### Wireframes
 
