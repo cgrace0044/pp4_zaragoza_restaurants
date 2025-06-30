@@ -121,7 +121,7 @@
             Write a Comment
           </button>
         {% else %}
-          <p>Log in to leave a comment</p>
+          <a href="{% url 'account_login' %}" class="btn btn-green">Login to Comment</a>
         {% endif %}
       </div>
     </div>
