@@ -445,7 +445,6 @@ All HTML pages were run through the [W3C HTML Validator](https://validator.w3.or
 | logout.html             | no errors  |
 | signup.html             | Note 2     |
 
-
 #### Note 1: Summernote Errors
 When validating the About Section and the Restaurant Detail page I received a number of errors which were caused by the installed Summernote library. I could not rectify these errors given that they weren't in my own code therefore they are unresolved.
 
@@ -457,8 +456,15 @@ When validating the About Section and the Restaurant Detail page I received a nu
 ![Summernote Errors Restaurant Detail](docs/readme_images/summernote_restaurantd.webp)
  </details>
 
-#### Fixed Errors
+#### Note 2: AllAuth Helptext Errors
+Within the Register page some errors were encountered due to the code coming from Django AllAuth. This error is unresolved as it is coming from third party code.
 
+ <details>
+
+ <summary>AllAuth Helptext Error</summary>
+
+![AllAuth Helptext](docs/readme_images/register_error.webp)
+ </details>
 
 ### CSS
 No errors were found when passing my CSS file through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
