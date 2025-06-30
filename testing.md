@@ -495,7 +495,7 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Restaurants    |           99 |           100 |             100 | 100 |
 | Rest Detail    |           96 |           100 |             100 | 100 |
 | Contact        |           99 |           100 |             100 | 100 |
-| Favourites     |           85 |           100 |             100 | 100 |
+| Favourites     |           96 |           100 |             100 | 100 |
 | Login          |           100|           100 |             100 | 100 |
 | Logout         |           98 |           100 |             100 | 100 |
 | Register       |           98 |           100 |             100 | 100 |
