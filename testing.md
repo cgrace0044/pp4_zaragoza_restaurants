@@ -7,19 +7,23 @@
 - [EPIC 5 | About Letters from Zaragoza](#epic-5--about-letters-from-zaragoza)
 - [EPIC 6 | Contact](#epic-6--contact)
 - [EPIC 7 | Celebrate Restaurant Reviews](#epic-7--celebrate-restaurant-reviews)
+- [Validator Testing](#validator-testing)
+  - [HTML](#html)
+  - [CSS](#css)
+  - [Javascript](#javascript)
+  - [Python](#python)
 - [Lighthouse](#lighthouse)
 - [Manual Testing](#manual-testing)
   - [Site Navigation](#site-navigation)
   - [Home Page](#home-page)
+  - [About Section](#about-section)
   - [Restaurants Page](#restaurants-page)
   - [Restaurant Detail Page](#restaurant-detail-page)
   - [Contact Form](#contact-form)
-  - [About Section](#about-section)
   - [Django All Auth Pages](#django-all-auth-pages)
 - [Bugs](#bugs)
   - [Fixed Bugs](#fixed-bugs)
   - [Unfixed Bugs](#unfixed-bugs)
-
 
 ## User Story Testing
 
