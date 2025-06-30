@@ -35,24 +35,10 @@ class RestaurantList(generic.ListView):
 def restaurant_detail(request, slug):
     """
     Displays detailed view of a specific restaurant, along with its comments.
-    Handles new comment submissions.
     """
-
-    queryset = Restaurant.objects.filter(status=1)
-    restaurant = get_object_or_404(queryset, slug=slug)
+    restaurant = get_object_or_404(Restaurant, slug=slug, status=1)
     comments = restaurant.comments.all().order_by("-created_on")
     comment_count = restaurant.comments.filter(approved=True).count()
-    if request.method == "POST":
-        comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():
-            comment = comment_form.save(commit=False)
-            comment.author = request.user
-            comment.restaurant = restaurant
-            comment.save()
-            messages.add_message(
-                request, messages.SUCCESS,
-                "Comment submitted and awaiting approval"
-            )
     comment_form = CommentForm()
 
     return render(
@@ -65,6 +51,26 @@ def restaurant_detail(request, slug):
             "comment_form": comment_form,
         },
     )
+
+
+def add_comment(request, slug):
+    """
+    Handles new comment submission for a specific restaurant.
+    """
+    restaurant = get_object_or_404(Restaurant, slug=slug, status=1)
+
+    if request.method == "POST":
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.author = request.user
+            comment.restaurant = restaurant
+            comment.save()
+            messages.success(request, "Comment submitted and awaiting approval")
+        else:
+            messages.error(request, "There was an error with your comment.")
+
+    return redirect("restaurant_detail", slug=slug)
 
 
 @login_required

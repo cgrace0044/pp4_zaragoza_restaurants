@@ -128,6 +128,7 @@
     </div>
 
     <!-- List of Comments Card -->
+  {% if comments %}
     <div class="col-md-10 card mb-4 shadow-lg border-0 p-4">
       <div class="card-body">
         <h3>Comments:</h3>
@@ -166,6 +167,7 @@
         {% endfor %}
       </div>
     </div>
+    {% endif %}
   </div>
 </div>
 
