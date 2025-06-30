@@ -177,7 +177,7 @@
 <div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <form id="commentForm" method="post">
+      <form id="commentForm" method="post" action="{% url 'add_comment' slug=restaurant.slug %}">
         {% csrf_token %}
         <div class="modal-header">
           <h5 class="page-title">Leave a comment</h5>
