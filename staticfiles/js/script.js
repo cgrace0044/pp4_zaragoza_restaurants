@@ -1,3 +1,6 @@
+/* jshint esversion: 11 */
+// Automatically fades out and removes Django alert messages after a delay
+// This runs when the DOM content is fully loaded
 window.addEventListener('DOMContentLoaded', function () {
     const alertContainer = document.getElementById('django-messages');
     const alerts = alertContainer?.querySelectorAll('.alert');

@@ -81,10 +81,17 @@ img {
   color: #495057;
 }
 
-.dropdown-menu .dropdown-item:hover,
-.dropdown-menu .dropdown-item:focus {
-    background-color: #e9ecef; 
-    color: #000;
+.dropdown-item.active,
+.dropdown-item.active:focus,
+.dropdown-item.active:hover {
+  color: #4E5424 !important;
+  background-color: transparent !important;
+  outline: none;
+  box-shadow: none;
+}
+
+.dropdown-item {
+  transition: none !important;
 }
 
 .hero {
@@ -114,6 +121,7 @@ i:hover {
 .thin {
     font-weight: 300;
 }
+
 .features-box {
     background-color: #F9FAFC;
     border-radius: 15px;
@@ -415,10 +423,6 @@ div.about-section {
     margin: auto;
 }
 
-.card-deck img {
-    border-radius: none;
-}
-
 .card:hover {
     box-shadow: 0px 0px 4px #4E5424 !important;
 }
@@ -532,7 +536,6 @@ input:-webkit-autofill {
 }
 
 .cover-text {
-    /* Final rgba value sets the opacity so it is semi-transparent */
     background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
     position: absolute;

@@ -491,7 +491,7 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 |----------------|:------------:|:-------------:|:---------------:|:---:|
 |                |              |               |                 |     |
 | Desktop        |              |               |                 |     |
-| Home           |           87 |           100 |             100 | 100 |
+| Home           |           88 |           100 |             100 | 100 |
 | Restaurants    |           99 |           100 |             100 | 100 |
 | Rest Detail    |           96 |           100 |             100 | 100 |
 | Contact        |           99 |           100 |             100 | 100 |
@@ -501,7 +501,7 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Register       |           98 |           100 |             100 | 100 |
 |                |              |               |                 |     |
 | Mobile         |              |               |                 |     |
-| Home           |           75 |           100 |             100 | 100 |
+| Home           |           73 |           100 |             100 | 100 |
 | Restaurants    |           89 |           100 |             100 | 100 |
 | Rest Detail    |           72 |           100 |             100 | 100 |
 | Contact        |           93 |           100 |             100 | 100 |
