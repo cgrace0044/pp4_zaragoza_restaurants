@@ -477,7 +477,7 @@ No errors were found when passing my CSS file through the official [W3C CSS Vali
 
  <summary>CSS</summary>
 
-![CSS Validation]()
+![CSS Validation](docs/readme_images/css_validation.webp)
  </details>
 
 ### Javascript
