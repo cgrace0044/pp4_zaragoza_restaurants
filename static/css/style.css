@@ -29,6 +29,30 @@ img {
     font-size: 27px;
 }
 
+.main-bg {
+    background-color: #F9FAFC;
+}
+
+.home-break {
+    border-top: 2px solid #4E5424;
+    margin: 1rem 0;
+}
+
+.link {
+    color: #4E5424;
+    text-decoration: underline;
+}
+
+.link:hover,
+.link:active {
+    color: #445261;
+    text-decoration: underline;
+}
+
+.faded {
+    color: #445261;
+}
+
 /* Buttons */
 .btn-signup,
 .btn-edit {
@@ -94,6 +118,7 @@ img {
   transition: none !important;
 }
 
+/* Hero Section */
 .hero {
     background-color: #E8E4E2;
     margin-bottom: 30px;
@@ -103,6 +128,13 @@ img {
     font-size: 40px;
 }
 
+.carousel-item img {
+  height: 350px; 
+  width: 100%;
+  object-fit: cover; 
+}
+
+/* Features Font Awesome Links */
 i {
     color: #B6BFB8;
     align-items: center;
@@ -110,16 +142,6 @@ i {
 
 i:hover {
     color: #4E5424; 
-}
-
-.carousel-item img {
-  height: 350px; 
-  width: 100%;
-  object-fit: cover; 
-}
-
-.thin {
-    font-weight: 300;
 }
 
 .features-box {
@@ -155,125 +177,7 @@ i:hover {
     text-align: center;
 }
 
-.main-bg {
-    background-color: #F9FAFC;
-}
-
-.author {
-    color: white;
-    margin: 4px;
-    text-transform: uppercase;
-}
-
-.restaurant-link {
-    text-decoration: none;
-    color: #4E5424;
-}
-
-.restaurant-title {
-    margin-top: 10%;
-    margin-left: 5%;
-}
-
-.link {
-    color: #4E5424;
-    text-decoration: underline;
-}
-
-.link:hover,
-.link:active {
-    color: #445261;
-    text-decoration: underline;
-}
-
-.faded {
-    color: #445261;
-}
-
-/*--------------------------------------------Restaurant Detail*/
-.masthead {
-    background-color: #E8E4E2;
-}
-
-/* Likes */
-.like-wrapper {
-  margin-top: 1rem; 
-}
-
-.like-action {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px; /* space between button and like count */
-}
-
-.like-action form {
-  margin: 0; /* remove default margin */
-}
-
-.like-action button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.like-action button i {
-  color: #4E5424;
-  font-size: 1.2rem;
-}
-
-.like-action i:hover {
-  box-shadow: 0px 0px 4px rgb(57, 57, 57) !important;
-}
-
-.like-action p {
-  margin: 0;
-}
-
-.restaurant-name {
-    font-family: 'Imperial Script';
-    font-size: 3rem;
-}
-
-/* Footer */
-.footer {
-    background-color: #4E5424;
-    color: rgb(252, 247, 242);;
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: auto;
-    width: 100%;
-}
-
-footer p {
-    font-size: 0.75rem;
-}
-
-.footer span {
-    display: block;
-}
-
-.footer i {
-    font-size: 1.5rem;
-    margin: 10px 5px;
-    color: #fff;
-    transition: color 0.3s;
-}
-
-.footer i:hover {
-    color: #142a2b;
-}
-
-/*--------------------------------------------About*/
-
-/* Map */
-#map {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    margin: 20px;
-}
+/*-------------------- About Section --------------------*/
 
 div.about-section {
     margin: 20px;
@@ -283,8 +187,36 @@ div.about-section {
     margin-bottom: 20px;
 }
 
-.email{
-    color:#000;
+.about-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #4E5424;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.section-heading {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #4E5424;
+    margin-bottom: 1rem;
+}
+
+/* Map and Contact Section*/
+#map {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    margin: 20px;
 }
 
 .map-contact-box {
@@ -320,30 +252,6 @@ div.about-section {
     text-decoration: underline;
 }
 
-/*-------------------- About Section --------------------*/
-
-.about-heading {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 2rem;
-    color: #4E5424;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.about-section p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.6;
-}
-
-.home-break {
-    border-top: 2px solid #4E5424;
-    margin: 1rem 0;
-}
-
 .map-wrapper {
     border-radius: 20px;
     overflow: hidden;
@@ -357,13 +265,6 @@ div.about-section {
     padding: 0 15px;
 }
 
-.section-heading {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: #4E5424;
-    margin-bottom: 1rem;
-}
-
 .email {
     color: #4E5424;
     font-weight: 500;
@@ -375,14 +276,7 @@ div.about-section {
     text-decoration: underline;
 }
 
-.pilar-image {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
+/* Featured Restaurants */
 .featured-restaurants {
     background-color: #F9FAFC;
     border-radius: 15px;
@@ -413,6 +307,84 @@ div.about-section {
 .featured-restaurant-link {
     text-decoration: none;
     color: inherit;
+}
+
+/* Footer */
+.footer {
+    background-color: #4E5424;
+    color: rgb(252, 247, 242);;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.75rem;
+}
+
+.footer span {
+    display: block;
+}
+
+.footer i {
+    font-size: 1.5rem;
+    margin: 10px 5px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer i:hover {
+    color: #142a2b;
+}
+
+/*--------------------------------------------Restaurant Detail*/
+
+/* Masthead */
+.masthead {
+    background-color: #E8E4E2;
+}
+
+/* Restaurant Name in Masthead */
+.restaurant-name {
+    font-family: 'Imperial Script';
+    font-size: 3rem;
+}
+
+/* Likes */
+.like-wrapper {
+  margin-top: 1rem; 
+}
+
+.like-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.like-action form {
+  margin: 0;
+}
+
+.like-action button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.like-action button i {
+  color: #4E5424;
+  font-size: 1.2rem;
+}
+
+.like-action i:hover {
+  box-shadow: 0px 0px 4px rgb(57, 57, 57) !important;
+}
+
+.like-action p {
+  margin: 0;
 }
 
 /*--------------------------------------------Browse Restaurants*/
@@ -533,17 +505,6 @@ input:-webkit-autofill {
     display: block;
     color: #4E5424;
     font-weight: bold;
-}
-
-.cover-text {
-    background-color: rgba(241, 109, 107, .7);
-    font-size: 130%;
-    position: absolute;
-    bottom: 30px;
-    width: 80%;
-    min-height: 200px;
-    padding-top: 40px;
-    padding-left: 10px;
 }
 
 /* Small devices (landscape phones, less than 768px */
