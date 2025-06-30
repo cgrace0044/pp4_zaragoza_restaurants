@@ -1,3 +1,6 @@
+/* jshint esversion: 8 */
+/* global google */
+// Code for rendering Google Map on landing page
 (async function() {
   // Import the Maps library from the Google Maps API
   const { Map } = await google.maps.importLibrary("maps");
@@ -9,7 +12,7 @@
     zoom: 12, // Set initial zoom level
     mapId: "4504f8b37365c3d0",
   });
-  // Add an advanced marker to the map at a specific position
+  // Add a marker at a specific location — variable intentionally unused
   const marker = new AdvancedMarkerElement({
     map,
     position: { lat: 41.6231, lng: -0.9324 },

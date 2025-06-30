@@ -424,6 +424,63 @@
 
 </details>
 
+## Validator Testing
+
+### HTML
+
+All HTML pages were run through the [W3C HTML Validator](https://validator.w3.org/). See results in below table.
+
+| Page                    |
+|-------------------------|
+| index.html              |
+| about.html              |
+| browse_restaurants.html |
+| restaurant_detail.html  |
+| favourite_list.html     |
+| index.html              |
+| contact.html.           |
+| login.html              |
+| logout.html             |
+| signup.html             |
+
+#### Note 1: Summernote Errors
+
+
+ <details>
+
+ <summary>Summernote Errors</summary>
+
+![Summernote Errors]()
+ </details>
+
+#### Fixed Errors
+
+
+### CSS
+No errors were found when passing my CSS file through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+ <details>
+
+ <summary>CSS</summary>
+
+![CSS Validation]()
+ </details>
+
+### Javascript
+No errors were found when passing my javascript through [Jshint](https://jshint.com/) 
+
+<details>
+
+<summary>Jshint</summary>
+
+![Comments JShint](docs/readme_images/comment_jshint.webp)
+![JS JShint](docs/readme_images/js_jshint.webp)
+![Maps JShint](docs/readme_images/maps_jshint.webp)
+</details>
+
+### Python
+All Python files were run through [Pep8](http://pep8online.com/) with no errors found. 
+
 ### Lighthouse
 
 Lighthouse validation was run on all pages (both mobile and desktop) in order to check accessibility and performance. 
