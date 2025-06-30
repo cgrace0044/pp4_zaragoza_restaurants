@@ -432,27 +432,29 @@
 
 All HTML pages were run through the [W3C HTML Validator](https://validator.w3.org/). See results in below table.
 
-| Page                    |
-|-------------------------|
-| index.html              |
-| about.html              |
-| browse_restaurants.html |
-| restaurant_detail.html  |
-| favourite_list.html     |
-| index.html              |
-| contact.html.           |
-| login.html              |
-| logout.html             |
-| signup.html             |
+| Page                    | Comment    |
+|-------------------------|------------|
+| index.html              | no errors  |
+| base.html               | no errors  |
+| about.html              | Note 1     |
+| browse_restaurants.html | no errors  |
+| restaurant_detail.html  | Note 1     |
+| favourite_list.html     | no errors  |
+| contact.html            | no errors  |
+| login.html              | no errors  |
+| logout.html             | no errors  |
+| signup.html             | Note 2     |
+
 
 #### Note 1: Summernote Errors
-
+When validating the About Section and the Restaurant Detail page I received a number of errors which were caused by the installed Summernote library. I could not rectify these errors given that they weren't in my own code therefore they are unresolved.
 
  <details>
 
  <summary>Summernote Errors</summary>
 
-![Summernote Errors]()
+![Summernote Errors About](docs/readme_images/summernote_about.webp)
+![Summernote Errors Restaurant Detail](docs/readme_images/summernote_restaurantd.webp)
  </details>
 
 #### Fixed Errors
