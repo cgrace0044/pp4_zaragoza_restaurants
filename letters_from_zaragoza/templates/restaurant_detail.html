@@ -86,7 +86,7 @@
         <div class="col-12">
           <h2>Description</h2>
           <hr class="home-break">
-          <p>{{ restaurant.description | safe }}</p>
+          {{ restaurant.description | safe }}
         </div>
       </div>
 
@@ -177,7 +177,7 @@
       <form id="commentForm" method="post" action="{% url 'add_comment' slug=restaurant.slug %}">
         {% csrf_token %}
         <div class="modal-header">
-          <h5 class="page-title">Leave a comment</h5>
+          <h5 class="page-title" id="commentModalLabel">Leave a comment</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
