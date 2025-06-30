@@ -52,7 +52,7 @@
 <details>
 <summary>📸 View Screenshot – Commenting as Logged-In User</summary>
 
-![Login Comment](docs/readme_images/login_comment.webp)
+![Login Comment](docs/readme_images/comment_login.webp)
 
 </details>
 
@@ -212,7 +212,7 @@
 <details>
 <summary>📸 View Screenshot – Comment Blocked (Not Logged In)</summary>
 
-![Blocked Comment](docs/readme_images/login_comment.webp)
+![Blocked Comment](docs/readme_images/comment_login.webp)
 
 </details>
 
@@ -423,6 +423,8 @@
 ![Favourite Page](docs/readme_images/my_favourites.webp)
 
 </details>
+
+---
 
 ## Validator Testing
 
