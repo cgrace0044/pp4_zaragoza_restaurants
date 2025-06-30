@@ -72,12 +72,12 @@
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <li class="nav-item">
-                                        <a class="dropdown-item nav-link {% if request.path == favourites_url %}active{% endif %}"
+                                        <a class="dropdown-item {% if request.path == favourites_url %}active{% endif %}"
                                            href="{% url 'favourites' %}">Favourites</a>
                                     </li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li class="nav-item">
-                                        <a class="dropdown-item nav-link" href="{{ logout_url }}">Logout</a>
+                                        <a class="dropdown-item" href="{{ logout_url }}">Logout</a>
                                     </li>
                                 </ul>
                             </li>

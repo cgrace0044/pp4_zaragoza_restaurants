@@ -81,10 +81,17 @@ img {
   color: #495057;
 }
 
-.dropdown-menu .dropdown-item:hover,
-.dropdown-menu .dropdown-item:focus {
-    background-color: #e9ecef; 
-    color: #000;
+.dropdown-item.active,
+.dropdown-item.active:focus,
+.dropdown-item.active:hover {
+  color: #4E5424 !important;
+  background-color: transparent !important;
+  outline: none;
+  box-shadow: none;
+}
+
+.dropdown-item {
+  transition: none !important;
 }
 
 .hero {
