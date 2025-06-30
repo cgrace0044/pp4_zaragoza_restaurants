@@ -2,34 +2,36 @@
     <div class="row">
         <div class="col-12 col-lg-10 mx-auto">
             <div class="map-contact-box px-3 py-4">
-            <div class="about-section">
+                <div class="about-section">
 
-                <!-- About Zaragoza -->
-                <div class="about-zaragoza mb-4">
-                    {{ about.about_zaragoza | safe }}
-                </div>
+                    <!-- About Zaragoza -->
+                    <div class="about-zaragoza mb-4">
+                        {{ about.about_zaragoza | safe }}
+                    </div>
 
-                <!-- Featured Restaurants Grid -->
-                <div class="featured-restaurants my-4 text-center">
-                    <h2 class="section-heading mb-4">Featured Restaurants</h2>
-                    <div class="row justify-content-center">
-                        {% for restaurant in featured_restaurants %}
+                    <!-- Featured Restaurants Grid -->
+                    <div class="featured-restaurants my-4 text-center">
+                        <h2 class="section-heading mb-4">Featured Restaurants</h2>
+                        <div class="row justify-content-center">
+                            {% for restaurant in featured_restaurants %}
                             <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                                <a href="{% url 'restaurant_detail' restaurant.slug %}" class="featured-restaurant-link">
-                                    <img src="{{ restaurant.image.url }}" alt="{{ restaurant.name }}" class="featured-restaurant-img img-fluid">
+                                <a href="{% url 'restaurant_detail' restaurant.slug %}"
+                                    class="featured-restaurant-link">
+                                    <img src="{{ restaurant.image.url }}" alt="{{ restaurant.name }}"
+                                        class="featured-restaurant-img img-fluid">
                                     <p class="featured-restaurant-name mt-2">{{ restaurant.name }}</p>
                                 </a>
                             </div>
-                        {% endfor %}
+                            {% endfor %}
+                        </div>
                     </div>
-                </div>
 
-                <!-- About Me -->
-                <div class="about-me">
-                    {{ about.about_me | safe }}
-                </div>
+                    <!-- About Me -->
+                    <div class="about-me">
+                        {{ about.about_me | safe }}
+                    </div>
 
-            </div>
+                </div>
             </div>
         </div>
     </div>
@@ -55,7 +57,8 @@
 
                         <h2 class="section-heading">Contact Us</h2>
                         <p>If you have any questions, feel free to contact us:</p>
-                        <p>Email: <a class="email" href="mailto:lettersfromzaragoza@gmail.com">{{ about.email | safe }}</a></p>
+                        <p>Email: <a class="email" href="mailto:lettersfromzaragoza@gmail.com">{{ about.email | safe
+                                }}</a></p>
                     </div>
                 </div>
             </div>

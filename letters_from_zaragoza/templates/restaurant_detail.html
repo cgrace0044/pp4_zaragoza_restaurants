@@ -17,31 +17,31 @@
           <!-- Favourite Toggle -->
           <div class="favourite-wrapper">
             {% if user.is_authenticated %}
-              <form action="{% url 'toggle_favourite' restaurant.slug %}" method="post">
-                {% csrf_token %}
-                {% if user in restaurant.favourites.all %}
-                  <button class="btn btn-green" type="submit">Remove from Favourites</button>
-                {% else %}
-                  <button class="btn btn-green" type="submit">Add to Favourites</button>
-                {% endif %}
-              </form>
+            <form action="{% url 'toggle_favourite' restaurant.slug %}" method="post">
+              {% csrf_token %}
+              {% if user in restaurant.favourites.all %}
+              <button class="btn btn-green" type="submit">Remove from Favourites</button>
+              {% else %}
+              <button class="btn btn-green" type="submit">Add to Favourites</button>
+              {% endif %}
+            </form>
             {% else %}
-              <a href="{% url 'account_login' %}" class="btn btn-green">Login to Interact</a>
+            <a href="{% url 'account_login' %}" class="btn btn-green">Login to Interact</a>
             {% endif %}
           </div>
 
           <!-- Like Button -->
           <div class="like-wrapper mt-3">
             {% if user.is_authenticated %}
-              <div class="like-action">
-                <form action="{% url 'toggle_like' restaurant.slug %}" method="post">
-                  {% csrf_token %}
-                  <button type="submit" aria-label="like this restaurant">
-                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                  </button>
-                </form>
-                <p>{{ restaurant.number_of_likes }} like{{ restaurant.number_of_likes|pluralize }}</p>
-              </div>
+            <div class="like-action">
+              <form action="{% url 'toggle_like' restaurant.slug %}" method="post">
+                {% csrf_token %}
+                <button type="submit" aria-label="like this restaurant">
+                  <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                </button>
+              </form>
+              <p>{{ restaurant.number_of_likes }} like{{ restaurant.number_of_likes|pluralize }}</p>
+            </div>
             {% endif %}
           </div>
         </div>
@@ -76,9 +76,7 @@
 
         <!-- Image Column -->
         <div class="col-md-5">
-          <img src="{{ restaurant.image.url }}"
-               class="img-fluid rounded shadow-sm "
-               alt="{{ restaurant.title }} image">
+          <img src="{{ restaurant.image.url }}" class="img-fluid rounded shadow-sm " alt="{{ restaurant.title }} image">
         </div>
 
       </div>
@@ -96,8 +94,8 @@
   </div>
 </div>
 
-  <!-- Comments Header -->
- <div class="container">
+<!-- Comments Header -->
+<div class="container">
   <div class="row justify-content-center">
     <div class="col-md-10">
       <strong class="text-secondary">
@@ -108,7 +106,7 @@
   </div>
 </div>
 
-  <!-- Comments Section -->
+<!-- Comments Section -->
 <div class="container">
   <div class="row justify-content-center">
     <!-- Make a Comment Card -->
@@ -117,52 +115,52 @@
         <h3>Leave a comment:</h3>
         <hr class="home-break">
         {% if user.is_authenticated %}
-          <button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#commentModal">
-            Write a Comment
-          </button>
+        <button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#commentModal">
+          Write a Comment
+        </button>
         {% else %}
-          <a href="{% url 'account_login' %}" class="btn btn-green">Login to Comment</a>
+        <a href="{% url 'account_login' %}" class="btn btn-green">Login to Comment</a>
         {% endif %}
       </div>
     </div>
 
     <!-- List of Comments Card -->
-  {% if comments %}
+    {% if comments %}
     <div class="col-md-10 card mb-4 shadow-lg border-0 p-4">
       <div class="card-body">
         <h3>Comments:</h3>
         <hr class="home-break">
         {% for comment in comments %}
-          <div class="p-2 comments
+        <div class="p-2 comments
             {% if not comment.approved and comment.author == user %} faded
             {% elif not comment.approved %} d-none
             {% endif %}">
 
-            <!-- Comment Author and Date -->
-            <p class="font-weight-bold">
-              {{ comment.author }}
-              <span class="font-weight-normal">{{ comment.created_on }}</span> wrote:
-            </p>
+          <!-- Comment Author and Date -->
+          <p class="font-weight-bold">
+            {{ comment.author }}
+            <span class="font-weight-normal">{{ comment.created_on }}</span> wrote:
+          </p>
 
-            <!-- Comment Body -->
-            <div id="comment{{ comment.id }}">
-              {{ comment.body | linebreaks }}
-            </div>
-
-            <!-- Approval Notice -->
-            {% if not comment.approved and comment.author == user %}
-              <p class="approval">This comment is awaiting approval</p>
-            {% endif %}
-
-            <!-- Comment Actions -->
-            {% if user.is_authenticated and comment.author == user %}
-              <div class="comment-actions mt-2">
-                <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-                <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
-              </div>
-            {% endif %}
-
+          <!-- Comment Body -->
+          <div id="comment{{ comment.id }}">
+            {{ comment.body | linebreaks }}
           </div>
+
+          <!-- Approval Notice -->
+          {% if not comment.approved and comment.author == user %}
+          <p class="approval">This comment is awaiting approval</p>
+          {% endif %}
+
+          <!-- Comment Actions -->
+          {% if user.is_authenticated and comment.author == user %}
+          <div class="comment-actions mt-2">
+            <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+            <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+          </div>
+          {% endif %}
+
+        </div>
         {% endfor %}
       </div>
     </div>

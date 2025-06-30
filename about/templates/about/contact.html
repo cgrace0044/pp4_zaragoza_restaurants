@@ -9,7 +9,7 @@
 
     <!-- Decorative horizontal line to separate header -->
     <hr class="home-break mb-4">
-    
+
     <!-- Introductory text encouraging users to reach out -->
     <p class="text-center mb-4">
         We'd love to hear from you. Send us your collaboration requests or suggestions below.
@@ -21,17 +21,17 @@
             <div class="card-body p-4">
                 <!-- Success message alert, shown after form submission -->
                 {% if success_message %}
-                    <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
-                        {{ success_message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
+                <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+                    {{ success_message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
                 {% endif %}
 
                 <!-- Contact form using POST method and crispy forms styling -->
                 <form method="post" class="contact">
                     {% csrf_token %}
                     {{ contact_form|crispy }}
-                    
+
                     <!-- Submit button centered below the form -->
                     <div class="text-center mt-3">
                         <button class="btn btn-dark px-4" type="submit">Send Message</button>
