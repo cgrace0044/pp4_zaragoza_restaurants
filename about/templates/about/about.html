@@ -16,8 +16,9 @@
                             {% for restaurant in featured_restaurants %}
                             <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
                                 <a href="{% url 'restaurant_detail' restaurant.slug %}"
-                                    class="featured-restaurant-link">
-                                    <img src="{{ restaurant.image.url }}" alt="{{ restaurant.name }}"
+                                    class="featured-restaurant-link"
+                                    aria-label="View details for {{ restaurant.name }}">
+                                    <img src="{{ restaurant.image.url }}" alt="food at {{ restaurant.name }}"
                                         class="featured-restaurant-img img-fluid">
                                     <p class="featured-restaurant-name mt-2">{{ restaurant.name }}</p>
                                 </a>
