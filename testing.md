@@ -575,6 +575,7 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 | Element                    | Action                         | Expected Result                                                             | Pass/Fail |
 |----------------------------|--------------------------------|-----------------------------------------------------------------------------|-----------|
 | Restaurant Card            | Display correct content        | Displays correct title, restaurant name and image                           | Pass      |
+| Restaurant Card            | Image Display                  | If no image uploaded by user a default image appears                        | Pass      |
 | Restaurant Card            | Click                          | Clicking inside restaurant card brings you to correct restaurant detail page| Pass      |
 | Restaurant Card            | Pagination                     | 8 restaurant cards will appear per page                                     | Pass      |
 | Restaurant Card            | Hover                          | Hovering over a restaurant card creates the desired box shadow effect       | Pass      |

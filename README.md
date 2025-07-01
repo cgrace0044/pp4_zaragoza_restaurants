@@ -127,7 +127,7 @@ The colours I chose are quite neutral. I have predominently kept the backgrounds
 Great care was taken to establish a good contrast between background colours and text at all times to ensure maximum user accessibility. This was tested using Lighthouse.
 
 #### Imagery
-All images come from admin user uploads. The images are all my own and they are served via Cloudinary. The images are filled with colour to make the food appetising.
+All images come from admin user uploads. The images are all my own and they are served via Cloudinary. The images are filled with colour to make the food appetising. In case an image is not uploaded to a restaurant review a default image of the Zaragoza Cathedral will appear. This image was sourced from Pexels.
 
 #### Fonts
 The [Montserrat](https://fonts.google.com/specimen/Montserrat) font is the main font used for the body of the website. The [Imperial Script](https://fonts.google.com/specimen/Imperial+Script) font was used for the name of the restaurant on the restaurant detail page. This font gives an 'upmarket' feel. These fonts were imported via Google Fonts. **Sans Serif** is the backup font, in case for any reason the main font isn't being imported into the site correctly.
@@ -160,7 +160,7 @@ Below are the wireframes which I prepared before starting the project. Naturally
 ![Restaurant Detail](docs/wireframes/restaurant_detail_wireframe.webp)
 
 - Originally my restaurant model contained an opening hours section but in the end I didn't think it was necessary.
-- The comment form was changed to a model to make the restaurant detail page look cleaner.
+- The comment form was changed to a modal to make the restaurant detail page look cleaner.
 </details>
 
 <details>
@@ -529,7 +529,7 @@ To clone the repository to your local machine:
 
 ## Frameworks - Libraries - Programs Used
 - [Django](https://www.djangoproject.com/): Main python framework used in the development of this project
-- [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html): authentication library used to create the user accounts
+- [Django-allauth](https://docs.allauth.org/en/latest/): authentication library used to create the user accounts
 - [PostgreSQL](https://www.postgresql.org/) was used as the database for this project.
 - [Heroku](https://dashboard.heroku.com/login) - was used as the cloud based platform to deploy the site on.
 - [Responsinator](http://www.responsinator.com/) - Used to verify responsiveness of website on different devices.
@@ -539,7 +539,7 @@ To clone the repository to your local machine:
 - [GitHub](https://github.com/) - Used for version control and agile tool.
 - [Google Fonts](https://fonts.google.com/) - Used to import and alter fonts on the page.
 - [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
-- [PEP8 Online](http://pep8online.com/) - used to validate all the Python code
+- [PEP8 Online](https://pep8ci.herokuapp.com/) - used to validate all the Python code
 - [Jshint](https://jshint.com/) - used to validate javascript
 - [Coolors](https://coolors.co/) - Used to create colour palette.
 - [Favicon](https://favicon.io/) - Used to create the favicon.
