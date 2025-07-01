@@ -51,16 +51,16 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarText">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link {% if request.path == home_url %}active{% endif %}"
-                                    aria-current="page" href="{{ home_url }}">Home</a>
+                                <a class="nav-link {% if request.path == home_url %}active"
+                                    aria-current="page{% endif %}" href="{{ home_url }}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {% if request.path == browse_restaurants_url %}active{% endif %}"
-                                    aria-current="page" href="{% url 'browse_restaurants' %}">Restaurants</a>
+                                <a class="nav-link {% if request.path == browse_restaurants_url %}active"
+                                    aria-current="page{% endif %}" href="{% url 'browse_restaurants' %}">Restaurants</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {% if request.path == contact_url %}active{% endif %}"
-                                    aria-current="page" href="{% url 'contact' %}">Contact</a>
+                                <a class="nav-link {% if request.path == contact_url %}active"
+                                    aria-current="page{% endif %}" href="{% url 'contact' %}">Contact</a>
                             </li>
 
                             {% if user.is_authenticated %}
@@ -72,25 +72,26 @@
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <li class="nav-item">
-                                        <a class="dropdown-item {% if request.path == favourites_url %}active{% endif %}"
-                                            href="{% url 'favourites' %}">Favourites</a>
+                                        <a class="dropdown-item {% if request.path == favourites_url %}active"
+                                            aria-current="page{% endif %}" href="{% url 'favourites' %}">Favourites</a>
                                     </li>
                                     <li>
                                         <hr class="dropdown-divider" />
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dropdown-item" href="{{ logout_url }}">Logout</a>
+                                        <a class="dropdown-item {% if request.path == logout_url %}active"
+                                            aria-current="page{% endif %}" href="{{ logout_url }}">Logout</a>
                                     </li>
                                 </ul>
                             </li>
                             {% else %}
                             <li class="nav-item">
-                                <a class="nav-link {% if request.path == signup_url %}active{% endif %}"
-                                    aria-current="page" href="{{ signup_url }}">Register</a>
+                                <a class="nav-link {% if request.path == signup_url %}active"
+                                    aria-current="page{% endif %}" href="{{ signup_url }}">Register</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {% if request.path == login_url %}active{% endif %}"
-                                    aria-current="page" href="{{ login_url }}">Login</a>
+                                <a class="nav-link {% if request.path == login_url %}active"
+                                    aria-current="page{% endif %}" href="{{ login_url }}">Login</a>
                             </li>
                             {% endif %}
                         </ul>
