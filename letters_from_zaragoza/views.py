@@ -10,6 +10,18 @@ from .forms import CommentForm
 
 
 def home(request):
+    """
+    Renders the home page with the most recent 'About' information
+    and a list of featured restaurants.
+
+    **Context**
+    ``about``
+        The most recent instance of :model:`about.About`.
+    ``featured_restaurants``
+        A list of the first six featured restaurants with status 1.
+    **Template**
+    :template:`index.html`
+    """
     about = About.objects.all().order_by("-updated_on").first()
     featured_restaurants = Restaurant.objects.filter(
         featured=True, status=1)[:6]
@@ -24,6 +36,12 @@ class RestaurantList(generic.ListView):
     """
     Displays a paginated list of approved restaurants, ordered by creation
     date.
+
+    **Context**
+    ``restaurant_list``
+        A list of approved restaurants, ordered by creation date.
+    **Template**
+    :template:`browse_restaurants.html`
     """
 
     model = Restaurant
@@ -35,6 +53,18 @@ class RestaurantList(generic.ListView):
 def restaurant_detail(request, slug):
     """
     Displays detailed view of a specific restaurant, along with its comments.
+
+    **Context**
+    ``restaurant``
+        The selected restaurant instance.
+    ``comments``
+        A list of comments for the restaurant, ordered by creation date.
+    ``comment_count``
+        The total number of approved comments for the restaurant.
+    ``comment_form``
+        A form for submitting a new comment.
+    **Template**
+    :template:`restaurant_detail.html`
     """
     restaurant = get_object_or_404(Restaurant, slug=slug, status=1)
     comments = restaurant.comments.all().order_by("-created_on")
@@ -56,6 +86,12 @@ def restaurant_detail(request, slug):
 def add_comment(request, slug):
     """
     Handles new comment submission for a specific restaurant.
+
+    **Context**
+    ``comment_form``
+        A form for submitting a comment for a restaurant.
+    **Template**
+    :template:`restaurant_detail.html`
     """
     restaurant = get_object_or_404(Restaurant, slug=slug, status=1)
 
@@ -66,7 +102,8 @@ def add_comment(request, slug):
             comment.author = request.user
             comment.restaurant = restaurant
             comment.save()
-            messages.success(request, "Comment submitted and awaiting approval")
+            messages.success(
+                request, "Comment submitted and awaiting approval")
         else:
             messages.error(request, "There was an error with your comment.")
 
@@ -78,6 +115,12 @@ def comment_edit(request, slug, comment_id):
     """
     Allows a logged-in user to edit their own comment on a restaurant.
     The comment will be marked as unapproved after editing.
+
+    **Context**
+    ``comment_form``
+        A form for editing an existing comment.
+    **Template**
+    :template:`restaurant_detail.html`
     """
 
     if request.method == "POST":
@@ -103,6 +146,12 @@ def comment_edit(request, slug, comment_id):
 def comment_delete(request, slug, comment_id):
     """
     Allows a logged-in user to delete their own comment.
+
+    **Context**
+    ``comment``
+        The comment that will be deleted.
+    **Template**
+    :template:`restaurant_detail.html`
     """
 
     queryset = Restaurant.objects.filter(status=1)
@@ -125,6 +174,12 @@ def toggle_favourite(request, slug):
     """
     Allows a logged-in user to add or remove a restaurant
     from their favourites.
+
+    **Context**
+    ``restaurant``
+        The restaurant that is being added or removed from favourites.
+    **Template**
+    :template:`restaurant_detail.html`
     """
 
     restaurant = get_object_or_404(Restaurant, slug=slug)
@@ -148,6 +203,12 @@ def toggle_favourite(request, slug):
 def favourite_list(request):
     """
     Displays a list of restaurants favourited by the logged-in user.
+
+    **Context**
+    ``favourites``
+        A list of restaurants favourited by the logged-in user.
+    **Template**
+    :template:`favourite_list.html`
     """
 
     favourites = request.user.favourite.all()
@@ -158,6 +219,12 @@ def favourite_list(request):
 def toggle_like(request, slug):
     """
     Allows a logged-in user to like or unlike a restaurant.
+
+    **Context**
+    ``restaurant``
+        The restaurant being liked or unliked.
+    **Template**
+    :template:`restaurant_detail.html`
     """
 
     restaurant = get_object_or_404(Restaurant, slug=slug)

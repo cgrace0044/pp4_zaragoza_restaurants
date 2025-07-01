@@ -5,6 +5,10 @@ from .models import About, Contact
 
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
+    """
+    Adds rich-text editing of content in admin
+    List display in About admin
+    """
     summernote_fields = ("about_zaragoza", "about_me")
     list_display = (
         "title",

@@ -7,7 +7,9 @@ STATUS = ((0, "Save for later"), (1, "Publish now"))
 
 # Create your models here.
 class Restaurant(models.Model):
-    """Model for Restaurant"""
+    """
+    Stores a single restaurant entry related to :model:`auth.User`.
+    """
 
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -49,7 +51,10 @@ class Restaurant(models.Model):
 
 
 class Comment(models.Model):
-    """Model for Comment"""
+    """
+    Stores a single comment entry related to :model:`auth.User`
+    and :model:`restaurant.Restaurant`.
+    """
 
     restaurant = models.ForeignKey(
         Restaurant, on_delete=models.CASCADE, related_name="comments"

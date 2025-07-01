@@ -4,7 +4,8 @@ from cloudinary.models import CloudinaryField
 
 class About(models.Model):
     """
-    Model for about text
+    Stores information about the site.
+    About me and about Letters from Zargoza.
     """
 
     title = models.CharField(max_length=200)
@@ -20,7 +21,8 @@ class About(models.Model):
 
 class Contact(models.Model):
     """
-    Model for contacting us
+    Stores a contact message from users,
+    and whether the message has been read.
     """
 
     name = models.CharField(max_length=200)
