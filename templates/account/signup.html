@@ -6,12 +6,18 @@
 
 {% block content %}
 <div class="container">
+
+  <!-- Page Title -->
   <h1 class="page-title">{% trans "Sign up" %}</h1>
   <hr class="home-break">
   <br>
+
+  <!-- Link to Login Page for existing users -->
   <p class="text-center mt-3">{% blocktrans %}Have an account? <a href="{{ login_url }}" class="text-dark"><u>Log
         in</u></a>{% endblocktrans %}
   </p>
+
+   <!-- Form Section for User Registration -->
   <div class="row justify-content-center">
     <div class="col-11 col-md-6 col-lg-4 mt-3 mb-3">
       <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">

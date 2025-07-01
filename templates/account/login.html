@@ -7,13 +7,22 @@
 
 {% block content %}
 
+<!-- login.html content starts here -->
+
 <div class="container">
+    <!-- Page Title -->
     <h1 class="row justify-content-center page-title">{% trans "Sign In" %}</h1>
     <hr class="home-break">
+
+    <!-- Informational paragraph for users who need to log in -->
     <p class="text-center mt-3">To interact with the restaurant reviews please log in</p>
+
+    <!-- Translation block for "Don't have an account? Sign up" -->
     <p class="text-center mt-3">{% blocktrans %}
         Don't have an account? <a class="link" href="{{ signup_url }}">Sign up</a>{% endblocktrans %}
     </p>
+
+    <!-- Form Section - login form -->
     <div class="row justify-content-center">
         <div class="col-11 col-md-6 col-lg-4 mt-3 mb-3">
             <form class="login" method="POST" action="{% url 'account_login' %}">
@@ -27,4 +36,7 @@
         </div>
     </div>
 </div>
+
+<!-- login.html content ends here -->
+
 {% endblock %}
