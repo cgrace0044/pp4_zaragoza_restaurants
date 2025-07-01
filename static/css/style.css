@@ -38,6 +38,7 @@ img {
     margin: 1rem 0;
 }
 
+/* Links */
 .link {
     color: #4E5424;
     text-decoration: underline;
@@ -47,10 +48,6 @@ img {
 .link:active {
     color: #445261;
     text-decoration: underline;
-}
-
-.faded {
-    color: #445261;
 }
 
 /* Buttons */
@@ -92,9 +89,7 @@ img {
     color:#fff;
 }
 
-/*--------------------------------------------Home Page*/
-
-/* Navbar */
+/*--------------------------------------------Navbar*/
 .dropdown-menu .dropdown-item {
     padding: 0.5rem 1rem;  
     font-size: 1rem;       
@@ -118,14 +113,45 @@ img {
   transition: none !important;
 }
 
+/*--------------------------------------------Footer*/
+.footer {
+    background-color: #4E5424;
+    color: rgb(252, 247, 242);;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.75rem;
+}
+
+.footer span {
+    display: block;
+}
+
+.footer i {
+    font-size: 1.5rem;
+    margin: 10px 5px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer i:hover {
+    color: #142a2b;
+}
+
+/*--------------------------------------------Home Page*/
+
 /* Hero Section */
 .hero {
     background-color: #E8E4E2;
     margin-bottom: 30px;
 }
 
-.hero-text{
-    font-size: 40px;
+section h1.hero-text {
+    font-size: 2.8rem;
 }
 
 .carousel-item img {
@@ -154,10 +180,6 @@ i:hover {
     margin-bottom: 40px;
 }
 
-.feature-image-outer {
-    padding: 0 15px;
-}
-
 .feature-title {
     font-size: 1.25rem;
     font-weight: 500;
@@ -177,55 +199,12 @@ i:hover {
     text-align: center;
 }
 
-/*-------------------- About Section --------------------*/
-
-div.about-section {
-    margin: 20px;
-}
-
-.about-zaragoza {
-    margin-bottom: 20px;
-}
-
-.about-heading {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 2rem;
-    color: #4E5424;
-    text-align: center;
-    margin-bottom: 1rem;
-}
+/* About Section*/
 
 .about-section p {
-    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 1.1rem;
     color: #333;
-    line-height: 1.6;
-}
-
-.section-heading {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: #4E5424;
-    margin-bottom: 1rem;
-}
-
-/* Map and Contact Section*/
-#map {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    margin: 20px;
-}
-
-.map-contact-box {
-    background-color: #F9FAFC;
-    border-radius: 15px;
-    padding: 40px 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    margin-top: 30px;
-    margin-bottom: 40px;
 }
 
 .map-contact-box .section-heading {
@@ -233,47 +212,6 @@ div.about-section {
     font-weight: 600;
     color: #4E5424;
     margin-bottom: 1rem;
-}
-
-.map-contact-box p {
-    font-size: 1.05rem;
-    font-weight: 300;
-    color: #333;
-    line-height: 1.6;
-}
-
-.map-contact-box .email {
-    font-weight: 500;
-    color: #4E5424;
-}
-
-.map-contact-box .email:hover {
-    color: #9DA57E;
-    text-decoration: underline;
-}
-
-.map-wrapper {
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 15px;
-}
-
-.email {
-    color: #4E5424;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.email:hover {
-    color: #9DA57E;
-    text-decoration: underline;
 }
 
 /* Featured Restaurants */
@@ -309,33 +247,53 @@ div.about-section {
     color: inherit;
 }
 
-/* Footer */
-.footer {
-    background-color: #4E5424;
-    color: rgb(252, 247, 242);;
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: auto;
+/* Map and Contact Section*/
+#map {
     width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    margin: 20px;
 }
 
-footer p {
-    font-size: 0.75rem;
+.map-contact-box,
+.about-box
+{
+    background-color: #F9FAFC;
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
-.footer span {
-    display: block;
+.map-contact-box p {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: #333;
+    line-height: 1.6;
 }
 
-.footer i {
-    font-size: 1.5rem;
-    margin: 10px 5px;
-    color: #fff;
-    transition: color 0.3s;
+.map-contact-box .email {
+    font-weight: 500;
+    color: #4E5424;
+    text-decoration: none;
 }
 
-.footer i:hover {
-    color: #142a2b;
+.map-contact-box .email:hover {
+    color: #9DA57E;
+    text-decoration: underline;
+}
+
+.map-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
 }
 
 /*--------------------------------------------Restaurant Detail*/
@@ -345,10 +303,15 @@ footer p {
     background-color: #E8E4E2;
 }
 
-/* Restaurant Name in Masthead */
+/* Restaurant name in masthead */
 .restaurant-name {
     font-family: 'Imperial Script';
     font-size: 3rem;
+}
+
+/* Comment text not approved */
+.faded {
+    color: #445261;
 }
 
 /* Likes */
@@ -420,12 +383,6 @@ footer p {
 
 .card-text-1 .card-text-2 {
     font-size: 15px;
-}
-
-.restaurant-description {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
 }
 
 /* Pagination */
