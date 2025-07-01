@@ -6,7 +6,10 @@ from .models import Restaurant, Comment
 
 @admin.register(Restaurant)
 class RestaurantAdmin(SummernoteModelAdmin):
-    """Allows admin to manage restaurants via the admin panel"""
+    """
+    Lists fields for display in admin, field for search,
+    field filters, fields to prepopulate and rich-text editor.
+    """
 
     list_display = (
         "title", "name", "slug", "status", "created_on", "featured")
