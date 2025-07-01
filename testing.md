@@ -493,7 +493,7 @@ No errors were found when passing my javascript through [Jshint](https://jshint.
 </details>
 
 ### Python
-All Python files were run through [Pep8](https://pep8online.com/) with no errors found. 
+All Python files were run through [Pep8](https://pep8ci.herokuapp.com/) with no errors found. 
 
 ### Lighthouse
 
@@ -562,11 +562,14 @@ Lighthouse validation was run on all pages (both mobile and desktop) in order to
 ### About Section
 | Element                    | Action                       | Expected Result                                                          | Pass/Fail |
 |----------------------------|------------------------------|--------------------------------------------------------------------------|-----------|
-| About Content              | Display                      | Correct content displays: About Zaragoza, About Me, Location, Contact Us | Pass      |
-| Google Map                 | Display                      | Google map displays with marker on Valdespartera location                | Pass      |
-| Google Map                 | Hover                        | Cursor changes to pointer on hover over Google map                       | Pass      |
-| Email address              | Hover                        | Text lightens on hover to show it is a link.                             | Pass      |
-| Email address              | Click                        | On click a draft email is opened with the email address in the To field  | Pass      |
+| About Content              | Display                      | The correct content displays: About, Featured Restaurants, Location, and Contact | Pass      |
+| Google Map                 | Display                      | The Google map displays with a marker at the Valdespartera location      | Pass      |
+| Google Map                 | Hover                        | The cursor changes to a pointer when hovering over the Google map        | Pass      |
+| Email Address              | Hover                        | The text lightens on hover, indicating it is a link.                     | Pass      |
+| Email Address              | Click                        | A draft email opens with the email address pre-filled in the "To" field | Pass      |
+| Featured Restaurants       | Display                      | Featured restaurants are displayed correctly with images and details    | Pass      |
+| Featured Restaurants       | Click                        | Clicking on a featured restaurant redirects to its detailed page        | Pass      |
+| Featured Restaurants       | Hover                        | Hovering over a featured restaurant creates a nice transform effect     | Pass      |
 
 ### Restaurants Page
 | Element                    | Action                         | Expected Result                                                             | Pass/Fail |
