@@ -21,8 +21,8 @@ class About(models.Model):
 
 class Contact(models.Model):
     """
-    Stores a contact message from users,
-    and whether the message has been read.
+    Stores contact messages from users,
+    and controls whether a message has been read.
     """
 
     name = models.CharField(max_length=200)

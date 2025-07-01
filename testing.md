@@ -231,7 +231,7 @@
 <details>
 <summary>📸 View Screenshot – Edit/Delete Buttons</summary>
 
-![Edit Delete](docs/readme_images/edit_delete_comment.webp)
+![Edit Delete](docs/readme_images/delete_edit_comment.webp)
 
 </details>
 
@@ -493,7 +493,7 @@ No errors were found when passing my javascript through [Jshint](https://jshint.
 </details>
 
 ### Python
-All Python files were run through [Pep8](http://pep8online.com/) with no errors found. 
+All Python files were run through [Pep8](https://pep8online.com/) with no errors found. 
 
 ### Lighthouse
 

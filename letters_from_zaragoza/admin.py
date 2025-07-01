@@ -3,7 +3,6 @@ from django_summernote.admin import SummernoteModelAdmin
 from .models import Restaurant, Comment
 
 
-
 @admin.register(Restaurant)
 class RestaurantAdmin(SummernoteModelAdmin):
     """

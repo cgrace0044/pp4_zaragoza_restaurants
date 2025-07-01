@@ -187,7 +187,9 @@ Github projects was used to manage the development process using an agile approa
 
 The project board is very effective as it allows the project manager to move issues between 'To Do', 'In Progress' and 'Done':
 
-![Board](docs/readme_images/project_board.webp)
+![Board](docs/readme_images/k_board.webp)
+
+Each user story was prioritized according to the MoSCoW prioritization method. In the end nothing was marked as 'won't have'.
 
 The below epics (as detailed above) were documented in Github projects as milestones:
 - User Profile
@@ -338,7 +340,7 @@ Google Maps API key is restricted to certain domains. Therefore although it is p
 
 **Comments Section**
 
-![comments section](docs/readme_images/comments_section.webp)
+![comments section](docs/readme_images/section_comments.webp)
 
 - The comments section starts with a **Font Awesome** comments symbol together with a comment counter.
 - Below there is a **make a comment card**. Clicking on *write a comment* opens the comment modal.
