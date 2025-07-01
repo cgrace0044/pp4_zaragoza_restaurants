@@ -24,7 +24,7 @@
 
                 <!-- Display restaurant image or fallback placeholder -->
                 {% if "placeholder" in restaurant.image.url %}
-                <img class="card-img-top" src="{% static 'images/pilar_zaragoza.webp' %}" alt="placeholder image">
+                <img class="card-img-top" src="{% static 'images/pilar_zaragoza.jpg' %}" alt="placeholder image">
                 {% else %}
                 <img src="{{ restaurant.image.url }}" alt="restaurant image" class="card-img-top">
                 {% endif %}

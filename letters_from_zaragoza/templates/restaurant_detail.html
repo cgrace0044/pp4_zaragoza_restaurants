@@ -74,9 +74,13 @@
           </div>
         </div>
 
-        <!-- Image Column -->
+        <!-- Image Column: display restaurant image or fallback-->
         <div class="col-md-5">
+          {% if "placeholder" in restaurant.image.url %}
+          <img src="{% static 'images/pilar_zaragoza.jpg' %}" class="img-fluid rounded shadow-sm " alt="placeholder image">
+          {% else %}
           <img src="{{ restaurant.image.url }}" class="img-fluid rounded shadow-sm " alt="{{ restaurant.title }} image">
+          {% endif %}
         </div>
 
       </div>
