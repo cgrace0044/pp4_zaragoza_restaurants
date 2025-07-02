@@ -159,8 +159,8 @@
           <!-- Comment Actions -->
           {% if user.is_authenticated and comment.author == user %}
           <div class="comment-actions mt-2">
-            <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-            <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+            <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
+            <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
           </div>
           {% endif %}
 

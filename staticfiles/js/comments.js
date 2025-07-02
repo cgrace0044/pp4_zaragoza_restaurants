@@ -18,8 +18,8 @@ const deleteConfirm = document.getElementById("deleteConfirm");
 // populates the input field, updates the form action, and opens the modal for editing.
 // ==============================
 for (let button of editButtons) {
-  button.addEventListener("click", (e) => {
-    let commentId = e.target.getAttribute("comment_id");
+  button.addEventListener("click", function() {
+    let commentId = this.dataset.comment_id;
     let commentContent = document.getElementById(`comment${commentId}`).innerText;
     commentText.value = commentContent;
     submitButton.innerText = "Update";
@@ -36,8 +36,8 @@ for (let button of editButtons) {
 // and opens a modal to confirm the deletion of the selected comment.
 // ==============================
 for (let button of deleteButtons) {
-  button.addEventListener("click", (e) => {
-    let commentId = e.target.getAttribute("comment_id");
+  button.addEventListener("click", function() {
+    let commentId = this.dataset.comment_id;
     deleteConfirm.href = `delete_comment/${commentId}`;
     deleteModal.show();
   });
