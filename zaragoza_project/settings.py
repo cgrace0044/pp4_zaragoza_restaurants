@@ -23,21 +23,15 @@ import cloudinary
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True if os.environ.get("DEBUG", "true") == "true" else False
 
-ALLOWED_HOSTS = [".herokuapp.com", "127.0.0.1"]
-
+ALLOWED_HOSTS = ["letters-from-zaragoza-663ab0086474.herokuapp.com", "127.0.0.1"]
 
 # Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
