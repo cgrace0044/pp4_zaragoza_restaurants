@@ -8,3 +8,4 @@ cloudinary_python.txt
 .DS_Store
 .env.py.swp
 db.sqlite3
+staticfiles
